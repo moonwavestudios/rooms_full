@@ -8,6 +8,14 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_hun61"]
 size = Vector3(1.6589966, 2.2031174, 0.1586914)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bm7r4"]
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nlgyn"]
+material = SubResource("StandardMaterial3D_bm7r4")
+flip_faces = true
+
 [node name="fake_door" type="StaticBody3D" unique_id=1515299434]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3189702, 0, 0)
 
@@ -34,3 +42,7 @@ stream = ExtResource("3_bw7fe")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.37246186, -0.43851668, 0.42246938)
 mesh = ExtResource("4_aty7x")
 surface_material_override/0 = ExtResource("5_lvj0u")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=205708841]
+transform = Transform3D(7.1261716, 0, 0, 0, 5.288819, 0, 0, 0, 7.964426, 0.18349528, 2.0164697, -3.6390107)
+mesh = SubResource("BoxMesh_nlgyn")
