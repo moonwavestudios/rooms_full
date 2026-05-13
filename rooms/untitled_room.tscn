@@ -3,12 +3,35 @@
 [ext_resource type="ArrayMesh" uid="uid://bh7ia34b5p5yh" path="res://rooms/models/Untitled_room.obj" id="1_c46fw"]
 [ext_resource type="Material" uid="uid://c28gdvubm0bai" path="res://assets/tiles.tres" id="2_trmpp"]
 [ext_resource type="Material" uid="uid://dk7rispq45fn3" path="res://assets/concrete.tres" id="3_qif3b"]
+[ext_resource type="PackedScene" uid="uid://edny0xnsfjdt" path="res://door.tscn" id="4_py7nt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qif3b"]
-size = Vector3(127.15085, 0.7895508, 136.42896)
+size = Vector3(127.15085, 0.7895508, 136.62085)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_py7nt"]
 size = Vector3(54.756943, 20.232178, 59.381287)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xvh2i"]
+size = Vector3(54.756943, 20.232178, 59.381287)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c61gd"]
+size = Vector3(54.756943, 20.232178, 59.381287)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kl47f"]
+size = Vector3(54.756943, 20.232178, 59.381287)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6cuu6"]
+size = Vector3(7.8287573, 20.232178, 0.29527283)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3lydm"]
+size = Vector3(8.077953, 20.232178, 0.29527283)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i3xd6"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4so63"]
+material = SubResource("StandardMaterial3D_i3xd6")
 
 [node name="Untitled_room" type="Node3D" unique_id=42789659]
 
@@ -38,9 +61,43 @@ surface_material_override/19 = ExtResource("3_qif3b")
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1727204344]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=783630579]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0026397705, -0.10522461, -0.020385742)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0026397705, -0.10522461, -0.022338867)
 shape = SubResource("BoxShape3D_qif3b")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=120409810]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.199593, 9.616089, -38.54422)
 shape = SubResource("BoxShape3D_py7nt")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=344696218]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.199593, 9.616089, 38.254944)
+shape = SubResource("BoxShape3D_xvh2i")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" unique_id=201944266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.12368, 9.616089, 38.254944)
+shape = SubResource("BoxShape3D_c61gd")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" unique_id=1952574496]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.12368, 9.616089, -38.53591)
+shape = SubResource("BoxShape3D_kl47f")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D" unique_id=129046956]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8591256, 9.616089, -68.15192)
+shape = SubResource("BoxShape3D_6cuu6")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="StaticBody3D" unique_id=1013543466]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8994555, 9.616089, -68.15192)
+shape = SubResource("BoxShape3D_3lydm")
+
+[node name="Begin_Pos" type="MeshInstance3D" parent="." unique_id=294603327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08, -0.224, 68.287186)
+mesh = SubResource("BoxMesh_4so63")
+
+[node name="End_Pos" type="MeshInstance3D" parent="." unique_id=57828443]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08, -0.224, -68.375916)
+mesh = SubResource("BoxMesh_4so63")
+
+[node name="DoorSpawn" type="Node3D" parent="." unique_id=1832689003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1396612, 0, -58.35228)
+
+[node name="door" parent="DoorSpawn" unique_id=1515299434 instance=ExtResource("4_py7nt")]
+transform = Transform3D(1.0833415, 0, 0, 0, 1.0225286, 0, 0, 0, 1, -0.32828996, 0.70507133, -10.2094345)
