@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dquovo6qklui1"]
+
+[ext_resource type="FontFile" uid="uid://dxsjhqed312w" path="res://fonts/daidaidaidaidaaisuki_free.otf" id="1_kadw1"]
+
+[node name="room_52" type="Node3D" unique_id=163777806]
+
+[node name="Label3D" type="Label3D" parent="." unique_id=1736448815]
+visible = false
+billboard = 1
+text = "test"
+font = ExtResource("1_kadw1")
+font_size = 63

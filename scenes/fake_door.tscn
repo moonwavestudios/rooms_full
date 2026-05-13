@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://doj68wv6hg67j" path="res://sfx/wrong.mp3" id="3_bw7fe"]
 [ext_resource type="ArrayMesh" uid="uid://b24hkbwbqgtg3" path="res://models/door/door.obj" id="4_aty7x"]
 [ext_resource type="Material" uid="uid://5r4jqpwqj063" path="res://assets/metal.tres" id="5_lvj0u"]
+[ext_resource type="AudioStream" uid="uid://mlawjlxnjwcp" path="res://sfx/growl.mp3" id="5_nlgyn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hun61"]
 size = Vector3(1.6589966, 2.2031174, 0.1586914)
@@ -46,3 +47,8 @@ surface_material_override/0 = ExtResource("5_lvj0u")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=205708841]
 transform = Transform3D(7.1261716, 0, 0, 0, 5.288819, 0, 0, 0, 7.964426, 0.18349528, 2.0164697, -3.6390107)
 mesh = SubResource("BoxMesh_nlgyn")
+
+[node name="monster_growl" type="AudioStreamPlayer3D" parent="." unique_id=1864210369]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3323541, -2.7269316)
+stream = ExtResource("5_nlgyn")
+volume_db = -17.944

@@ -22,6 +22,7 @@
 [ext_resource type="Animation" uid="uid://sffw2mei1qe4" path="res://models/player_model/animations/keycard/Armature_mixamo_com.tres" id="14_op7ga"]
 [ext_resource type="Animation" uid="uid://betayvu8y5xe5" path="res://models/player_model/animations/imaginary_remote/use/Armature_mixamo_com.tres" id="16_q13i1"]
 [ext_resource type="Animation" uid="uid://byysd3p5n6rdc" path="res://models/player_model/animations/pills/take/Armature_mixamo_com.tres" id="17_pbfsw"]
+[ext_resource type="FontFile" uid="uid://dxsjhqed312w" path="res://fonts/daidaidaidaidaaisuki_free.otf" id="23_7lmhl"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
 
@@ -312,6 +313,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2120752, 0.082793)
 billboard = 1
 double_sided = false
 text = "PlayerName"
+font = ExtResource("23_7lmhl")
 
 [node name="items" type="Node3D" parent="." unique_id=2121520016]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31440336, 0.48102278, -0.05488777)

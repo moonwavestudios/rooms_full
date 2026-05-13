@@ -15,6 +15,12 @@ size = Vector3(54.756943, 20.232178, 59.381287)
 [sub_resource type="BoxShape3D" id="BoxShape3D_xvh2i"]
 size = Vector3(54.756943, 20.232178, 59.381287)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_e8b8o"]
+size = Vector3(0.44753647, 20.232178, 7.818657)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_32v67"]
+size = Vector3(0.44753647, 20.232178, 8.022121)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_c61gd"]
 size = Vector3(54.756943, 20.232178, 59.381287)
 
@@ -79,6 +85,22 @@ shape = SubResource("BoxShape3D_py7nt")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.199593, 9.616089, 38.254944)
 shape = SubResource("BoxShape3D_xvh2i")
 
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="StaticBody3D" unique_id=1071716133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.354294, 9.616089, 4.7524605)
+shape = SubResource("BoxShape3D_e8b8o")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="StaticBody3D" unique_id=542944718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.354294, 9.616089, -4.988637)
+shape = SubResource("BoxShape3D_32v67")
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="StaticBody3D" unique_id=2115142526]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.344086, 9.616089, 4.7524605)
+shape = SubResource("BoxShape3D_e8b8o")
+
+[node name="CollisionShape3D13" type="CollisionShape3D" parent="StaticBody3D" unique_id=770820232]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.344086, 9.616089, -4.988637)
+shape = SubResource("BoxShape3D_32v67")
+
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" unique_id=201944266]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.12368, 9.616089, 38.254944)
 shape = SubResource("BoxShape3D_c61gd")
@@ -122,3 +144,57 @@ transform = Transform3D(-4.8227122e-08, 0, -1, 0, 1.060459, 0, 1.103308, 0, -4.3
 
 [node name="fake_door2" parent="." unique_id=310096971 instance=ExtResource("5_xvh2i")]
 transform = Transform3D(1.4468137e-07, 0, 1, 0, 1.060459, 0, -1.1033081, 0, 1.3113417e-07, -63.69859, 0.73810625, 0.3702881)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2064600126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.276157, 0)
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 21.728556
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="." unique_id=1952531015]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.276157, -22.485592)
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 21.728556
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="." unique_id=1554449813]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.276157, -52.195515)
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 21.728556
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="." unique_id=968738737]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.276157, 24.018848)
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 21.728556
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="." unique_id=990849092]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.276157, 54.75569)
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 21.728556
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=9511285]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.352255, 15.276157, 0)
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 21.728556
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=1239987465]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.62789, 15.276157, 0)
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 21.728556
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=217332815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.921736, 15.276157, 0)
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 21.728556
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="." unique_id=126444304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.973755, 15.276157, 0)
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 21.728556
