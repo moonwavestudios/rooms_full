@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cg11s6b8adnp2"]
+
+[ext_resource type="PackedScene" uid="uid://cr7qvymc6dhd8" path="res://models/old_pc_2.tscn" id="1_nyq18"]
+
+[node name="90sComputer" type="Node3D" unique_id=2090889962]
+
+[node name="old pc2" parent="." unique_id=1338493334 instance=ExtResource("1_nyq18")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
