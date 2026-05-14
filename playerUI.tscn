@@ -188,7 +188,23 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="." unique_id=1947272310]
+[node name="DemoLabel" type="Label" parent="." unique_id=42241630]
+visible = false
+layout_mode = 0
+offset_left = -1.0
+offset_right = 100.0
+offset_bottom = 34.0
+text = "DEVELOPER-BUILD"
+label_settings = SubResource("LabelSettings_af2jw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameUI" type="Control" parent="." unique_id=227517540]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="GameUI" unique_id=1947272310]
 visible = false
 layout_mode = 0
 offset_left = 384.0
@@ -197,18 +213,7 @@ offset_bottom = 66.0
 text = "Use the interact key"
 label_settings = SubResource("LabelSettings_af2jw")
 
-[node name="DemoLabel" type="Label" parent="." unique_id=42241630]
-visible = false
-layout_mode = 0
-offset_left = -1.0
-offset_right = 100.0
-offset_bottom = 34.0
-text = "DEMO"
-label_settings = SubResource("LabelSettings_af2jw")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="fps" type="Label" parent="." unique_id=1878810733]
+[node name="fps" type="Label" parent="GameUI" unique_id=1878810733]
 visible = false
 layout_mode = 0
 offset_left = 1079.0
@@ -219,7 +224,7 @@ text = "FPS: 0"
 label_settings = SubResource("LabelSettings_af2jw")
 script = ExtResource("3_o66fx")
 
-[node name="Label2" type="Label" parent="." unique_id=1095642828]
+[node name="Label2" type="Label" parent="GameUI" unique_id=1095642828]
 visible = false
 layout_mode = 0
 offset_left = 501.0
@@ -229,7 +234,7 @@ offset_bottom = 140.0
 text = "Room: 1"
 label_settings = SubResource("LabelSettings_1j5ju")
 
-[node name="Coins" type="TextureRect" parent="." unique_id=344997321]
+[node name="Coins" type="TextureRect" parent="GameUI" unique_id=344997321]
 visible = false
 layout_mode = 0
 offset_left = 956.0
@@ -239,7 +244,7 @@ offset_bottom = 48.0
 texture = ExtResource("3_jvi5b")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="Coins" unique_id=400217496]
+[node name="Label" type="Label" parent="GameUI/Coins" unique_id=400217496]
 layout_mode = 0
 offset_left = 57.0
 offset_top = -2.0
@@ -249,7 +254,7 @@ text = "$0"
 label_settings = SubResource("LabelSettings_pm3rl")
 vertical_alignment = 1
 
-[node name="BatteryAmount" type="TextureRect" parent="." unique_id=270516366]
+[node name="BatteryAmount" type="TextureRect" parent="GameUI" unique_id=270516366]
 visible = false
 layout_mode = 0
 offset_left = 956.0
@@ -259,7 +264,7 @@ offset_bottom = 98.0
 texture = ExtResource("4_jvi5b")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="BatteryAmount" unique_id=977452885]
+[node name="Label" type="Label" parent="GameUI/BatteryAmount" unique_id=977452885]
 layout_mode = 0
 offset_left = 57.0
 offset_top = -2.0
@@ -269,7 +274,7 @@ text = "0/5"
 label_settings = SubResource("LabelSettings_pm3rl")
 vertical_alignment = 1
 
-[node name="health" type="Panel" parent="." unique_id=2076999836]
+[node name="health" type="Panel" parent="GameUI" unique_id=2076999836]
 visible = false
 layout_mode = 0
 offset_left = 5.0
@@ -278,7 +283,7 @@ offset_right = 323.0
 offset_bottom = 642.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_aomcw")
 
-[node name="Health" type="ProgressBar" parent="health" unique_id=327822234]
+[node name="Health" type="ProgressBar" parent="GameUI/health" unique_id=327822234]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 10.0
@@ -292,26 +297,26 @@ rounded = true
 show_percentage = false
 script = ExtResource("3_lyh3y")
 
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=861348515]
+[node name="CenterContainer" type="CenterContainer" parent="GameUI" unique_id=861348515]
 layout_mode = 0
 offset_right = 1156.0
 offset_bottom = 649.0
 
-[node name="TextureRect2" type="TextureRect" parent="CenterContainer" unique_id=205883420]
+[node name="TextureRect2" type="TextureRect" parent="GameUI/CenterContainer" unique_id=205883420]
 layout_mode = 2
 texture = ExtResource("3_aomcw")
 
-[node name="CenterContainer2" type="CenterContainer" parent="." unique_id=1489757352]
+[node name="CenterContainer2" type="CenterContainer" parent="GameUI" unique_id=1489757352]
 layout_mode = 0
 offset_top = 586.0
 offset_right = 1156.0
 offset_bottom = 649.0
 
-[node name="shop" type="Control" parent="." unique_id=1403266229]
+[node name="shop" type="Control" parent="GameUI" unique_id=1403266229]
 visible = false
 anchors_preset = 0
 
-[node name="Panel" type="Panel" parent="shop" unique_id=1932942776]
+[node name="Panel" type="Panel" parent="GameUI/shop" unique_id=1932942776]
 layout_mode = 0
 offset_left = 174.0
 offset_top = 54.0
@@ -319,7 +324,7 @@ offset_right = 968.0
 offset_bottom = 586.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_1j5ju")
 
-[node name="Button" type="Button" parent="shop/Panel" unique_id=1679473995]
+[node name="Button" type="Button" parent="GameUI/shop/Panel" unique_id=1679473995]
 layout_mode = 0
 offset_left = 176.0
 offset_top = 442.0
@@ -335,7 +340,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_o66fx")
 text = "CONFIRM"
 script = ExtResource("4_af2jw")
 
-[node name="Label" type="Label" parent="shop/Panel" unique_id=1072204828]
+[node name="Label" type="Label" parent="GameUI/shop/Panel" unique_id=1072204828]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 4.0
@@ -344,7 +349,7 @@ offset_bottom = 76.0
 text = "Pre-Run Shop"
 label_settings = SubResource("LabelSettings_aomcw")
 
-[node name="Label2" type="Label" parent="shop/Panel" unique_id=136906450]
+[node name="Label2" type="Label" parent="GameUI/shop/Panel" unique_id=136906450]
 layout_mode = 0
 offset_left = 553.0
 offset_top = 5.0
@@ -354,25 +359,25 @@ text = "$0"
 label_settings = SubResource("LabelSettings_aomcw")
 horizontal_alignment = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="shop/Panel" unique_id=93775749]
+[node name="CenterContainer" type="CenterContainer" parent="GameUI/shop/Panel" unique_id=93775749]
 layout_mode = 0
 offset_left = 12.0
 offset_top = 51.0
 offset_right = 779.0
 offset_bottom = 467.0
 
-[node name="GridContainer" type="GridContainer" parent="shop/Panel/CenterContainer" unique_id=628472343]
+[node name="GridContainer" type="GridContainer" parent="GameUI/shop/Panel/CenterContainer" unique_id=628472343]
 layout_mode = 2
 theme_override_constants/h_separation = 49
 theme_override_constants/v_separation = 49
 columns = 4
 
-[node name="TextureButton" type="TextureButton" parent="shop/Panel/CenterContainer/GridContainer" unique_id=919525906]
+[node name="TextureButton" type="TextureButton" parent="GameUI/shop/Panel/CenterContainer/GridContainer" unique_id=919525906]
 layout_mode = 2
 texture_normal = ExtResource("1_pm3rl")
 script = ExtResource("6_v6544")
 
-[node name="Price" type="Label" parent="shop/Panel/CenterContainer/GridContainer/TextureButton" unique_id=1978681090]
+[node name="Price" type="Label" parent="GameUI/shop/Panel/CenterContainer/GridContainer/TextureButton" unique_id=1978681090]
 layout_mode = 0
 offset_right = 121.0
 offset_bottom = 44.0
@@ -380,14 +385,14 @@ text = "$0"
 label_settings = SubResource("LabelSettings_lyh3y")
 horizontal_alignment = 1
 
-[node name="Death" type="Panel" parent="." unique_id=1124568970]
+[node name="Death" type="Panel" parent="GameUI" unique_id=1124568970]
 visible = false
 layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 649.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_v6544")
 
-[node name="Label" type="Label" parent="Death" unique_id=527897731]
+[node name="Label" type="Label" parent="GameUI/Death" unique_id=527897731]
 layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 650.0
@@ -396,14 +401,14 @@ label_settings = SubResource("LabelSettings_v6544")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Revive" type="Panel" parent="." unique_id=1944946440]
+[node name="Revive" type="Panel" parent="GameUI" unique_id=1944946440]
 visible = false
 layout_mode = 0
 offset_right = 1151.0
 offset_bottom = 649.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_v6544")
 
-[node name="Button" type="Button" parent="Revive" unique_id=332286889]
+[node name="Button" type="Button" parent="GameUI/Revive" unique_id=332286889]
 layout_mode = 0
 offset_left = 411.0
 offset_top = 3.0
@@ -415,19 +420,19 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_3bkiv")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4y1jq")
 text = "Revive"
 
-[node name="Jumpscares" type="Panel" parent="." unique_id=313728627]
+[node name="Jumpscares" type="Panel" parent="GameUI" unique_id=313728627]
 visible = false
 layout_mode = 0
 offset_right = 1153.0
 offset_bottom = 649.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_5yvkk")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Jumpscares" unique_id=740206079]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GameUI/Jumpscares" unique_id=740206079]
 position = Vector2(565, 315)
 scale = Vector2(3.0234375, 2.890625)
 sprite_frames = SubResource("SpriteFrames_v6544")
 
-[node name="DeafVignette" type="ColorRect" parent="." unique_id=1336051374]
+[node name="DeafVignette" type="ColorRect" parent="GameUI" unique_id=1336051374]
 self_modulate = Color(1, 1, 1, 0)
 top_level = true
 material = SubResource("ShaderMaterial_jvi5b")
@@ -438,22 +443,22 @@ mouse_filter = 2
 color = Color(1, 1, 1, 0)
 script = ExtResource("11_jvi5b")
 
-[node name="Hotbar" type="CenterContainer" parent="." unique_id=372805190]
+[node name="Hotbar" type="CenterContainer" parent="GameUI" unique_id=372805190]
 layout_mode = 0
 offset_top = 522.0
 offset_right = 1157.0
 offset_bottom = 650.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Hotbar" unique_id=809913503]
+[node name="HBoxContainer" type="HBoxContainer" parent="GameUI/Hotbar" unique_id=809913503]
 layout_mode = 2
 theme_override_constants/separation = -2
 
-[node name="slot1" type="TextureRect" parent="Hotbar/HBoxContainer" unique_id=1250407566]
+[node name="slot1" type="TextureRect" parent="GameUI/Hotbar/HBoxContainer" unique_id=1250407566]
 visible = false
 layout_mode = 2
 texture = ExtResource("1_pm3rl")
 
-[node name="ProgressBar" type="ProgressBar" parent="Hotbar/HBoxContainer/slot1" unique_id=1654353154]
+[node name="ProgressBar" type="ProgressBar" parent="GameUI/Hotbar/HBoxContainer/slot1" unique_id=1654353154]
 visible = false
 layout_mode = 0
 offset_left = 1.0
@@ -467,19 +472,19 @@ value = 100.0
 rounded = true
 show_percentage = false
 
-[node name="Label" type="Label" parent="Hotbar/HBoxContainer/slot1" unique_id=1670271167]
+[node name="Label" type="Label" parent="GameUI/Hotbar/HBoxContainer/slot1" unique_id=1670271167]
 layout_mode = 0
 offset_right = 127.0
 offset_bottom = 23.0
 text = "1"
 horizontal_alignment = 1
 
-[node name="slot2" type="TextureRect" parent="Hotbar/HBoxContainer" unique_id=1383005226]
+[node name="slot2" type="TextureRect" parent="GameUI/Hotbar/HBoxContainer" unique_id=1383005226]
 visible = false
 layout_mode = 2
 texture = ExtResource("1_pm3rl")
 
-[node name="ProgressBar" type="ProgressBar" parent="Hotbar/HBoxContainer/slot2" unique_id=929004903]
+[node name="ProgressBar" type="ProgressBar" parent="GameUI/Hotbar/HBoxContainer/slot2" unique_id=929004903]
 visible = false
 layout_mode = 0
 offset_left = 1.0
@@ -493,19 +498,19 @@ value = 100.0
 rounded = true
 show_percentage = false
 
-[node name="Label" type="Label" parent="Hotbar/HBoxContainer/slot2" unique_id=127165273]
+[node name="Label" type="Label" parent="GameUI/Hotbar/HBoxContainer/slot2" unique_id=127165273]
 layout_mode = 0
 offset_right = 127.0
 offset_bottom = 23.0
 text = "2"
 horizontal_alignment = 1
 
-[node name="slot3" type="TextureRect" parent="Hotbar/HBoxContainer" unique_id=247700975]
+[node name="slot3" type="TextureRect" parent="GameUI/Hotbar/HBoxContainer" unique_id=247700975]
 visible = false
 layout_mode = 2
 texture = ExtResource("1_pm3rl")
 
-[node name="ProgressBar" type="ProgressBar" parent="Hotbar/HBoxContainer/slot3" unique_id=1118618470]
+[node name="ProgressBar" type="ProgressBar" parent="GameUI/Hotbar/HBoxContainer/slot3" unique_id=1118618470]
 visible = false
 layout_mode = 0
 offset_left = 1.0
@@ -519,19 +524,19 @@ value = 100.0
 rounded = true
 show_percentage = false
 
-[node name="Label2" type="Label" parent="Hotbar/HBoxContainer/slot3" unique_id=1179931874]
+[node name="Label2" type="Label" parent="GameUI/Hotbar/HBoxContainer/slot3" unique_id=1179931874]
 layout_mode = 0
 offset_right = 127.0
 offset_bottom = 23.0
 text = "3"
 horizontal_alignment = 1
 
-[node name="slot4" type="TextureRect" parent="Hotbar/HBoxContainer" unique_id=850566285]
+[node name="slot4" type="TextureRect" parent="GameUI/Hotbar/HBoxContainer" unique_id=850566285]
 visible = false
 layout_mode = 2
 texture = ExtResource("1_pm3rl")
 
-[node name="ProgressBar" type="ProgressBar" parent="Hotbar/HBoxContainer/slot4" unique_id=1906040242]
+[node name="ProgressBar" type="ProgressBar" parent="GameUI/Hotbar/HBoxContainer/slot4" unique_id=1906040242]
 visible = false
 layout_mode = 0
 offset_left = 1.0
@@ -545,19 +550,19 @@ value = 100.0
 rounded = true
 show_percentage = false
 
-[node name="Label2" type="Label" parent="Hotbar/HBoxContainer/slot4" unique_id=548227220]
+[node name="Label2" type="Label" parent="GameUI/Hotbar/HBoxContainer/slot4" unique_id=548227220]
 layout_mode = 0
 offset_right = 127.0
 offset_bottom = 23.0
 text = "4"
 horizontal_alignment = 1
 
-[node name="slot5" type="TextureRect" parent="Hotbar/HBoxContainer" unique_id=897907403]
+[node name="slot5" type="TextureRect" parent="GameUI/Hotbar/HBoxContainer" unique_id=897907403]
 visible = false
 layout_mode = 2
 texture = ExtResource("1_pm3rl")
 
-[node name="ProgressBar" type="ProgressBar" parent="Hotbar/HBoxContainer/slot5" unique_id=1137038706]
+[node name="ProgressBar" type="ProgressBar" parent="GameUI/Hotbar/HBoxContainer/slot5" unique_id=1137038706]
 visible = false
 layout_mode = 0
 offset_left = 1.0
@@ -571,19 +576,19 @@ value = 100.0
 rounded = true
 show_percentage = false
 
-[node name="Label3" type="Label" parent="Hotbar/HBoxContainer/slot5" unique_id=1494228492]
+[node name="Label3" type="Label" parent="GameUI/Hotbar/HBoxContainer/slot5" unique_id=1494228492]
 layout_mode = 0
 offset_right = 127.0
 offset_bottom = 23.0
 text = "5"
 horizontal_alignment = 1
 
-[node name="slot6" type="TextureRect" parent="Hotbar/HBoxContainer" unique_id=1046178039]
+[node name="slot6" type="TextureRect" parent="GameUI/Hotbar/HBoxContainer" unique_id=1046178039]
 visible = false
 layout_mode = 2
 texture = ExtResource("1_pm3rl")
 
-[node name="ProgressBar" type="ProgressBar" parent="Hotbar/HBoxContainer/slot6" unique_id=1593415315]
+[node name="ProgressBar" type="ProgressBar" parent="GameUI/Hotbar/HBoxContainer/slot6" unique_id=1593415315]
 visible = false
 layout_mode = 0
 offset_left = 1.0
@@ -597,19 +602,19 @@ value = 100.0
 rounded = true
 show_percentage = false
 
-[node name="Label4" type="Label" parent="Hotbar/HBoxContainer/slot6" unique_id=100189461]
+[node name="Label4" type="Label" parent="GameUI/Hotbar/HBoxContainer/slot6" unique_id=100189461]
 layout_mode = 0
 offset_right = 127.0
 offset_bottom = 23.0
 text = "6"
 horizontal_alignment = 1
 
-[node name="slot7" type="TextureRect" parent="Hotbar/HBoxContainer" unique_id=1892204142]
+[node name="slot7" type="TextureRect" parent="GameUI/Hotbar/HBoxContainer" unique_id=1892204142]
 visible = false
 layout_mode = 2
 texture = ExtResource("1_pm3rl")
 
-[node name="ProgressBar" type="ProgressBar" parent="Hotbar/HBoxContainer/slot7" unique_id=2105081772]
+[node name="ProgressBar" type="ProgressBar" parent="GameUI/Hotbar/HBoxContainer/slot7" unique_id=2105081772]
 visible = false
 layout_mode = 0
 offset_left = 1.0
@@ -623,19 +628,19 @@ value = 100.0
 rounded = true
 show_percentage = false
 
-[node name="Label5" type="Label" parent="Hotbar/HBoxContainer/slot7" unique_id=1196275229]
+[node name="Label5" type="Label" parent="GameUI/Hotbar/HBoxContainer/slot7" unique_id=1196275229]
 layout_mode = 0
 offset_right = 127.0
 offset_bottom = 23.0
 text = "7"
 horizontal_alignment = 1
 
-[node name="slot8" type="TextureRect" parent="Hotbar/HBoxContainer" unique_id=1018618511]
+[node name="slot8" type="TextureRect" parent="GameUI/Hotbar/HBoxContainer" unique_id=1018618511]
 visible = false
 layout_mode = 2
 texture = ExtResource("1_pm3rl")
 
-[node name="ProgressBar" type="ProgressBar" parent="Hotbar/HBoxContainer/slot8" unique_id=2110655145]
+[node name="ProgressBar" type="ProgressBar" parent="GameUI/Hotbar/HBoxContainer/slot8" unique_id=2110655145]
 visible = false
 layout_mode = 0
 offset_left = 1.0
@@ -649,19 +654,19 @@ value = 100.0
 rounded = true
 show_percentage = false
 
-[node name="Label6" type="Label" parent="Hotbar/HBoxContainer/slot8" unique_id=246428683]
+[node name="Label6" type="Label" parent="GameUI/Hotbar/HBoxContainer/slot8" unique_id=246428683]
 layout_mode = 0
 offset_right = 127.0
 offset_bottom = 23.0
 text = "8"
 horizontal_alignment = 1
 
-[node name="slot9" type="TextureRect" parent="Hotbar/HBoxContainer" unique_id=639771415]
+[node name="slot9" type="TextureRect" parent="GameUI/Hotbar/HBoxContainer" unique_id=639771415]
 visible = false
 layout_mode = 2
 texture = ExtResource("1_pm3rl")
 
-[node name="ProgressBar" type="ProgressBar" parent="Hotbar/HBoxContainer/slot9" unique_id=1881657039]
+[node name="ProgressBar" type="ProgressBar" parent="GameUI/Hotbar/HBoxContainer/slot9" unique_id=1881657039]
 visible = false
 layout_mode = 0
 offset_left = 1.0
@@ -675,20 +680,20 @@ value = 100.0
 rounded = true
 show_percentage = false
 
-[node name="Label7" type="Label" parent="Hotbar/HBoxContainer/slot9" unique_id=1980188737]
+[node name="Label7" type="Label" parent="GameUI/Hotbar/HBoxContainer/slot9" unique_id=1980188737]
 layout_mode = 0
 offset_right = 10.0
 offset_bottom = 23.0
 text = "9"
 horizontal_alignment = 1
 
-[node name="Panel" type="Panel" parent="." unique_id=1142944185]
+[node name="Pause" type="Panel" parent="." unique_id=1142944185]
 visible = false
 layout_mode = 0
 offset_right = 1156.0
 offset_bottom = 648.0
 
-[node name="Label" type="Label" parent="Panel" unique_id=146650063]
+[node name="Label" type="Label" parent="Pause" unique_id=146650063]
 layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 65.0
@@ -696,7 +701,7 @@ text = "PAUSED"
 label_settings = SubResource("LabelSettings_jvi5b")
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="Panel" unique_id=1271031716]
+[node name="Button" type="Button" parent="Pause" unique_id=1271031716]
 layout_mode = 0
 offset_left = 463.0
 offset_top = 146.0
@@ -708,7 +713,7 @@ text = "RESUME"
 flat = true
 script = ExtResource("12_un6lf")
 
-[node name="Button2" type="Button" parent="Panel" unique_id=64478079]
+[node name="Button2" type="Button" parent="Pause" unique_id=64478079]
 layout_mode = 0
 offset_left = 462.0
 offset_top = 229.0
@@ -721,6 +726,7 @@ flat = true
 script = ExtResource("13_jmjus")
 
 [node name="LobbyUI" type="Control" parent="." unique_id=2146145697]
+visible = false
 anchors_preset = 0
 offset_right = 1150.0
 offset_bottom = 646.0
@@ -758,7 +764,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Shop" type="TabContainer" parent="LobbyUI" unique_id=1417695407]
-visible = false
 layout_mode = 0
 offset_left = 139.0
 offset_top = 30.0
@@ -766,11 +771,14 @@ offset_right = 1021.0
 offset_bottom = 598.0
 current_tab = 0
 
-[node name="Revives" type="Control" parent="LobbyUI/Shop" unique_id=49463595]
+[node name="Revives" type="ScrollContainer" parent="LobbyUI/Shop" unique_id=555742878]
 layout_mode = 2
 metadata/_tab_index = 0
 
-[connection signal="value_changed" from="health/Health" to="health/Health" method="_on_value_changed"]
-[connection signal="pressed" from="shop/Panel/Button" to="shop/Panel/Button" method="_on_pressed"]
-[connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]
-[connection signal="pressed" from="Panel/Button2" to="Panel/Button2" method="_on_pressed"]
+[node name="GridContainer" type="GridContainer" parent="LobbyUI/Shop/Revives" unique_id=1821999451]
+layout_mode = 2
+
+[connection signal="value_changed" from="GameUI/health/Health" to="GameUI/health/Health" method="_on_value_changed"]
+[connection signal="pressed" from="GameUI/shop/Panel/Button" to="GameUI/shop/Panel/Button" method="_on_pressed"]
+[connection signal="pressed" from="Pause/Button" to="Pause/Button" method="_on_pressed"]
+[connection signal="pressed" from="Pause/Button2" to="Pause/Button2" method="_on_pressed"]
