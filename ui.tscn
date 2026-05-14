@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dbggfjdaxgtua"]
 
+[ext_resource type="FontFile" uid="uid://cpnmpt4n1ipvu" path="res://fonts/AccanthisadfstdBold-BYzx.otf" id="1_b2p7n"]
 [ext_resource type="FontFile" uid="uid://dymgxqwsbd45o" path="res://fonts/Poppins/Poppins-Bold.ttf" id="1_n5ude"]
 [ext_resource type="Script" uid="uid://egrovh1ytx4n" path="res://settings.gd" id="3_waa4j"]
 [ext_resource type="Script" uid="uid://jnpgjtr013yd" path="res://multiplayer.gd" id="3_y4yjw"]
@@ -22,7 +23,7 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n5ude"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_gs482"]
-font = ExtResource("1_n5ude")
+font = ExtResource("1_b2p7n")
 font_size = 71
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cxd00"]
@@ -77,14 +78,14 @@ horizontal_alignment = 1
 
 [node name="Singleplayer" type="Button" parent="Panel/VBoxContainer" unique_id=966524567]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_n5ude")
+theme_override_fonts/font = ExtResource("1_b2p7n")
 theme_override_font_sizes/font_size = 56
 text = "Singleplayer"
 flat = true
 
 [node name="Multiplayer" type="Button" parent="Panel/VBoxContainer" unique_id=686564472]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_n5ude")
+theme_override_fonts/font = ExtResource("1_b2p7n")
 theme_override_font_sizes/font_size = 56
 text = "Multiplayer"
 flat = true
@@ -92,7 +93,7 @@ script = ExtResource("3_y4yjw")
 
 [node name="Settings" type="Button" parent="Panel/VBoxContainer" unique_id=1608019302]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_n5ude")
+theme_override_fonts/font = ExtResource("1_b2p7n")
 theme_override_font_sizes/font_size = 56
 text = "Settings"
 flat = true
@@ -100,7 +101,7 @@ script = ExtResource("3_waa4j")
 
 [node name="Credits" type="Button" parent="Panel/VBoxContainer" unique_id=1095457999]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_n5ude")
+theme_override_fonts/font = ExtResource("1_b2p7n")
 theme_override_font_sizes/font_size = 56
 text = "Credits"
 flat = true
@@ -108,7 +109,7 @@ script = ExtResource("4_n5rqp")
 
 [node name="Quit" type="Button" parent="Panel/VBoxContainer" unique_id=113334948]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_n5ude")
+theme_override_fonts/font = ExtResource("1_b2p7n")
 theme_override_font_sizes/font_size = 56
 text = "Quit"
 flat = true
