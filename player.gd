@@ -82,6 +82,8 @@ var smooth_rotation := Vector3.ZERO
 
 var _anim_state_machine: AnimationNodeStateMachinePlayback
 
+var roomNum = 1
+
 const ANIM_BLEND_TABLE := {
 	"flashlight": ["parameters/Blend2/blend_amount",       ""],
 	"pills":      ["parameters/Blend2Again/blend_amount",  "parameters/pills take/blend_amount"],
@@ -489,7 +491,9 @@ func open_door_internal(door) -> void:
 		var current_room = door_parent.get_parent().get_parent()
 		rooms_node.generate_room(current_room)
 	if is_multiplayer_authority():
+		roomNum += 1
 		respawn_position = original_pos
+		roomNumLabel.text = "Room: " + str(roomNum)
 		roomNumLabel.visible = true
 		timer.start(1)
 	door_parent.open = true

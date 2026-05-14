@@ -622,7 +622,6 @@ func spawn_rush_monster():
 
 	var spawn_room: Node = null
 	for i in range(generated_rooms.size() - 1 - RUSH_SPAWN_OFFSET, -1, -1):
-		# FIX: use tag system instead of child node name check.
 		if room_has_tag(generated_rooms[i], "has_wardrobe"):
 			spawn_room = generated_rooms[i]
 			break
