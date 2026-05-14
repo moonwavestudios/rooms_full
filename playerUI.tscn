@@ -13,6 +13,8 @@
 [ext_resource type="Script" uid="uid://daaq0a7yfb2kj" path="res://scripts/deaf_vignette.gd" id="11_jvi5b"]
 [ext_resource type="Script" uid="uid://dubpy0iqdf2yo" path="res://resumne.gd" id="12_un6lf"]
 [ext_resource type="Script" uid="uid://dqb7xp775y7bg" path="res://quit.gd" id="13_jmjus"]
+[ext_resource type="Texture2D" uid="uid://dgpx5a74ela8v" path="res://assets/shoppingCart.png" id="14_yy0y6"]
+[ext_resource type="FontFile" uid="uid://cpnmpt4n1ipvu" path="res://fonts/AccanthisadfstdBold-BYzx.otf" id="15_kpvek"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_af2jw"]
 font = ExtResource("5_lyh3y")
@@ -169,6 +171,14 @@ corner_radius_bottom_left = 10
 [sub_resource type="LabelSettings" id="LabelSettings_jvi5b"]
 font = ExtResource("5_lyh3y")
 font_size = 45
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpvek"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qrc3h"]
+font = ExtResource("15_kpvek")
+font_size = 28
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Control" type="Control" unique_id=934513150]
 layout_mode = 3
@@ -709,6 +719,56 @@ theme_override_font_sizes/font_size = 33
 text = "QUIT"
 flat = true
 script = ExtResource("13_jmjus")
+
+[node name="LobbyUI" type="Control" parent="." unique_id=2146145697]
+anchors_preset = 0
+offset_right = 1150.0
+offset_bottom = 646.0
+
+[node name="ShopButton" type="Button" parent="LobbyUI" unique_id=868760923]
+layout_mode = 0
+offset_top = 270.0
+offset_right = 90.0
+offset_bottom = 339.0
+text = "Shop"
+icon = ExtResource("14_yy0y6")
+icon_alignment = 2
+expand_icon = true
+
+[node name="CoinsLabel" type="Label" parent="LobbyUI" unique_id=766081816]
+layout_mode = 0
+offset_left = 988.0
+offset_right = 1152.0
+offset_bottom = 43.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_kpvek")
+text = "0"
+label_settings = SubResource("LabelSettings_qrc3h")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RevivesLabel" type="Label" parent="LobbyUI" unique_id=879201962]
+layout_mode = 0
+offset_left = 798.0
+offset_right = 962.0
+offset_bottom = 43.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_kpvek")
+text = "0"
+label_settings = SubResource("LabelSettings_qrc3h")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Shop" type="TabContainer" parent="LobbyUI" unique_id=1417695407]
+visible = false
+layout_mode = 0
+offset_left = 139.0
+offset_top = 30.0
+offset_right = 1021.0
+offset_bottom = 598.0
+current_tab = 0
+
+[node name="Revives" type="Control" parent="LobbyUI/Shop" unique_id=49463595]
+layout_mode = 2
+metadata/_tab_index = 0
 
 [connection signal="value_changed" from="health/Health" to="health/Health" method="_on_value_changed"]
 [connection signal="pressed" from="shop/Panel/Button" to="shop/Panel/Button" method="_on_pressed"]
