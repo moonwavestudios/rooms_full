@@ -61,14 +61,12 @@ import/blender/enabled=false
 [global_group]
 
 coins=""
-door=""
 item=""
 player=""
 wardrobe=""
 giveHealth=""
 shelf=""
 battery=""
-door2=""
 ladder=""
 cat=""
 shelf2=""

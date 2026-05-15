@@ -18,15 +18,6 @@ is_side_door = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41455078, 0.84957886, 0.4206543)
 shape = SubResource("BoxShape3D_hun61")
 
-[node name="Area3D" type="Area3D" parent="." unique_id=846809152 groups=["door2"]]
-transform = Transform3D(4.488792, 0, 0, 0, 3.2292252, 0, 0, 0, 1, -0.47642237, -0.55726457, 0)
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=130974805]
-transform = Transform3D(0.9999502, 0, 0, 0, 0.99996537, 0, 0, 0, 0.99997205, 0.19930728, 0.44028378, 0.42065394)
-shape = SubResource("BoxShape3D_hun61")
-
 [node name="OpenSound" type="AudioStreamPlayer3D" parent="." unique_id=1021229183]
 stream = ExtResource("2_sop41")
 
@@ -36,5 +27,6 @@ mesh = ExtResource("3_nsq3b")
 surface_material_override/0 = ExtResource("4_51cyg")
 
 [node name="ProximityPrompt" parent="." unique_id=25112644 instance=ExtResource("5_nsq3b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2761101, 0.6746013, 0.3925773)
 hold_duration = 0.0
 max_activations = 1

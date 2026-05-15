@@ -98,7 +98,6 @@ func _build_interact_handlers():
 	interact_handlers = {
 		"coins":      _interact_coin,
 		"giveHealth": _interact_health,
-		"shelf":      _interact_shelf,
 		"wardrobe":   _interact_wardrobe,
 		"item":       _interact_item,
 		"battery":    _interact_battery,
@@ -448,45 +447,6 @@ func on_room_advanced(new_respawn: Vector3) -> void:
 	roomNumLabel.text = "Room: " + str(roomNum)
 	roomNumLabel.visible = true
 	timer.start(1)
-
-#func open_door_internal(door) -> void:
-	#var door_parent = door.get_parent()
-	#if door_parent.open:
-		#return
-	#var original_pos = door_parent.global_position
-	#var tween = create_tween()
-	#tween.set_ease(Tween.EASE_IN_OUT)
-	#tween.set_trans(Tween.TRANS_CUBIC)
-	#tween.tween_property(door_parent, "global_position", door_parent.global_position + Vector3(0, 3.0, 0), 0.5)
-	#if multiplayer.is_server():
-		#var rooms_node = get_tree().current_scene.get_node("Game").get_node("Rooms")
-		#var current_room = door_parent.get_parent().get_parent()
-		#rooms_node.generate_room(current_room)
-	#if is_multiplayer_authority():
-		#roomNum += 1
-		#respawn_position = original_pos
-		#roomNumLabel.text = "Room: " + str(roomNum)
-		#roomNumLabel.visible = true
-		#timer.start(1)
-	#door_parent.open = true
-	#door_parent.get_node("CollisionShape3D").disabled = true
-	#door_parent.get_node("OpenSound").play()
-	#await tween.finished
-	#door.queue_free()
-
-#func open_side_door_internal(door) -> void:
-	#var door_parent = door.get_parent()
-	#if door_parent.open:
-		#return
-	#var tween = create_tween()
-	#tween.set_ease(Tween.EASE_IN_OUT)
-	#tween.set_trans(Tween.TRANS_CUBIC)
-	#tween.tween_property(door_parent, "global_position", door_parent.global_position + Vector3(0, 3.0, 0), 0.5)
-	#door_parent.open = true
-	#door_parent.get_node("CollisionShape3D").disabled = true
-	#door_parent.get_node("OpenSound").play()
-	#await tween.finished
-	#door.queue_free()
 
 func _interact_shelf(collider: Area3D) -> void:
 	if not is_multiplayer_authority():

@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dc0j0jjdves3a" path="res://bandage.tscn" id="8_mjimj"]
 [ext_resource type="AudioStream" uid="uid://2jf3080tfb13" path="res://sfx/drawer_open.mp3" id="9_6euae"]
 [ext_resource type="PackedScene" uid="uid://gctp1g3lxleq" path="res://models/battery/Battery.tscn" id="9_cx021"]
+[ext_resource type="PackedScene" uid="uid://dopin5px1enhc" path="res://scenes/proximity_prompt.tscn" id="11_yg22o"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uv71d"]
 size = Vector3(1.9631958, 0.8005371, 3.6730957)
@@ -40,14 +41,6 @@ surface_material_override/6 = ExtResource("2_7045n")
 surface_material_override/7 = ExtResource("2_7045n")
 surface_material_override/8 = ExtResource("2_7045n")
 
-[node name="Area3D" type="Area3D" parent="." unique_id=1883038922 groups=["shelf"]]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1217904210]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.055145264, 0.13146973, -1.7440186)
-shape = SubResource("BoxShape3D_uv71d")
-
 [node name="Shelfdoor" type="MeshInstance3D" parent="." unique_id=287308756]
 transform = Transform3D(0.15381664, 0, 0, 0, 0.12573974, 0, 0, 0, 0.20009634, -0.04129544, 0.017822027, 0.004882604)
 mesh = ExtResource("3_7045n")
@@ -73,3 +66,7 @@ stream = ExtResource("9_6euae")
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=1316359010]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46, 0.018, 0.005)
+
+[node name="ProximityPrompt" parent="." unique_id=25112644 instance=ExtResource("11_yg22o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0036496, 0.40584666, -1.5970936)
+hold_duration = 0.0
