@@ -16,9 +16,6 @@ size = Vector3(0.67767334, 0.98487854, 0.17604065)
 [sub_resource type="BoxShape3D" id="BoxShape3D_tlp37"]
 size = Vector3(0.03463745, 0.98487854, 1.3042641)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_c8hr7"]
-size = Vector3(0.67767334, 1.1080322, 1.6358032)
-
 [sub_resource type="Environment" id="Environment_qahno"]
 background_mode = 1
 background_color = Color(0.27022192, 0.27022192, 0.2702219, 1)
@@ -46,14 +43,6 @@ shape = SubResource("BoxShape3D_tlp37")
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="." unique_id=715381160]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31775874, 0.034318384, 0.012386322)
 shape = SubResource("BoxShape3D_tlp37")
-
-[node name="Area3D" type="Area3D" parent="." unique_id=1446997627 groups=["wardrobe"]]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1077613951]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003479004, -0.023132324, 0.000579834)
-shape = SubResource("BoxShape3D_c8hr7")
 
 [node name="Wardrobe" type="MeshInstance3D" parent="." unique_id=853259015]
 transform = Transform3D(-8.432499e-09, 0, 0.042563494, 0, 0.069205865, 0, -0.1929131, 0, -1.8605094e-09, 0, -0.5059644, 0)

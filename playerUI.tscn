@@ -168,6 +168,12 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="LabelSettings" id="LabelSettings_5gb3g"]
+font = ExtResource("5_lyh3y")
+font_size = 36
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_jvi5b"]
 font = ExtResource("5_lyh3y")
 font_size = 45
@@ -686,6 +692,18 @@ offset_right = 10.0
 offset_bottom = 23.0
 text = "9"
 horizontal_alignment = 1
+
+[node name="PaintingUI" type="Label" parent="GameUI" unique_id=510754359]
+visible = false
+layout_mode = 0
+offset_left = -2.0
+offset_top = 599.0
+offset_right = 1151.0
+offset_bottom = 650.0
+text = "Test"
+label_settings = SubResource("LabelSettings_5gb3g")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Pause" type="Panel" parent="." unique_id=1142944185]
 visible = false
