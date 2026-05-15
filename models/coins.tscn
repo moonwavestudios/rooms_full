@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bin5ddfwdldw4"]
+[gd_scene format=3 uid="uid://bin5ddfwdldw4"]
 
 [ext_resource type="Script" uid="uid://rxm3s1ju7dk6" path="res://models/coins.gd" id="1_5i5fi"]
 [ext_resource type="ArrayMesh" uid="uid://cvmty458mtdpj" path="res://models/coins/coins_1.obj" id="2_tlk6g"]
+[ext_resource type="PackedScene" uid="uid://dopin5px1enhc" path="res://scenes/proximity_prompt.tscn" id="3_pb8os"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_tlk6g"]
 height = 0.14245605
@@ -13,17 +14,22 @@ albedo_color = Color(1, 1, 0, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pb8os"]
 albedo_color = Color(1, 1, 0, 1)
 
-[node name="coins" type="Area3D" groups=["coins"]]
+[node name="coins" type="Area3D" unique_id=1106331798]
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_5i5fi")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1085849108]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0010375977, 0)
 shape = SubResource("CylinderShape3D_tlk6g")
 
-[node name="Coins1" type="MeshInstance3D" parent="."]
+[node name="Coins1" type="MeshInstance3D" parent="." unique_id=1251504367]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.0448519, -0.05560279, -0.25119495)
 mesh = ExtResource("2_tlk6g")
 surface_material_override/0 = SubResource("StandardMaterial3D_tlk6g")
 surface_material_override/1 = SubResource("StandardMaterial3D_pb8os")
+
+[node name="ProximityPrompt" parent="." unique_id=25112644 instance=ExtResource("3_pb8os")]
+prompt_text = "Press [E] to pick up"
+hold_duration = 0.0
+max_activations = 1

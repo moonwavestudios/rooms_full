@@ -13,7 +13,7 @@ func _on_prompt_triggered(_interactor: Node) -> void:
 
 @rpc("any_peer", "call_local", "reliable")
 func sync_open() -> void:
-	get_node("Open").play()
+	$"..".get_node("Open").play()
 	var target_position = marker.global_position
 	proximity_prompt.set_enabled(false)
 	var tween = create_tween()
