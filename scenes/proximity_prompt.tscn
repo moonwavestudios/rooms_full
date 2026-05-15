@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dopin5px1enhc"]
+
+[ext_resource type="Script" uid="uid://daw35201vfnda" path="res://scripts/proximity_prompt.gd" id="1_5l7g3"]
+[ext_resource type="FontFile" uid="uid://cpnmpt4n1ipvu" path="res://fonts/AccanthisadfstdBold-BYzx.otf" id="2_xdxkh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5l7g3"]
+
+[node name="ProximityPrompt" type="Area3D" unique_id=25112644]
+script = ExtResource("1_5l7g3")
+prompt_text = "Press [E] to interact"
+prompt_font = ExtResource("2_xdxkh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=293999784]
+shape = SubResource("BoxShape3D_5l7g3")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=1829354049]
+billboard = 1
+font = ExtResource("2_xdxkh")
