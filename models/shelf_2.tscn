@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bl4pss0w5v8wg" path="res://models/pills.tscn" id="7_vvbss"]
 [ext_resource type="PackedScene" uid="uid://dc0j0jjdves3a" path="res://bandage.tscn" id="8_uypnd"]
 [ext_resource type="PackedScene" uid="uid://gctp1g3lxleq" path="res://models/battery/Battery.tscn" id="9_oni4c"]
+[ext_resource type="PackedScene" uid="uid://dopin5px1enhc" path="res://scenes/proximity_prompt.tscn" id="12_gdoxv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5n2l1"]
 transparency = 1
@@ -130,3 +131,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2728053, -0.115, 0.005)
 
 [node name="Marker3D3" type="Marker3D" parent="." unique_id=1735829391]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2705508, -0.239, 0.005)
+
+[node name="ProximityPrompt" parent="." unique_id=25112644 instance=ExtResource("12_gdoxv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9289926, 0.36368358, -1.5787826)
+
+[node name="ProximityPrompt2" parent="." unique_id=983969012 instance=ExtResource("12_gdoxv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9289926, 0.21366513, -1.5787826)
+
+[node name="ProximityPrompt3" parent="." unique_id=1481073302 instance=ExtResource("12_gdoxv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9289926, 0.0564968, -1.5787826)
