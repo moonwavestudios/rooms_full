@@ -19,9 +19,13 @@ func try_open(interactor: Node) -> void:
 			return
 		interactor.consume_key()
 		locked = false
-	_open_door()
+	rpc("sync_open_door")
 	if not is_side_door:
 		interactor.on_room_advanced(global_position)
+
+@rpc("any_peer", "call_local", "reliable")
+func sync_open_door() -> void:
+	_open_door()
 
 func _open_door() -> void:
 	open = true

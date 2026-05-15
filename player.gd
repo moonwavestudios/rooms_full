@@ -104,7 +104,6 @@ func _build_interact_handlers():
 		"ladder":     _interact_ladder,
 		"fake_door": _interact_fake_door,
 		"car":        _interact_car,
-		"shelf2":     _interact_shelf2,
 	}
 
 func _ready() -> void:
@@ -447,46 +446,6 @@ func on_room_advanced(new_respawn: Vector3) -> void:
 	roomNumLabel.text = "Room: " + str(roomNum)
 	roomNumLabel.visible = true
 	timer.start(1)
-
-func _interact_shelf(collider: Area3D) -> void:
-	if not is_multiplayer_authority():
-		return
-	rpc("sync_shelf_open", get_path_to(collider))
-
-func _interact_shelf2(collider: Area3D) -> void:
-	if not is_multiplayer_authority():
-		return
-	rpc("sync_shelf_open2", get_path_to(collider))
-
-@rpc("any_peer", "call_local", "reliable")
-func sync_shelf_open(shelf_path: NodePath) -> void:
-	var collider = get_node_or_null(shelf_path)
-	if not collider or not is_instance_valid(collider):
-		return
-	collider.get_parent().get_node("Open").play()
-	var shelf_door = collider.get_parent().get_node("Shelfdoor")
-	var target_position = collider.get_parent().get_node("Marker3D").global_position
-	collider.queue_free()
-	var tween = create_tween()
-	tween.set_ease(Tween.EASE_OUT)
-	tween.set_trans(Tween.TRANS_CUBIC)
-	tween.tween_property(shelf_door, "global_position", target_position, 0.5)
-	await tween.finished
-
-@rpc("any_peer", "call_local", "reliable")
-func sync_shelf_open2(shelf_path: NodePath) -> void:
-	var collider = get_node_or_null(shelf_path)
-	if not collider or not is_instance_valid(collider):
-		return
-	collider.get_parent().get_node("Open").play()
-	var shelf_door = collider.door
-	var target_position = collider.marker.global_position
-	collider.queue_free()
-	var tween = create_tween()
-	tween.set_ease(Tween.EASE_OUT)
-	tween.set_trans(Tween.TRANS_CUBIC)
-	tween.tween_property(shelf_door, "global_position", target_position, 0.5)
-	await tween.finished
 
 func player_has_key() -> bool:
 	return inventory.any(func(i): return i == "key")

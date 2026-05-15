@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ckkpxnv5lkthc"]
 
 [ext_resource type="ArrayMesh" uid="uid://cb4a1yaex75gc" path="res://models/shelf.obj" id="1_5p1us"]
+[ext_resource type="Script" uid="uid://ba66b13k730j6" path="res://scripts/shelf.gd" id="1_mjimj"]
 [ext_resource type="Material" uid="uid://d3vq7bpwvpdgl" path="res://assets/walls.tres" id="2_7045n"]
 [ext_resource type="ArrayMesh" uid="uid://bxou8oas6tt46" path="res://models/shelfdoor.obj" id="3_7045n"]
 [ext_resource type="Script" uid="uid://dgy6tipe27mtc" path="res://rooms/mesh_instance_3d.gd" id="4_kj8e8"]
@@ -23,6 +24,7 @@ albedo_color = Color(1, 0, 0, 0.6039216)
 material = SubResource("StandardMaterial3D_5n2l1")
 
 [node name="shelf" type="StaticBody3D" unique_id=1709193542]
+script = ExtResource("1_mjimj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=373642770]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.055145264, 0.13146973, -1.7440186)
