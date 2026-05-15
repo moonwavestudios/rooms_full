@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://henea8a7ndwv" path="res://scenes/fake_door.tscn" id="5_xvh2i"]
 [ext_resource type="PackedScene" uid="uid://ckkpxnv5lkthc" path="res://models/shelf.tscn" id="6_c61gd"]
 [ext_resource type="PackedScene" uid="uid://bydgsi1jfy2oh" path="res://models/shelf_2.tscn" id="7_kl47f"]
+[ext_resource type="PackedScene" uid="uid://fphemjocp54i" path="res://wardrobe.tscn" id="8_6cuu6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qif3b"]
 size = Vector3(127.15085, 0.7895508, 136.62085)
@@ -239,3 +240,21 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.97
 
 [node name="shelf8" parent="." unique_id=824085691 instance=ExtResource("7_kl47f")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.9736047, 0.5500581, 54.14992)
+
+[node name="Wardrobe" parent="." unique_id=1143442656 instance=ExtResource("8_6cuu6")]
+transform = Transform3D(-4.425481, 0, 8.742278e-08, 0, 4.607639, 0, -3.8688782e-07, 0, -1, 23.718603, 2.8949046, 7.9164085)
+
+[node name="Wardrobe2" parent="." unique_id=149870253 instance=ExtResource("8_6cuu6")]
+transform = Transform3D(-4.425481, 0, 8.742278e-08, 0, 4.607639, 0, -3.8688782e-07, 0, -1, 48.347214, 2.8949046, 7.9164085)
+
+[node name="Wardrobe3" parent="." unique_id=1081820554 instance=ExtResource("8_6cuu6")]
+transform = Transform3D(-4.425481, 0, 8.742278e-08, 0, 4.607639, 0, -3.8688782e-07, 0, -1, -46.835648, 2.8949046, 7.9164085)
+
+[node name="Wardrobe4" parent="." unique_id=202298663 instance=ExtResource("8_6cuu6")]
+transform = Transform3D(-4.425481, 0, 8.742278e-08, 0, 4.607639, 0, -3.8688782e-07, 0, -1, -22.207039, 2.8949046, 7.9164085)
+
+[node name="Wardrobe5" parent="." unique_id=765889815 instance=ExtResource("8_6cuu6")]
+transform = Transform3D(8.34465e-07, 0, 1, 0, 4.6076393, 0, -4.4254813, 0, 1.7881393e-07, -8.104397, 2.8949046, -55.53094)
+
+[node name="Wardrobe6" parent="." unique_id=321721192 instance=ExtResource("8_6cuu6")]
+transform = Transform3D(8.34465e-07, 0, 1, 0, 4.6076393, 0, -4.4254813, 0, 1.7881393e-07, -8.104397, 2.8949046, -30.902332)
