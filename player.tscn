@@ -221,7 +221,7 @@ colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_urp6f"]
 gradient = SubResource("Gradient_ewgrv")
 
-[node name="player" type="CharacterBody3D" unique_id=616076794 groups=["player"]]
+[node name="player" type="CharacterBody3D" unique_id=616076794 groups=["interactors", "player"]]
 script = ExtResource("1_4flbx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1783487959]

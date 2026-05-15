@@ -2,15 +2,36 @@ extends StaticBody3D
 
 @export var open = false
 @export var locked = false
+@export var is_side_door = false
 
 func _ready():
-	pass  
+	$ProximityPrompt.prompt_triggered.connect(_on_interacted)
 
-func try_open():
-	if locked:
-		print("Door is locked!")
+func _on_interacted(interactor: Node) -> void:
+	try_open(interactor)
+
+func try_open(interactor: Node) -> void:
+	if open:
 		return
-	open_door()
+	if locked:
+		if not interactor.player_has_key():
+			$LockedSound.play()
+			return
+		interactor.consume_key()
+		locked = false
+	_open_door()
+	if not is_side_door:
+		interactor.on_room_advanced(global_position)
 
-func open_door():
+func _open_door() -> void:
 	open = true
+	$CollisionShape3D.disabled = true
+	$OpenSound.play()
+	var tween = create_tween()
+	tween.set_ease(Tween.EASE_IN_OUT)
+	tween.set_trans(Tween.TRANS_CUBIC)
+	tween.tween_property(self, "global_position", global_position + Vector3(0, 3.0, 0), 0.5)
+	if not is_side_door and multiplayer.is_server():
+		var rooms_node = get_tree().current_scene.get_node("Game").get_node("Rooms")
+		rooms_node.generate_room(get_parent().get_parent())
+	await tween.finished

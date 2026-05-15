@@ -74,6 +74,7 @@ cat=""
 shelf2=""
 fake_door=""
 painting=""
+interactors=""
 
 [input]
 

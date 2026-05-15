@@ -5,6 +5,7 @@
 [ext_resource type="ArrayMesh" uid="uid://b24hkbwbqgtg3" path="res://models/door/door.obj" id="3_0phs7"]
 [ext_resource type="AudioStream" uid="uid://doj68wv6hg67j" path="res://sfx/wrong.mp3" id="3_50cdl"]
 [ext_resource type="Material" uid="uid://5r4jqpwqj063" path="res://assets/metal.tres" id="5_y5njw"]
+[ext_resource type="PackedScene" uid="uid://dopin5px1enhc" path="res://scenes/proximity_prompt.tscn" id="6_4xadh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hun61"]
 size = Vector3(1.6589966, 2.2031174, 0.1586914)
@@ -36,3 +37,8 @@ stream = ExtResource("3_50cdl")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.37246186, -0.43851668, 0.42246938)
 mesh = ExtResource("3_0phs7")
 surface_material_override/0 = ExtResource("5_y5njw")
+
+[node name="ProximityPrompt" parent="." unique_id=25112644 instance=ExtResource("6_4xadh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7251501, 0.3723284)
+hold_duration = 0.0
+max_activations = 1

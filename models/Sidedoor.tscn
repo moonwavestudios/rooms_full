@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://1bw0pr2gv3ff" path="res://sfx/open.mp3" id="2_sop41"]
 [ext_resource type="ArrayMesh" uid="uid://b24hkbwbqgtg3" path="res://models/door/door.obj" id="3_nsq3b"]
 [ext_resource type="Material" uid="uid://5r4jqpwqj063" path="res://assets/metal.tres" id="4_51cyg"]
+[ext_resource type="PackedScene" uid="uid://dopin5px1enhc" path="res://scenes/proximity_prompt.tscn" id="5_nsq3b"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hun61"]
 size = Vector3(0.39691162, 0.851799, 0.1586914)
@@ -11,6 +12,7 @@ size = Vector3(0.39691162, 0.851799, 0.1586914)
 [node name="Sidedoor" type="StaticBody3D" unique_id=1515299434]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3189702, 0, 0)
 script = ExtResource("1_ruaiv")
+is_side_door = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=911589613]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41455078, 0.84957886, 0.4206543)
@@ -32,3 +34,7 @@ stream = ExtResource("2_sop41")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.403418, -0.4205234, 0.4156853)
 mesh = ExtResource("3_nsq3b")
 surface_material_override/0 = ExtResource("4_51cyg")
+
+[node name="ProximityPrompt" parent="." unique_id=25112644 instance=ExtResource("5_nsq3b")]
+hold_duration = 0.0
+max_activations = 1

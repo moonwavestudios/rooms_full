@@ -1,6 +1,6 @@
 extends Area3D
 
-@export var prompt_text: String = "Press [F] to interact"
+@export var prompt_text: String = "Press [E] to interact"
 @export var action_key: String = "interact"          
 @export var hold_duration: float = 1.0               # 0 = tap, >0 = hold to trigger
 @export var max_activations: int = -1               # -1 = infinite

@@ -2,6 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://dkc1e8h4wyu7x" path="res://models/wardrobe.obj" id="1_tbqvm"]
 [ext_resource type="Material" uid="uid://d3vq7bpwvpdgl" path="res://assets/walls.tres" id="2_qahno"]
+[ext_resource type="PackedScene" uid="uid://dopin5px1enhc" path="res://scenes/proximity_prompt.tscn" id="3_kft4c"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qahno"]
 size = Vector3(0.67767334, 0.12307739, 1.6358032)
@@ -77,3 +78,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5829725)
 
 [node name="InsideTeleport" type="Marker3D" parent="." unique_id=68216015]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.067857616, 0.11911327)
+
+[node name="ProximityPrompt" parent="." unique_id=25112644 instance=ExtResource("3_kft4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.09156656)
+hold_duration = 0.0
+max_activations = 1
