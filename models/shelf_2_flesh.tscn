@@ -4,13 +4,14 @@
 [ext_resource type="Material" uid="uid://dcgv2w8qaarnl" path="res://assets/flesh.tres" id="2_v6dgr"]
 [ext_resource type="ArrayMesh" uid="uid://dxci4xry6m5cu" path="res://models/shelf2door.obj" id="3_v6dgr"]
 [ext_resource type="AudioStream" uid="uid://2jf3080tfb13" path="res://sfx/drawer_open.mp3" id="4_ahie0"]
+[ext_resource type="Script" uid="uid://badqus7a36am5" path="res://scripts/shelf_2.gd" id="4_mqmjf"]
 [ext_resource type="Script" uid="uid://dgy6tipe27mtc" path="res://rooms/mesh_instance_3d.gd" id="4_wm26l"]
 [ext_resource type="PackedScene" uid="uid://uqbl7oigqd8n" path="res://models/flashlight.tscn" id="5_xirya"]
 [ext_resource type="PackedScene" uid="uid://bin5ddfwdldw4" path="res://models/coins.tscn" id="6_mqmjf"]
 [ext_resource type="PackedScene" uid="uid://bl4pss0w5v8wg" path="res://models/pills.tscn" id="7_4g85h"]
 [ext_resource type="PackedScene" uid="uid://dc0j0jjdves3a" path="res://bandage.tscn" id="8_7yiw7"]
 [ext_resource type="PackedScene" uid="uid://gctp1g3lxleq" path="res://models/battery/Battery.tscn" id="9_ui854"]
-[ext_resource type="Script" uid="uid://51a2vpkeq6p6" path="res://models/shelf_door.gd" id="11_xirya"]
+[ext_resource type="PackedScene" uid="uid://dopin5px1enhc" path="res://scenes/proximity_prompt.tscn" id="11_mqmjf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5n2l1"]
 transparency = 1
@@ -29,9 +30,6 @@ material = SubResource("StandardMaterial3D_wm26l")
 [sub_resource type="BoxShape3D" id="BoxShape3D_1lpxm"]
 size = Vector3(1.9631958, 0.8005371, 3.4908447)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_fkhgt"]
-size = Vector3(1.4367676, 0.13330078, 3.2233887)
-
 [node name="shelf_2_flesh" type="StaticBody3D" unique_id=182222130]
 
 [node name="Shelf2" type="MeshInstance3D" parent="." unique_id=1795626408]
@@ -46,12 +44,16 @@ surface_material_override/5 = ExtResource("2_v6dgr")
 surface_material_override/6 = ExtResource("2_v6dgr")
 surface_material_override/7 = ExtResource("2_v6dgr")
 
-[node name="Shelf2Door" type="MeshInstance3D" parent="." unique_id=187731335]
+[node name="Shelf2Door" type="MeshInstance3D" parent="." unique_id=187731335 node_paths=PackedStringArray("proximity_prompt", "door", "marker")]
 transform = Transform3D(0.14428714, 0, 0, 0, 0.126, 0, 0, 0, 0.19129042, -0.028213792, 0.002566211, 0.005)
 mesh = ExtResource("3_v6dgr")
 surface_material_override/0 = ExtResource("2_v6dgr")
 surface_material_override/1 = ExtResource("2_v6dgr")
 surface_material_override/2 = ExtResource("2_v6dgr")
+script = ExtResource("4_mqmjf")
+proximity_prompt = NodePath("ProximityPrompt")
+door = NodePath(".")
+marker = NodePath("../Marker3D")
 
 [node name="spawnTemplates" type="Node3D" parent="Shelf2Door" unique_id=519023250]
 transform = Transform3D(6.5012474, 0, 0, 0, 7.952936, 0, 0, 0, 4.997593, 52.14665, -6.046869, -6.5087485)
@@ -62,19 +64,31 @@ mesh = SubResource("BoxMesh_0iewy")
 script = ExtResource("4_wm26l")
 spawn_scenes = Array[PackedScene]([ExtResource("5_xirya"), ExtResource("6_mqmjf"), ExtResource("7_4g85h"), ExtResource("8_7yiw7"), ExtResource("9_ui854")])
 
-[node name="Shelf2Door2" type="MeshInstance3D" parent="." unique_id=1779380430]
+[node name="ProximityPrompt" parent="Shelf2Door" unique_id=25112644 instance=ExtResource("11_mqmjf")]
+
+[node name="Shelf2Door2" type="MeshInstance3D" parent="." unique_id=1779380430 node_paths=PackedStringArray("proximity_prompt", "door", "marker")]
 transform = Transform3D(0.14428714, 0, 0, 0, 0.126, 0, 0, 0, 0.19129042, -0.028213792, -0.1154213, 0.005)
 mesh = ExtResource("3_v6dgr")
 surface_material_override/0 = ExtResource("2_v6dgr")
 surface_material_override/1 = ExtResource("2_v6dgr")
 surface_material_override/2 = ExtResource("2_v6dgr")
+script = ExtResource("4_mqmjf")
+proximity_prompt = NodePath("ProximityPrompt")
+door = NodePath(".")
+marker = NodePath("../Marker3D2")
 
-[node name="Shelf2Door3" type="MeshInstance3D" parent="." unique_id=1026983416]
+[node name="ProximityPrompt" parent="Shelf2Door2" unique_id=1195358369 instance=ExtResource("11_mqmjf")]
+
+[node name="Shelf2Door3" type="MeshInstance3D" parent="." unique_id=1026983416 node_paths=PackedStringArray("proximity_prompt", "door", "marker")]
 transform = Transform3D(0.14428714, 0, 0, 0, 0.126, 0, 0, 0, 0.19129042, -0.028213792, -0.23896825, 0.005)
 mesh = ExtResource("3_v6dgr")
 surface_material_override/0 = ExtResource("2_v6dgr")
 surface_material_override/1 = ExtResource("2_v6dgr")
 surface_material_override/2 = ExtResource("2_v6dgr")
+script = ExtResource("4_mqmjf")
+proximity_prompt = NodePath("ProximityPrompt")
+door = NodePath(".")
+marker = NodePath("../Marker3D3")
 
 [node name="spawnTemplates" type="Node3D" parent="Shelf2Door3" unique_id=299019838]
 transform = Transform3D(6.5012474, 0, 0, 0, 7.952936, 0, 0, 0, 4.9975934, 52.146637, -5.54131, -6.5087495)
@@ -85,6 +99,8 @@ mesh = SubResource("BoxMesh_xirya")
 script = ExtResource("4_wm26l")
 spawn_scenes = Array[PackedScene]([ExtResource("5_xirya"), ExtResource("6_mqmjf"), ExtResource("7_4g85h"), ExtResource("8_7yiw7"), ExtResource("9_ui854")])
 
+[node name="ProximityPrompt" parent="Shelf2Door3" unique_id=1010187298 instance=ExtResource("11_mqmjf")]
+
 [node name="Open" type="AudioStreamPlayer3D" parent="." unique_id=1409135486]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.98542035, 0.5596032, -1.6998062)
 stream = ExtResource("4_ahie0")
@@ -92,42 +108,6 @@ stream = ExtResource("4_ahie0")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1828473]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.055145264, 0.13146973, -1.6528931)
 shape = SubResource("BoxShape3D_1lpxm")
-
-[node name="Area3D" type="Area3D" parent="." unique_id=1071761574 node_paths=PackedStringArray("door", "marker") groups=["shelf2"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38269198, 0)
-collision_layer = 2
-collision_mask = 2
-script = ExtResource("11_xirya")
-door = NodePath("../Shelf2Door")
-marker = NodePath("../Marker3D")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=255625971]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28112793, 0.0012207031, -1.6654053)
-shape = SubResource("BoxShape3D_fkhgt")
-
-[node name="Area3D2" type="Area3D" parent="." unique_id=357729896 node_paths=PackedStringArray("door", "marker") groups=["shelf2"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25680614, 0)
-collision_layer = 2
-collision_mask = 2
-script = ExtResource("11_xirya")
-door = NodePath("../Shelf2Door2")
-marker = NodePath("../Marker3D2")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2" unique_id=575057154]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28112793, 0.0012207031, -1.6654053)
-shape = SubResource("BoxShape3D_fkhgt")
-
-[node name="Area3D3" type="Area3D" parent="." unique_id=170699109 node_paths=PackedStringArray("door", "marker") groups=["shelf2"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14190924, 0)
-collision_layer = 2
-collision_mask = 2
-script = ExtResource("11_xirya")
-door = NodePath("../Shelf2Door3")
-marker = NodePath("../Marker3D3")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D3" unique_id=1237611201]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28112793, 0.0012207031, -1.6654053)
-shape = SubResource("BoxShape3D_fkhgt")
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=816971816]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.271, 0.003, 0.005)

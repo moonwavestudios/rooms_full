@@ -16,6 +16,7 @@ func try_open(interactor: Node) -> void:
 	if locked:
 		if not interactor.player_has_key():
 			$LockedSound.play()
+			$ProximityPrompt._activation_count = 0
 			return
 		interactor.consume_key()
 		locked = false

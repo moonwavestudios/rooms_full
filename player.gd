@@ -96,7 +96,6 @@ var interact_handlers: Dictionary
 
 func _build_interact_handlers():
 	interact_handlers = {
-		"coins":      _interact_coin,
 		"giveHealth": _interact_health,
 		"wardrobe":   _interact_wardrobe,
 		"item":       _interact_item,
@@ -107,6 +106,7 @@ func _build_interact_handlers():
 	}
 
 func _ready() -> void:
+	add_to_group("interactors")
 	_build_interact_handlers()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
@@ -415,7 +415,9 @@ func try_interact(collider: Area3D) -> void:
 			interact_handlers[group].call(collider)
 			return
 
-func _interact_coin(collider) -> void:
+func on_coin_interacted(collider: Area3D) -> void:
+	if not is_multiplayer_authority():
+		return
 	var coin_path = get_path_to(collider)
 	rpc("sync_coin_collection", coin_path, collider.coins)
 

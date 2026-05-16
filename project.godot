@@ -42,6 +42,7 @@ driver/enable_input=true
 data="*uid://sdeh14euxnht"
 ModLoader="*uid://h02p7y6au54x"
 MoonwaveDataFormat="*uid://cmqg6dj0a0obb"
+ProximityPromptManager="*uid://ce1pxx0gi2ybe"
 
 [display]
 

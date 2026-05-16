@@ -1,10 +1,10 @@
 extends Area3D
 
 @export var prompt_text: String = "Press [E] to interact"
-@export var action_key: String = "interact"          
-@export var hold_duration: float = 1.0               # 0 = tap, >0 = hold to trigger
-@export var max_activations: int = -1               # -1 = infinite
-@export var cooldown_time: float = 1.0               # seconds between activations
+@export var action_key: String = "interact"
+@export var hold_duration: float = 1.0
+@export var max_activations: int = -1
+@export var cooldown_time: float = 1.0
 @export var max_distance: float = 5.0
 @export var prompt_font: Font
 @export var prompt_font_size: int = 18
@@ -22,15 +22,20 @@ var _cooldown_timer: float = 0.0
 var _activation_count: int = 0
 var _is_holding: bool = false
 var _exhausted: bool = false
-var _ui_label: Label          
+var _ui_label: Label
 var _ui_container: Control
+var _is_priority: bool = false
 
 func _ready() -> void:
 	if not InputMap.has_action(action_key):
 		push_error("ProximityPrompt: Action '%s' not found in Input Map! Please add it via Project > Input Map." % action_key)
 
+	ProximityPromptManager.register(self)
 	_build_ui()
 	_set_ui_visible(false)
+
+func _exit_tree() -> void:
+	ProximityPromptManager.unregister(self)
 
 func _process(delta: float) -> void:
 	if not enabled:
@@ -38,9 +43,9 @@ func _process(delta: float) -> void:
 
 	if _cooldown_timer > 0.0:
 		_cooldown_timer -= delta
-		
+
 	_update_closest_player()
-	
+
 	if _closest_player == null:
 		_set_ui_visible(false)
 		_reset_hold()
@@ -51,22 +56,25 @@ func _process(delta: float) -> void:
 		_set_ui_visible(false)
 		_reset_hold()
 		return
-		
+
+	_is_priority = ProximityPromptManager.get_winner_for_player(_closest_player) == self
+
+	if not _is_priority:
+		_set_ui_visible(false)
+		_reset_hold()
+		return
+
 	_set_ui_visible(true)
 	_update_ui_position()
 
 	if Input.is_action_pressed(action_key):
 		if hold_duration > 0.0:
-			
 			_is_holding = true
 			_hold_timer += delta
 			_update_progress_bar(_hold_timer / hold_duration)
 			if _hold_timer >= hold_duration:
 				_try_activate(_closest_player)
 				_reset_hold()
-		else:
-			
-			pass
 	else:
 		if _is_holding:
 			_reset_hold()
@@ -78,9 +86,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	if hold_duration > 0.0:
 		return
+	if not _is_priority:
+		return
 	if global_position.distance_to(_closest_player.global_position) > max_distance:
 		return
-	
 	if _exhausted or (max_activations >= 0 and _activation_count >= max_activations):
 		return
 
@@ -110,10 +119,8 @@ func _update_closest_player() -> void:
 	for p in all_players:
 		if not is_instance_valid(p):
 			continue
-			
 		if p.has_method("is_Killer") and p.is_Killer:
 			continue
-			
 		if "is_Killer" in p and p.is_Killer:
 			continue
 
