@@ -43,6 +43,7 @@ data="*uid://sdeh14euxnht"
 ModLoader="*uid://h02p7y6au54x"
 MoonwaveDataFormat="*uid://cmqg6dj0a0obb"
 ProximityPromptManager="*uid://ce1pxx0gi2ybe"
+LobbyManager="*uid://cmqdyweogpbb8"
 
 [display]
 
@@ -61,16 +62,13 @@ import/blender/enabled=false
 
 [global_group]
 
-coins=""
 item=""
 player=""
 wardrobe=""
 giveHealth=""
-shelf=""
 battery=""
 ladder=""
 cat=""
-shelf2=""
 fake_door=""
 painting=""
 interactors=""
