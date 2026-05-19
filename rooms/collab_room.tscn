@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://wkj31gby8th"]
+
+[ext_resource type="Shader" uid="uid://cumw4njtk8vxf" path="res://shaders/checkerboard_floor.gdshader" id="1_vyyk1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vcv1w"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1rac2"]
+render_priority = 0
+shader = ExtResource("1_vyyk1")
+shader_parameter/tile_color_a = Color(1, 1, 1, 1)
+shader_parameter/tile_color_b = Color(0.02, 0.02, 0.04, 1)
+shader_parameter/tile_size = 1.0
+shader_parameter/emission_strength = 1.8
+shader_parameter/roughness_a = 0.15
+shader_parameter/roughness_b = 0.9
+shader_parameter/wetness = 0.6
+shader_parameter/caustic_strength = 0.25
+shader_parameter/caustic_speed = 0.4
+
+[sub_resource type="BoxMesh" id="BoxMesh_vyyk1"]
+material = SubResource("ShaderMaterial_1rac2")
+
+[node name="collab_room" type="Node3D" unique_id=676583748]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=968250269]
+transform = Transform3D(3.7029147, 0, 0, 0, 0.24260992, 0, 0, 0, 15.262229, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=280911840]
+shape = SubResource("BoxShape3D_vcv1w")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=704604779]
+mesh = SubResource("BoxMesh_vyyk1")
