@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://wkj31gby8th"]
 
 [ext_resource type="Shader" uid="uid://cumw4njtk8vxf" path="res://shaders/checkerboard_floor.gdshader" id="1_vyyk1"]
+[ext_resource type="Shader" uid="uid://cuvo5jpi6obt8" path="res://shaders/underwater_world.gdshader" id="2_1rac2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vcv1w"]
 
@@ -20,6 +21,20 @@ shader_parameter/caustic_speed = 0.4
 [sub_resource type="BoxMesh" id="BoxMesh_vyyk1"]
 material = SubResource("ShaderMaterial_1rac2")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nt81o"]
+shader = ExtResource("2_1rac2")
+shader_parameter/sky_top_color = Color(0.01, 0.08, 0.1, 1)
+shader_parameter/sky_horizon_color = Color(0.02, 0.18, 0.2, 1)
+shader_parameter/fog_density = 0.85
+shader_parameter/time_scale = 0.3
+
+[sub_resource type="Sky" id="Sky_mt2x8"]
+sky_material = SubResource("ShaderMaterial_nt81o")
+
+[sub_resource type="Environment" id="Environment_vyyk1"]
+background_mode = 2
+sky = SubResource("Sky_mt2x8")
+
 [node name="collab_room" type="Node3D" unique_id=676583748]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=968250269]
@@ -30,3 +45,6 @@ shape = SubResource("BoxShape3D_vcv1w")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=704604779]
 mesh = SubResource("BoxMesh_vyyk1")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=896556989]
+environment = SubResource("Environment_vyyk1")
