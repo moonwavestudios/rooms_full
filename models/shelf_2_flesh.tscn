@@ -65,6 +65,8 @@ script = ExtResource("4_wm26l")
 spawn_scenes = Array[PackedScene]([ExtResource("5_xirya"), ExtResource("6_mqmjf"), ExtResource("7_4g85h"), ExtResource("8_7yiw7"), ExtResource("9_ui854")])
 
 [node name="ProximityPrompt" parent="Shelf2Door" unique_id=25112644 instance=ExtResource("11_mqmjf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.8822737, 3.3068397, -8.504956)
+hold_duration = 0.0
 
 [node name="Shelf2Door2" type="MeshInstance3D" parent="." unique_id=1779380430 node_paths=PackedStringArray("proximity_prompt", "door", "marker")]
 transform = Transform3D(0.14428714, 0, 0, 0, 0.126, 0, 0, 0, 0.19129042, -0.028213792, -0.1154213, 0.005)
@@ -78,6 +80,8 @@ door = NodePath(".")
 marker = NodePath("../Marker3D2")
 
 [node name="ProximityPrompt" parent="Shelf2Door2" unique_id=1195358369 instance=ExtResource("11_mqmjf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6117544, 3.1876705, -8.4973545)
+hold_duration = 0.0
 
 [node name="Shelf2Door3" type="MeshInstance3D" parent="." unique_id=1026983416 node_paths=PackedStringArray("proximity_prompt", "door", "marker")]
 transform = Transform3D(0.14428714, 0, 0, 0, 0.126, 0, 0, 0, 0.19129042, -0.028213792, -0.23896825, 0.005)
@@ -100,6 +104,8 @@ script = ExtResource("4_wm26l")
 spawn_scenes = Array[PackedScene]([ExtResource("5_xirya"), ExtResource("6_mqmjf"), ExtResource("7_4g85h"), ExtResource("8_7yiw7"), ExtResource("9_ui854")])
 
 [node name="ProximityPrompt" parent="Shelf2Door3" unique_id=1010187298 instance=ExtResource("11_mqmjf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2912884, 2.9362297, -8.566678)
+hold_duration = 0.0
 
 [node name="Open" type="AudioStreamPlayer3D" parent="." unique_id=1409135486]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.98542035, 0.5596032, -1.6998062)

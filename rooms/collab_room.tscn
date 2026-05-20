@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://wkj31gby8th"]
 
 [ext_resource type="Shader" uid="uid://cumw4njtk8vxf" path="res://shaders/checkerboard_floor.gdshader" id="1_vyyk1"]
-[ext_resource type="Shader" uid="uid://cuvo5jpi6obt8" path="res://shaders/underwater_world.gdshader" id="2_1rac2"]
 [ext_resource type="Shader" uid="uid://buqodknmksfdh" path="res://shaders/underwater_stone.gdshader" id="3_nt81o"]
+[ext_resource type="PackedScene" uid="uid://edny0xnsfjdt" path="res://door.tscn" id="4_mt2x8"]
+[ext_resource type="PackedScene" uid="uid://ckkpxnv5lkthc" path="res://models/shelf.tscn" id="5_bo11w"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vcv1w"]
 
@@ -22,21 +23,8 @@ shader_parameter/caustic_speed = 0.4
 [sub_resource type="BoxMesh" id="BoxMesh_vyyk1"]
 material = SubResource("ShaderMaterial_1rac2")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_nt81o"]
-shader = ExtResource("2_1rac2")
-shader_parameter/sky_top_color = Color(0.01, 0.08, 0.1, 1)
-shader_parameter/sky_horizon_color = Color(0.02, 0.18, 0.2, 1)
-shader_parameter/fog_density = 0.85
-shader_parameter/time_scale = 0.3
-
-[sub_resource type="Sky" id="Sky_mt2x8"]
-sky_material = SubResource("ShaderMaterial_nt81o")
-
-[sub_resource type="Environment" id="Environment_vyyk1"]
-background_mode = 2
-sky = SubResource("Sky_mt2x8")
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_1rac2"]
+size = Vector3(1, 0.72998047, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mt2x8"]
 render_priority = 0
@@ -54,6 +42,147 @@ shader_parameter/teal_shift = 0.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_1rac2"]
 material = SubResource("ShaderMaterial_mt2x8")
+
+[sub_resource type="Shader" id="Shader_nt81o"]
+code = "shader_type spatial;
+
+uniform vec4 stone_light : source_color = vec4(0.35, 0.75, 0.72, 1.0);
+uniform vec4 stone_dark : source_color = vec4(0.04, 0.14, 0.16, 1.0);
+uniform vec4 grout_color : source_color = vec4(0.02, 0.08, 0.10, 1.0);
+uniform float tile_size : hint_range(0.1, 10.0) = 1.0;
+uniform float roughness_base : hint_range(0.0, 1.0) = 0.7;
+uniform float wetness : hint_range(0.0, 1.0) = 0.55;
+uniform float caustic_strength : hint_range(0.0, 1.0) = 0.18;
+uniform float caustic_speed : hint_range(0.0, 2.0) = 0.35;
+uniform float grout_width : hint_range(0.0, 0.5) = 0.07;
+uniform float teal_shift : hint_range(0.0, 1.0) = 0.6;
+
+float hash(vec2 p) {
+	return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
+}
+
+float hash1(float n) {
+	return fract(sin(n) * 43758.5453);
+}
+
+float noise(vec2 p) {
+	vec2 i = floor(p);
+	vec2 f = fract(p);
+	f = f * f * (3.0 - 2.0 * f);
+	float a = hash(i);
+	float b = hash(i + vec2(1.0, 0.0));
+	float c = hash(i + vec2(0.0, 1.0));
+	float d = hash(i + vec2(1.0, 1.0));
+	return mix(mix(a, b, f.x), mix(c, d, f.x), f.y);
+}
+
+float fbm(vec2 p) {
+	float v = 0.0;
+	float a = 0.5;
+	for (int i = 0; i < 4; i++) {
+		v += a * noise(p);
+		p *= 2.1;
+		a *= 0.5;
+	}
+	return v;
+}
+
+float caustics(vec2 uv, float t) {
+	float n1 = noise(uv * 2.0 + vec2(t * 0.5, t * 0.3));
+	float n2 = noise(uv * 4.0 - vec2(t * 0.4, t * 0.6));
+	float n3 = noise(uv * 8.0 + vec2(t * 0.2, t * 0.7));
+	return n1 * 0.5 + n2 * 0.3 + n3 * 0.2;
+}
+
+vec2 brick_uv(vec2 world_xz, float bw, float bh, float offset) {
+	float row = floor(world_xz.y / bh);
+	float shift = mod(row, 2.0) * offset;
+	float col = floor((world_xz.x + shift) / bw);
+	vec2 local = vec2(
+		fract((world_xz.x + shift) / bw),
+		fract(world_xz.y / bh)
+	);
+	return local;
+}
+
+varying vec3 world_pos;
+varying vec3 world_normal;
+
+void vertex() {
+	world_pos = (MODEL_MATRIX * vec4(VERTEX, 1.0)).xyz;
+	world_normal = normalize((MODEL_MATRIX * vec4(NORMAL, 0.0)).xyz);
+}
+
+void fragment() {
+	float bw = tile_size * 2.0;
+	float bh = tile_size;
+
+	vec2 xz = world_pos.xz;
+	vec2 xy = world_pos.xy;
+	vec2 zy = world_pos.zy;
+
+	vec3 blend = abs(world_normal);
+	blend = pow(blend, vec3(4.0));
+	blend /= blend.x + blend.y + blend.z + 0.001;
+
+	vec2 local_xz = brick_uv(xz / tile_size, 2.0, 1.0, 0.5);
+	vec2 local_xy = brick_uv(xy / tile_size, 2.0, 1.0, 0.5);
+	vec2 local_zy = brick_uv(zy / tile_size, 2.0, 1.0, 0.5);
+
+	float grout_xz = step(1.0 - grout_width, local_xz.x) + step(1.0 - grout_width, local_xz.y);
+	float grout_xy = step(1.0 - grout_width, local_xy.x) + step(1.0 - grout_width, local_xy.y);
+	float grout_zy = step(1.0 - grout_width, local_zy.x) + step(1.0 - grout_width, local_zy.y);
+	float grout = clamp(
+		grout_xz * blend.y + grout_xy * blend.z + grout_zy * blend.x,
+		0.0, 1.0
+	);
+
+	float stone_xz = fbm(xz / tile_size * 3.5 + 7.3);
+	float stone_xy = fbm(xy / tile_size * 3.5 + 2.1);
+	float stone_zy = fbm(zy / tile_size * 3.5 + 4.7);
+	float stone_detail = stone_xz * blend.y + stone_xy * blend.z + stone_zy * blend.x;
+
+	vec3 base = mix(stone_dark.rgb, stone_light.rgb, stone_detail);
+	base = mix(base, grout_color.rgb, grout);
+
+	float t = TIME * caustic_speed;
+	float caustic_val = caustics(xz / tile_size * 0.5, t);
+	vec3 teal = vec3(0.1, 0.9, 0.85);
+	base += teal * caustic_val * caustic_strength * (1.0 - grout);
+
+	float lum = dot(base, vec3(0.299, 0.587, 0.114));
+	base = mix(base, mix(vec3(lum), teal, 0.5) * (lum + 0.1), teal_shift * 0.4);
+
+	ALBEDO = clamp(base, 0.0, 1.0);
+	ROUGHNESS = mix(roughness_base, roughness_base * 0.3, wetness * (1.0 - grout));
+	METALLIC = 0.0;
+	SPECULAR = mix(0.1, 0.7, wetness * (1.0 - grout));
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bo11w"]
+render_priority = 0
+shader = SubResource("Shader_nt81o")
+shader_parameter/stone_light = Color(0.043039218, 0.043039143, 0.04303913, 1)
+shader_parameter/stone_dark = Color(0.13682577, 0.13682574, 0.13682571, 1)
+shader_parameter/grout_color = Color(0, 0, 0, 1)
+shader_parameter/tile_size = 1.0
+shader_parameter/roughness_base = 0.7
+shader_parameter/wetness = 0.55
+shader_parameter/caustic_strength = 0.0
+shader_parameter/caustic_speed = 0.35
+shader_parameter/grout_width = 0.07
+shader_parameter/teal_shift = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_ejt1y"]
+material = SubResource("ShaderMaterial_bo11w")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kug8b"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6er78"]
+material = SubResource("StandardMaterial3D_kug8b")
 
 [node name="collab_room" type="Node3D" unique_id=676583748]
 
@@ -93,14 +222,54 @@ shape = SubResource("BoxShape3D_vcv1w")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D5/CollisionShape3D" unique_id=863699436]
 mesh = SubResource("BoxMesh_vyyk1")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=896556989]
-environment = SubResource("Environment_vyyk1")
-
 [node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1117648961]
 transform = Transform3D(4.552266, 0, 0, 0, 0.5622734, 0, 0, 0, 4.696626, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=2132430206]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1350098, 0)
 shape = SubResource("BoxShape3D_1rac2")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2/CollisionShape3D" unique_id=409900725]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2" unique_id=409900725]
+transform = Transform3D(1, 0, 0, 0, 0.5509535, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_1rac2")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D2" unique_id=136954873]
+transform = Transform3D(0.25, 0, 0, 0, 1, 0, 0, 0, 0.25, -0.3891649, 0.21159554, -0.38257983)
+mesh = SubResource("BoxMesh_ejt1y")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="StaticBody3D2" unique_id=868647311]
+transform = Transform3D(0.25, 0, 0, 0, 1, 0, 0, 0, 0.25, -0.3891649, 0.21159554, 0.39345533)
+mesh = SubResource("BoxMesh_ejt1y")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="StaticBody3D2" unique_id=2035642694]
+transform = Transform3D(0.25, 0, 0, 0, 1, 0, 0, 0, 0.25, 0.4040643, 0.21159554, -0.38257983)
+mesh = SubResource("BoxMesh_ejt1y")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="StaticBody3D2" unique_id=381313132]
+transform = Transform3D(0.25, 0, 0, 0, 1, 0, 0, 0, 0.25, 0.4040643, 0.21159554, 0.39345533)
+mesh = SubResource("BoxMesh_ejt1y")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="Begin_Pos" type="MeshInstance3D" parent="." unique_id=1815682830]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.111, 17.175)
+mesh = SubResource("BoxMesh_6er78")
+
+[node name="End_Pos" type="MeshInstance3D" parent="." unique_id=171100272]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.111, -17.715)
+mesh = SubResource("BoxMesh_6er78")
+
+[node name="DoorSpawn" type="Node3D" parent="." unique_id=1810737015]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.111, -7.694)
+
+[node name="door" parent="DoorSpawn" unique_id=1515299434 instance=ExtResource("4_mt2x8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35170513, 0.70507133, -10.2094345)
+
+[node name="shelf" parent="." unique_id=1709193542 instance=ExtResource("5_bo11w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.568953, 0.41605926, 1.8410928)
+
+[node name="shelf2" parent="." unique_id=2059407059 instance=ExtResource("5_bo11w")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16.293056, 0.41605926, -1.6879144)
