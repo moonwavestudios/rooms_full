@@ -330,6 +330,7 @@ func generate_room(previous_room):
 		has_seen_wardrobe = true
 
 	if roomNum >= RUSH_START_ROOM:
+		$"../Ambience".stop()
 		if has_seen_wardrobe:
 			if rooms_since_last_rush >= RUSH_COOLDOWN_ROOMS:
 				if generated_rooms.size() > RUSH_SPAWN_OFFSET:
