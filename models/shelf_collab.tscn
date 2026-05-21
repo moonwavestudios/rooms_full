@@ -1,0 +1,314 @@
+[gd_scene format=3 uid="uid://bsessj80mq3bb"]
+
+[ext_resource type="Script" uid="uid://ba66b13k730j6" path="res://scripts/shelf.gd" id="1_dvfyr"]
+[ext_resource type="ArrayMesh" uid="uid://cb4a1yaex75gc" path="res://models/shelf.obj" id="2_b82xv"]
+[ext_resource type="Shader" uid="uid://ctqig4x1w3s4f" path="res://shaders/underwater_wood.gdshader" id="3_b82xv"]
+[ext_resource type="ArrayMesh" uid="uid://bxou8oas6tt46" path="res://models/shelfdoor.obj" id="4_qi73s"]
+[ext_resource type="Script" uid="uid://dgy6tipe27mtc" path="res://rooms/mesh_instance_3d.gd" id="5_ihmgw"]
+[ext_resource type="PackedScene" uid="uid://uqbl7oigqd8n" path="res://models/flashlight.tscn" id="6_0c5y7"]
+[ext_resource type="PackedScene" uid="uid://bin5ddfwdldw4" path="res://models/coins.tscn" id="7_ti856"]
+[ext_resource type="PackedScene" uid="uid://bl4pss0w5v8wg" path="res://models/pills.tscn" id="8_tgoc4"]
+[ext_resource type="PackedScene" uid="uid://dc0j0jjdves3a" path="res://bandage.tscn" id="9_c76q2"]
+[ext_resource type="PackedScene" uid="uid://gctp1g3lxleq" path="res://models/battery/Battery.tscn" id="10_yqdn2"]
+[ext_resource type="AudioStream" uid="uid://2jf3080tfb13" path="res://sfx/drawer_open.mp3" id="11_egy07"]
+[ext_resource type="PackedScene" uid="uid://dopin5px1enhc" path="res://scenes/proximity_prompt.tscn" id="12_exn6n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uv71d"]
+size = Vector3(1.9631958, 0.8005371, 3.6730957)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_klkhv"]
+render_priority = 0
+shader = ExtResource("3_b82xv")
+shader_parameter/wood_base_color = Color(0.04, 0.1, 0.12, 1)
+shader_parameter/wood_grain_color = Color(0.45765406, 0.20802048, 0, 1)
+shader_parameter/teal_tint = Color(0, 0, 0, 1)
+shader_parameter/tile_size = 1.0
+shader_parameter/plank_width = 0.5
+shader_parameter/grain_scale = 8.0
+shader_parameter/roughness_base = 0.85
+shader_parameter/wetness = 0.7
+shader_parameter/teal_strength = 0.0
+shader_parameter/caustic_strength = 0.08
+shader_parameter/caustic_speed = 0.35
+shader_parameter/edge_darkness = 0.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b82xv"]
+render_priority = 0
+shader = ExtResource("3_b82xv")
+shader_parameter/wood_base_color = Color(0.04, 0.1, 0.12, 1)
+shader_parameter/wood_grain_color = Color(0.45882353, 0.20784314, 0, 1)
+shader_parameter/teal_tint = Color(0, 0, 0, 1)
+shader_parameter/tile_size = 1.0
+shader_parameter/plank_width = 0.5
+shader_parameter/grain_scale = 8.0
+shader_parameter/roughness_base = 0.85
+shader_parameter/wetness = 0.7
+shader_parameter/teal_strength = 0.0
+shader_parameter/caustic_strength = 0.08
+shader_parameter/caustic_speed = 0.35
+shader_parameter/edge_darkness = 0.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qi73s"]
+render_priority = 0
+shader = ExtResource("3_b82xv")
+shader_parameter/wood_base_color = Color(0.04, 0.1, 0.12, 1)
+shader_parameter/wood_grain_color = Color(0.45882353, 0.20784314, 0, 1)
+shader_parameter/teal_tint = Color(0, 0, 0, 1)
+shader_parameter/tile_size = 1.0
+shader_parameter/plank_width = 0.5
+shader_parameter/grain_scale = 8.0
+shader_parameter/roughness_base = 0.85
+shader_parameter/wetness = 0.7
+shader_parameter/teal_strength = 0.0
+shader_parameter/caustic_strength = 0.08
+shader_parameter/caustic_speed = 0.35
+shader_parameter/edge_darkness = 0.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ihmgw"]
+render_priority = 0
+shader = ExtResource("3_b82xv")
+shader_parameter/wood_base_color = Color(0.04, 0.1, 0.12, 1)
+shader_parameter/wood_grain_color = Color(0.45882353, 0.20784314, 0, 1)
+shader_parameter/teal_tint = Color(0, 0, 0, 1)
+shader_parameter/tile_size = 1.0
+shader_parameter/plank_width = 0.5
+shader_parameter/grain_scale = 8.0
+shader_parameter/roughness_base = 0.85
+shader_parameter/wetness = 0.7
+shader_parameter/teal_strength = 0.0
+shader_parameter/caustic_strength = 0.08
+shader_parameter/caustic_speed = 0.35
+shader_parameter/edge_darkness = 0.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0c5y7"]
+render_priority = 0
+shader = ExtResource("3_b82xv")
+shader_parameter/wood_base_color = Color(0.04, 0.1, 0.12, 1)
+shader_parameter/wood_grain_color = Color(0.45882353, 0.20784314, 0, 1)
+shader_parameter/teal_tint = Color(0, 0, 0, 1)
+shader_parameter/tile_size = 1.0
+shader_parameter/plank_width = 0.5
+shader_parameter/grain_scale = 8.0
+shader_parameter/roughness_base = 0.85
+shader_parameter/wetness = 0.7
+shader_parameter/teal_strength = 0.0
+shader_parameter/caustic_strength = 0.08
+shader_parameter/caustic_speed = 0.35
+shader_parameter/edge_darkness = 0.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ti856"]
+render_priority = 0
+shader = ExtResource("3_b82xv")
+shader_parameter/wood_base_color = Color(0.04, 0.1, 0.12, 1)
+shader_parameter/wood_grain_color = Color(0.45882353, 0.20784314, 0, 1)
+shader_parameter/teal_tint = Color(0, 0, 0, 1)
+shader_parameter/tile_size = 1.0
+shader_parameter/plank_width = 0.5
+shader_parameter/grain_scale = 8.0
+shader_parameter/roughness_base = 0.85
+shader_parameter/wetness = 0.7
+shader_parameter/teal_strength = 0.0
+shader_parameter/caustic_strength = 0.08
+shader_parameter/caustic_speed = 0.35
+shader_parameter/edge_darkness = 0.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tgoc4"]
+render_priority = 0
+shader = ExtResource("3_b82xv")
+shader_parameter/wood_base_color = Color(0.04, 0.1, 0.12, 1)
+shader_parameter/wood_grain_color = Color(0.45882353, 0.20784314, 0, 1)
+shader_parameter/teal_tint = Color(0, 0, 0, 1)
+shader_parameter/tile_size = 1.0
+shader_parameter/plank_width = 0.5
+shader_parameter/grain_scale = 8.0
+shader_parameter/roughness_base = 0.85
+shader_parameter/wetness = 0.7
+shader_parameter/teal_strength = 0.0
+shader_parameter/caustic_strength = 0.08
+shader_parameter/caustic_speed = 0.35
+shader_parameter/edge_darkness = 0.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c76q2"]
+render_priority = 0
+shader = ExtResource("3_b82xv")
+shader_parameter/wood_base_color = Color(0.04, 0.1, 0.12, 1)
+shader_parameter/wood_grain_color = Color(0.45882353, 0.20784314, 0, 1)
+shader_parameter/teal_tint = Color(0, 0, 0, 1)
+shader_parameter/tile_size = 1.0
+shader_parameter/plank_width = 0.5
+shader_parameter/grain_scale = 8.0
+shader_parameter/roughness_base = 0.85
+shader_parameter/wetness = 0.7
+shader_parameter/teal_strength = 0.0
+shader_parameter/caustic_strength = 0.08
+shader_parameter/caustic_speed = 0.35
+shader_parameter/edge_darkness = 0.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yqdn2"]
+render_priority = 0
+shader = ExtResource("3_b82xv")
+shader_parameter/wood_base_color = Color(0.04, 0.1, 0.12, 1)
+shader_parameter/wood_grain_color = Color(0.45882353, 0.20784314, 0, 1)
+shader_parameter/teal_tint = Color(0, 0, 0, 1)
+shader_parameter/tile_size = 1.0
+shader_parameter/plank_width = 0.5
+shader_parameter/grain_scale = 8.0
+shader_parameter/roughness_base = 0.85
+shader_parameter/wetness = 0.7
+shader_parameter/teal_strength = 0.0
+shader_parameter/caustic_strength = 0.08
+shader_parameter/caustic_speed = 0.35
+shader_parameter/edge_darkness = 0.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_egy07"]
+render_priority = 0
+shader = ExtResource("3_b82xv")
+shader_parameter/wood_base_color = Color(0.04, 0.1, 0.12, 1)
+shader_parameter/wood_grain_color = Color(0.45882353, 0.20784314, 0, 1)
+shader_parameter/teal_tint = Color(0, 0, 0, 1)
+shader_parameter/tile_size = 1.0
+shader_parameter/plank_width = 0.5
+shader_parameter/grain_scale = 8.0
+shader_parameter/roughness_base = 0.85
+shader_parameter/wetness = 0.7
+shader_parameter/teal_strength = 0.0
+shader_parameter/caustic_strength = 0.08
+shader_parameter/caustic_speed = 0.35
+shader_parameter/edge_darkness = 0.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dvfyr"]
+render_priority = 0
+shader = ExtResource("3_b82xv")
+shader_parameter/wood_base_color = Color(0.04, 0.1, 0.12, 1)
+shader_parameter/wood_grain_color = Color(0.45882353, 0.20784314, 0, 1)
+shader_parameter/teal_tint = Color(0, 0, 0, 1)
+shader_parameter/tile_size = 1.0
+shader_parameter/plank_width = 0.5
+shader_parameter/grain_scale = 8.0
+shader_parameter/roughness_base = 0.85
+shader_parameter/wetness = 0.7
+shader_parameter/teal_strength = 0.0
+shader_parameter/caustic_strength = 0.08
+shader_parameter/caustic_speed = 0.35
+shader_parameter/edge_darkness = 0.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_exn6n"]
+render_priority = 0
+shader = ExtResource("3_b82xv")
+shader_parameter/wood_base_color = Color(0.04, 0.1, 0.12, 1)
+shader_parameter/wood_grain_color = Color(0.45882353, 0.20784314, 0, 1)
+shader_parameter/teal_tint = Color(0, 0, 0, 1)
+shader_parameter/tile_size = 1.0
+shader_parameter/plank_width = 0.5
+shader_parameter/grain_scale = 8.0
+shader_parameter/roughness_base = 0.85
+shader_parameter/wetness = 0.7
+shader_parameter/teal_strength = 0.0
+shader_parameter/caustic_strength = 0.08
+shader_parameter/caustic_speed = 0.35
+shader_parameter/edge_darkness = 0.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yj2bj"]
+render_priority = 0
+shader = ExtResource("3_b82xv")
+shader_parameter/wood_base_color = Color(0.04, 0.1, 0.12, 1)
+shader_parameter/wood_grain_color = Color(0.45882353, 0.20784314, 0, 1)
+shader_parameter/teal_tint = Color(0, 0, 0, 1)
+shader_parameter/tile_size = 1.0
+shader_parameter/plank_width = 0.5
+shader_parameter/grain_scale = 8.0
+shader_parameter/roughness_base = 0.85
+shader_parameter/wetness = 0.7
+shader_parameter/teal_strength = 0.0
+shader_parameter/caustic_strength = 0.08
+shader_parameter/caustic_speed = 0.35
+shader_parameter/edge_darkness = 0.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jb1wi"]
+render_priority = 0
+shader = ExtResource("3_b82xv")
+shader_parameter/wood_base_color = Color(0.04, 0.1, 0.12, 1)
+shader_parameter/wood_grain_color = Color(0.45882353, 0.20784314, 0, 1)
+shader_parameter/teal_tint = Color(0, 0, 0, 1)
+shader_parameter/tile_size = 1.0
+shader_parameter/plank_width = 0.5
+shader_parameter/grain_scale = 8.0
+shader_parameter/roughness_base = 0.85
+shader_parameter/wetness = 0.7
+shader_parameter/teal_strength = 0.0
+shader_parameter/caustic_strength = 0.08
+shader_parameter/caustic_speed = 0.35
+shader_parameter/edge_darkness = 0.6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_67vkh"]
+render_priority = 0
+shader = ExtResource("3_b82xv")
+shader_parameter/wood_base_color = Color(0.04, 0.1, 0.12, 1)
+shader_parameter/wood_grain_color = Color(0.45882353, 0.20784314, 0, 1)
+shader_parameter/teal_tint = Color(0, 0, 0, 1)
+shader_parameter/tile_size = 1.0
+shader_parameter/plank_width = 0.5
+shader_parameter/grain_scale = 8.0
+shader_parameter/roughness_base = 0.85
+shader_parameter/wetness = 0.7
+shader_parameter/teal_strength = 0.0
+shader_parameter/caustic_strength = 0.08
+shader_parameter/caustic_speed = 0.35
+shader_parameter/edge_darkness = 0.6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5n2l1"]
+transparency = 1
+albedo_color = Color(1, 0, 0, 0.6039216)
+
+[sub_resource type="BoxMesh" id="BoxMesh_emwm5"]
+material = SubResource("StandardMaterial3D_5n2l1")
+
+[node name="shelf_collab" type="StaticBody3D" unique_id=1709193542]
+script = ExtResource("1_dvfyr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=373642770]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.055145264, 0.13146973, -1.7440186)
+shape = SubResource("BoxShape3D_uv71d")
+
+[node name="Shelf" type="MeshInstance3D" parent="." unique_id=1094679677]
+transform = Transform3D(0.14717978, 0, 0, 0, 0.12990814, 0, 0, 0, 0.19854015, 0, 0, 0)
+mesh = ExtResource("2_b82xv")
+surface_material_override/0 = SubResource("ShaderMaterial_klkhv")
+surface_material_override/1 = SubResource("ShaderMaterial_b82xv")
+surface_material_override/2 = SubResource("ShaderMaterial_qi73s")
+surface_material_override/3 = SubResource("ShaderMaterial_ihmgw")
+surface_material_override/4 = SubResource("ShaderMaterial_0c5y7")
+surface_material_override/5 = SubResource("ShaderMaterial_ti856")
+surface_material_override/6 = SubResource("ShaderMaterial_tgoc4")
+surface_material_override/7 = SubResource("ShaderMaterial_c76q2")
+surface_material_override/8 = SubResource("ShaderMaterial_yqdn2")
+
+[node name="Shelfdoor" type="MeshInstance3D" parent="." unique_id=287308756]
+transform = Transform3D(0.15381664, 0, 0, 0, 0.12573974, 0, 0, 0, 0.20009634, -0.04129544, 0.017822027, 0.004882604)
+mesh = ExtResource("4_qi73s")
+surface_material_override/0 = SubResource("ShaderMaterial_egy07")
+surface_material_override/1 = SubResource("ShaderMaterial_dvfyr")
+surface_material_override/2 = SubResource("ShaderMaterial_exn6n")
+surface_material_override/3 = SubResource("ShaderMaterial_yj2bj")
+surface_material_override/4 = SubResource("ShaderMaterial_jb1wi")
+surface_material_override/5 = SubResource("ShaderMaterial_67vkh")
+
+[node name="spawnTemplates" type="Node3D" parent="Shelfdoor" unique_id=994814145]
+transform = Transform3D(6.5012474, 0, 0, 0, 7.952936, 0, 0, 0, 4.997593, 52.14665, -6.046869, -6.5087485)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Shelfdoor/spawnTemplates" unique_id=302092413]
+transform = Transform3D(0.45945656, 0, 0, 0, 0.2468592, 0, 0, 0, 0.3723157, -7.804861, 1.118545, 0)
+mesh = SubResource("BoxMesh_emwm5")
+script = ExtResource("5_ihmgw")
+spawn_scenes = Array[PackedScene]([ExtResource("6_0c5y7"), ExtResource("7_ti856"), ExtResource("8_tgoc4"), ExtResource("9_c76q2"), ExtResource("10_yqdn2")])
+
+[node name="Open" type="AudioStreamPlayer3D" parent="." unique_id=713065446]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.98542035, 0.5596032, -1.6998062)
+stream = ExtResource("11_egy07")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=1316359010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46, 0.018, 0.005)
+
+[node name="ProximityPrompt" parent="." unique_id=25112644 instance=ExtResource("12_exn6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0036496, 0.40584666, -1.5970936)
+hold_duration = 0.0

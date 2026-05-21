@@ -420,6 +420,12 @@ func on_coin_interacted(collider: Area3D) -> void:
 		return
 	var coin_path = get_path_to(collider)
 	rpc("sync_coin_collection", coin_path, collider.coins)
+	
+func on_battery_interacted(collider: Area3D) -> void:
+	if not is_multiplayer_authority():
+		return
+	var battery_path = get_path_to(collider)
+	rpc("sync_battery_collection", battery_path)
 
 @rpc("any_peer", "call_local", "reliable")
 func sync_coin_collection(coin_path: NodePath, coin_value: int) -> void:
@@ -428,6 +434,14 @@ func sync_coin_collection(coin_path: NodePath, coin_value: int) -> void:
 		if is_multiplayer_authority():
 			coins += coin_value
 			$coin.play()
+		coin_node.queue_free()
+		
+@rpc("any_peer", "call_local", "reliable")
+func sync_battery_collection(coin_path: NodePath) -> void:
+	var coin_node = get_node_or_null(coin_path)
+	if coin_node and is_instance_valid(coin_node):
+		if is_multiplayer_authority():
+			batteries += 1
 		coin_node.queue_free()
 	
 func _interact_fake_door(_collider) -> void:

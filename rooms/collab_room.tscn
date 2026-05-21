@@ -3,7 +3,7 @@
 [ext_resource type="Shader" uid="uid://cumw4njtk8vxf" path="res://shaders/checkerboard_floor.gdshader" id="1_vyyk1"]
 [ext_resource type="Shader" uid="uid://buqodknmksfdh" path="res://shaders/underwater_stone.gdshader" id="3_nt81o"]
 [ext_resource type="PackedScene" uid="uid://edny0xnsfjdt" path="res://door.tscn" id="4_mt2x8"]
-[ext_resource type="PackedScene" uid="uid://ckkpxnv5lkthc" path="res://models/shelf.tscn" id="5_bo11w"]
+[ext_resource type="PackedScene" uid="uid://bsessj80mq3bb" path="res://models/shelf_collab.tscn" id="5_ejt1y"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vcv1w"]
 
@@ -268,8 +268,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.111, -7.694)
 [node name="door" parent="DoorSpawn" unique_id=1515299434 instance=ExtResource("4_mt2x8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35170513, 0.70507133, -10.2094345)
 
-[node name="shelf" parent="." unique_id=1709193542 instance=ExtResource("5_bo11w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.568953, 0.41605926, 1.8410928)
+[node name="shelf_collab" parent="." unique_id=1709193542 instance=ExtResource("5_ejt1y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.586601, 0.4155748, 1.8155494)
 
-[node name="shelf2" parent="." unique_id=2059407059 instance=ExtResource("5_bo11w")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16.293056, 0.41605926, -1.6879144)
+[node name="shelf_collab2" parent="." unique_id=1587052374 instance=ExtResource("5_ejt1y")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 16.395172, 0.4155748, -1.7155542)
