@@ -1,10 +1,15 @@
 extends StaticBody3D
 
+var _occupant: Node = null
+
 func _ready() -> void:
 	$ProximityPrompt.prompt_triggered.connect(_on_interacted)
 
 func _on_interacted(interactor: Node) -> void:
 	if not interactor.is_multiplayer_authority():
+		return
+
+	if _occupant != null and _occupant != interactor:
 		return
 
 	if not interactor.hidden:
@@ -14,8 +19,10 @@ func _on_interacted(interactor: Node) -> void:
 		interactor.hidden = true
 		get_node("Camera3D").current = true
 		interactor.wardrobe_timer = 0.0
+		_occupant = interactor
 	else:
 		interactor.global_position = get_node("leaveTeleport").global_position
 		interactor.hidden = false
 		interactor.camera.current = true
 		interactor.wardrobe_timer = 0.0
+		_occupant = null

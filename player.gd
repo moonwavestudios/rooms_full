@@ -215,9 +215,6 @@ func _handle_wardrobe_timer(delta: float) -> void:
 	else:
 		shadow_overlay.modulate.a = shadow_strength
 
-	if hidden and wardrobe_timer >= WARDROBE_MAX_TIME:
-		_force_exit_wardrobe()
-
 func _handle_camera_height(delta: float) -> void:
 	var target_cam_height = CROUCH_CAMERA_HEIGHT if is_crouching else STAND_CAMERA_HEIGHT
 	camera.position.y = lerp(camera.position.y, target_cam_height, delta * 10.0)
@@ -503,16 +500,6 @@ func sync_item_pickup(item_path: NodePath) -> void:
 	var item = get_node_or_null(item_path)
 	if item and is_instance_valid(item):
 		item.queue_free()
-
-func _force_exit_wardrobe() -> void:
-	hidden = false
-	wardrobe_timer = 0.0
-	camera.current = true
-	health -= 35
-	if shadow_overlay.material:
-		shadow_overlay.material.set_shader_parameter("strength", 0.0)
-	else:
-		shadow_overlay.modulate.a = 0.0
 
 func _interact_ladder(collider: Area3D) -> void:
 	if not is_multiplayer_authority():

@@ -46,4 +46,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0022320151)
 [node name="ProximityPrompt" parent="." unique_id=25112644 instance=ExtResource("3_2fabl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1347804)
 hold_duration = 0.0
-max_activations = 1
