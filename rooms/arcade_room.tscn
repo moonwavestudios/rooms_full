@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://hga4jvdavlw1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bc1pc"]
+size = Vector3(14.340332, 0.3466797, 42.163452)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bc1pc"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_t2im3"]
+material = SubResource("StandardMaterial3D_bc1pc")
+
+[node name="ArcadeRoom" type="Node3D" unique_id=717371999]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=329355528]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=420283650]
+shape = SubResource("BoxShape3D_bc1pc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=1357674649]
+transform = Transform3D(14.28318, 0, 0, 0, 0.34124982, 0, 0, 0, 42.030132, 0, 0, 0)
+mesh = SubResource("BoxMesh_t2im3")
