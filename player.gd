@@ -20,7 +20,7 @@ var max_health := 100
 
 var being_killed := false
 var is_crouching := false
-var hidden := true
+var hidden := false
 var teleporting := false
 var CrucifixHeld := false
 
