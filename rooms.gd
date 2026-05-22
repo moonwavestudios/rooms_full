@@ -76,6 +76,7 @@ var RushMonsters: Array[PackedScene] = [
 ]
 
 const STALKER_MONSTER_SCENE := preload("res://stalker.tscn")
+const eyes_monster_scene = preload("res://models/entity_models/eye_monster.tscn")
 const KEY_SCENE := preload("res://models/key.tscn")
 
 const LOCKED_DOOR_CHANCE := 0.35
