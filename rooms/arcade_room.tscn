@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://hga4jvdavlw1"]
 
 [ext_resource type="Texture2D" uid="uid://dpbocxc86ur7o" path="res://assets/arcade_carpet.png" id="1_46otc"]
+[ext_resource type="PackedScene" uid="uid://edny0xnsfjdt" path="res://door.tscn" id="2_i3ar1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bc1pc"]
 size = Vector3(14.340332, 0.3466797, 42.163452)
@@ -14,6 +15,13 @@ uv1_world_triplanar = true
 [sub_resource type="BoxMesh" id="BoxMesh_t2im3"]
 material = SubResource("StandardMaterial3D_bc1pc")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kug8b"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s6vih"]
+material = SubResource("StandardMaterial3D_kug8b")
+
 [node name="ArcadeRoom" type="Node3D" unique_id=717371999]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=329355528]
@@ -24,3 +32,17 @@ shape = SubResource("BoxShape3D_bc1pc")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=1357674649]
 transform = Transform3D(14.28318, 0, 0, 0, 0.34124982, 0, 0, 0, 42.030132, 0, 0, 0)
 mesh = SubResource("BoxMesh_t2im3")
+
+[node name="Begin_Pos" type="MeshInstance3D" parent="." unique_id=1710706827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.013)
+mesh = SubResource("BoxMesh_s6vih")
+
+[node name="End_Pos" type="MeshInstance3D" parent="." unique_id=504913483]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -21.141)
+mesh = SubResource("BoxMesh_s6vih")
+
+[node name="DoorSpawn" type="Node3D" parent="." unique_id=1958622226]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11.12)
+
+[node name="door" parent="DoorSpawn" unique_id=1515299434 instance=ExtResource("2_i3ar1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35170513, 0.70507133, -10.2094345)
