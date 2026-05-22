@@ -1,5 +1,7 @@
 extends StaticBody3D
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$ProximityPrompt.prompt_triggered.connect(_on_interacted)
+
+func _on_interacted(interactor: Node) -> void:
+	pass

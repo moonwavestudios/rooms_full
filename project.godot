@@ -64,14 +64,13 @@ import/blender/enabled=false
 
 item=""
 player=""
-wardrobe=""
 giveHealth=""
-battery=""
 ladder=""
 cat=""
 fake_door=""
 painting=""
 interactors=""
+eye_monster=""
 
 [input]
 

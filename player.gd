@@ -20,7 +20,7 @@ var max_health := 100
 
 var being_killed := false
 var is_crouching := false
-var hidden := false
+var hidden := true
 var teleporting := false
 var CrucifixHeld := false
 
@@ -261,6 +261,8 @@ func _handle_interact_input() -> void:
 		if collider is Area3D:
 			var can_interact := interact_handlers.keys().any(func(g): return collider.is_in_group(g))
 			UI.get_node("GameUI/Label").visible = can_interact
+			if collider.is_in_group("eye_monster"):
+				health -= 20
 	else:
 		UI.get_node("GameUI/Label").visible = false
 
