@@ -97,7 +97,6 @@ var interact_handlers: Dictionary
 func _build_interact_handlers():
 	interact_handlers = {
 		"giveHealth": _interact_health,
-		"wardrobe":   _interact_wardrobe,
 		"item":       _interact_item,
 		"battery":    _interact_battery,
 		"ladder":     _interact_ladder,
@@ -504,22 +503,6 @@ func sync_item_pickup(item_path: NodePath) -> void:
 	var item = get_node_or_null(item_path)
 	if item and is_instance_valid(item):
 		item.queue_free()
-
-func _interact_wardrobe(collider: Area3D) -> void:
-	if not hidden:
-		var wardrobe = collider.get_parent()
-		var inside_marker = wardrobe.get_node_or_null("InsideTeleport")
-		var target_pos = inside_marker.global_position if inside_marker else wardrobe.get_node("MeshInstance3D").global_position
-		global_position = target_pos
-		hidden = true
-		wardrobe.get_node("Camera3D").current = true
-		wardrobe_timer = 0.0
-	else:
-		var wardrobe = collider.get_parent()
-		global_position = wardrobe.get_node("leaveTeleport").global_position
-		hidden = false
-		camera.current = true
-		wardrobe_timer = 0.0
 
 func _force_exit_wardrobe() -> void:
 	hidden = false
