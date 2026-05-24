@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://vteuwnbjul2s"]
+
+[ext_resource type="Texture2D" uid="uid://5xua7yw16g6w" path="res://assets/backrooms/ceiling_tiles/ceiling_tiles_color.png" id="1_ud5yg"]
+[ext_resource type="Texture2D" uid="uid://j803wjuo5is1" path="res://assets/backrooms/ceiling_tiles/ceiling_tiles_rough.png" id="2_mn20g"]
+[ext_resource type="Texture2D" uid="uid://bncx246lm0k6g" path="res://assets/backrooms/ceiling_tiles/ceiling_tiles_normal.png" id="2_tt7bc"]
+
+[resource]
+albedo_texture = ExtResource("1_ud5yg")
+roughness_texture = ExtResource("2_mn20g")
+normal_enabled = true
+normal_texture = ExtResource("2_tt7bc")
+uv1_scale = Vector3(0.375, 0.375, 0.375)
+uv1_triplanar = true
+uv1_world_triplanar = true

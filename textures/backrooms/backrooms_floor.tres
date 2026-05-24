@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bkflrnbbx7xx2"]
+
+[ext_resource type="Texture2D" uid="uid://wkakyatbey7h" path="res://assets/backrooms/carpet/carpet_color.png" id="1_u6cx3"]
+[ext_resource type="Texture2D" uid="uid://da6rusunjdeqx" path="res://assets/backrooms/carpet/carpet_rough.png" id="2_fj77b"]
+[ext_resource type="Texture2D" uid="uid://csu86uuqqw3nr" path="res://assets/backrooms/carpet/carpet_normal.png" id="2_wkw1j"]
+
+[resource]
+albedo_texture = ExtResource("1_u6cx3")
+roughness_texture = ExtResource("2_fj77b")
+normal_enabled = true
+normal_texture = ExtResource("2_wkw1j")
+uv1_triplanar = true
+uv1_world_triplanar = true

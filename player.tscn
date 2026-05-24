@@ -221,6 +221,8 @@ colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_urp6f"]
 gradient = SubResource("Gradient_ewgrv")
 
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_7lmhl"]
+
 [node name="player" type="CharacterBody3D" unique_id=616076794 groups=["interactors", "player"]]
 script = ExtResource("1_4flbx")
 
@@ -317,6 +319,15 @@ font = ExtResource("23_7lmhl")
 
 [node name="items" type="Node3D" parent="." unique_id=2121520016]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31440336, 0.48102278, -0.05488777)
+
+[node name="VoicePlayer" type="AudioStreamPlayer3D" parent="." unique_id=1663521611]
+unit_size = 1.0
+max_distance = 20.0
+
+[node name="MicInput" type="AudioStreamPlayer" parent="." unique_id=772366677]
+stream = SubResource("AudioStreamMicrophone_7lmhl")
+autoplay = true
+bus = &"Voice"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="TimerItems" to="." method="_on_timer_items_timeout"]

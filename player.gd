@@ -31,6 +31,13 @@ const WARDROBE_MAX_TIME := 12.0
 @export var void_y := -50.0
 @export var respawn_position: Vector3
 
+@onready var voice_player: AudioStreamPlayer3D = $VoicePlayer
+
+var voice_capture: AudioEffectCapture
+var voice_playback: AudioStreamGeneratorPlayback
+
+const VOICE_PACKET_SIZE := 960
+
 var inventory := ["", "", "", "", "", "", "", "", ""]
 var selected_slot := 0
 
@@ -120,6 +127,22 @@ func _ready() -> void:
 
 	if username != "":
 		print("Player loaded: ", username)
+		
+	_setup_voice_chat()
+
+func _setup_voice_chat() -> void:
+	if is_multiplayer_authority():
+		var bus_idx = AudioServer.get_bus_index("Voice")
+		voice_capture = AudioServer.get_bus_effect(bus_idx, 0)
+
+	var generator := AudioStreamGenerator.new()
+	generator.mix_rate = 48000
+	generator.buffer_length = 0.1
+
+	voice_player.stream = generator
+	voice_player.play()
+
+	voice_playback = voice_player.get_stream_playback()
 
 func set_username(new_username: String) -> void:
 	username = new_username
@@ -167,6 +190,37 @@ func _physics_process(delta: float) -> void:
 	_handle_movement(delta)
 	_update_all_anim_blends()
 	update_battery_ui()
+	_process_voice_chat()
+
+func _process_voice_chat() -> void:
+	if not is_multiplayer_authority():
+		return
+	if voice_capture == null:
+		return
+	var available := voice_capture.get_frames_available()
+	if available < VOICE_PACKET_SIZE:
+		return
+	var frames := voice_capture.get_buffer(VOICE_PACKET_SIZE)
+	send_voice.rpc(frames)
+
+@rpc("unreliable", "any_peer")
+func send_voice(frames: PackedVector2Array) -> void:
+	var sender_id := multiplayer.get_remote_sender_id()
+	for player in get_tree().get_nodes_in_group("interactors"):
+		if player.get_multiplayer_authority() == sender_id:
+			continue
+		receive_voice.rpc_id(
+			player.get_multiplayer_authority(),
+			frames
+		)
+
+
+@rpc("authority", "unreliable")
+func receive_voice(frames: PackedVector2Array) -> void:
+	if voice_playback == null:
+		return
+	for frame in frames:
+		voice_playback.push_frame(frame)
 
 func _update_hud() -> void:
 	coinsLabel.text = "$" + str(coins)
