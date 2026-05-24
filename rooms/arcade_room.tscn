@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dpbocxc86ur7o" path="res://assets/arcade_carpet.png" id="1_46otc"]
 [ext_resource type="PackedScene" uid="uid://edny0xnsfjdt" path="res://door.tscn" id="2_i3ar1"]
 [ext_resource type="Material" uid="uid://dk7rispq45fn3" path="res://assets/concrete.tres" id="2_t2im3"]
+[ext_resource type="PackedScene" uid="uid://dkml6ithko4qm" path="res://models/arcade.tscn" id="4_s6vih"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bc1pc"]
 size = Vector3(48.729736, 0.3466797, 42.163452)
@@ -190,3 +191,273 @@ light_color = Color(0.9098039, 0, 1, 1)
 light_energy = 8.0
 shadow_enabled = true
 omni_range = 15.0
+
+[node name="arcade" parent="." unique_id=676638227 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -19.857164)
+
+[node name="arcade2" parent="." unique_id=1232150369 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -18.945543)
+
+[node name="arcade3" parent="." unique_id=622673889 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -18.040184)
+
+[node name="arcade4" parent="." unique_id=1107643760 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -17.128563)
+
+[node name="arcade5" parent="." unique_id=87243366 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -16.229568)
+
+[node name="arcade6" parent="." unique_id=21620834 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -15.317948)
+
+[node name="arcade7" parent="." unique_id=2068225571 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -14.412589)
+
+[node name="arcade8" parent="." unique_id=225282818 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -13.500968)
+
+[node name="arcade9" parent="." unique_id=1871143478 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -12.617535)
+
+[node name="arcade10" parent="." unique_id=1368752912 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -11.705914)
+
+[node name="arcade11" parent="." unique_id=344095423 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -10.800554)
+
+[node name="arcade12" parent="." unique_id=717131048 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -9.888933)
+
+[node name="arcade13" parent="." unique_id=1372015914 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -8.989939)
+
+[node name="arcade14" parent="." unique_id=751328121 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -8.078319)
+
+[node name="arcade15" parent="." unique_id=1363378817 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -7.1729593)
+
+[node name="arcade16" parent="." unique_id=2073994494 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -6.261338)
+
+[node name="arcade17" parent="." unique_id=2005479804 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -5.3527)
+
+[node name="arcade18" parent="." unique_id=462422897 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -4.441079)
+
+[node name="arcade19" parent="." unique_id=924973489 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -3.5357199)
+
+[node name="arcade20" parent="." unique_id=1571004577 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -2.6240988)
+
+[node name="arcade21" parent="." unique_id=1370998525 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -1.7251043)
+
+[node name="arcade22" parent="." unique_id=142168921 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, -0.8134842)
+
+[node name="arcade23" parent="." unique_id=2001399200 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 0.09187508)
+
+[node name="arcade24" parent="." unique_id=400441214 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 1.0034962)
+
+[node name="arcade25" parent="." unique_id=919515022 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 1.8869295)
+
+[node name="arcade26" parent="." unique_id=389532090 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 2.7985506)
+
+[node name="arcade27" parent="." unique_id=361555506 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 3.7039099)
+
+[node name="arcade28" parent="." unique_id=129474729 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 4.615531)
+
+[node name="arcade29" parent="." unique_id=1651677898 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 5.5145254)
+
+[node name="arcade30" parent="." unique_id=766061067 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 6.4261456)
+
+[node name="arcade31" parent="." unique_id=202283614 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 7.331505)
+
+[node name="arcade32" parent="." unique_id=456816175 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 8.243126)
+
+[node name="arcade33" parent="." unique_id=1715630834 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 9.105063)
+
+[node name="arcade34" parent="." unique_id=293854255 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 10.010423)
+
+[node name="arcade35" parent="." unique_id=1581373002 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 10.922044)
+
+[node name="arcade36" parent="." unique_id=1655264744 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 11.805477)
+
+[node name="arcade37" parent="." unique_id=37553573 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 12.717098)
+
+[node name="arcade38" parent="." unique_id=358459804 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 13.6224575)
+
+[node name="arcade39" parent="." unique_id=502133551 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 14.534079)
+
+[node name="arcade40" parent="." unique_id=440847329 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 15.433073)
+
+[node name="arcade41" parent="." unique_id=132406947 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 16.344692)
+
+[node name="arcade42" parent="." unique_id=874686739 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 17.250053)
+
+[node name="arcade43" parent="." unique_id=518529632 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 18.161674)
+
+[node name="arcade44" parent="." unique_id=1486389499 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 19.060686)
+
+[node name="arcade45" parent="." unique_id=1365342112 instance=ExtResource("4_s6vih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.470152, 1.2400162, 19.972307)
+
+[node name="arcade46" parent="." unique_id=517050139 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.322998, 1.2400162, 19.995588)
+
+[node name="arcade47" parent="." unique_id=1577752433 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.322998, 1.2400162, 19.083967)
+
+[node name="arcade48" parent="." unique_id=1650232819 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.322998, 1.2400162, 18.178608)
+
+[node name="arcade49" parent="." unique_id=957174369 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.322998, 1.2400162, 17.266987)
+
+[node name="arcade50" parent="." unique_id=205821283 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.322998, 1.2400162, 16.367992)
+
+[node name="arcade51" parent="." unique_id=2055920235 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.322998, 1.2400162, 15.456372)
+
+[node name="arcade52" parent="." unique_id=1565448785 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.322998, 1.2400162, 14.551013)
+
+[node name="arcade53" parent="." unique_id=244749908 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.322998, 1.2400162, 13.639392)
+
+[node name="arcade54" parent="." unique_id=1237608551 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.322998, 1.2400162, 12.755959)
+
+[node name="arcade55" parent="." unique_id=1460789004 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.322998, 1.2400162, 11.844337)
+
+[node name="arcade56" parent="." unique_id=592420328 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, 10.938978)
+
+[node name="arcade57" parent="." unique_id=550429976 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, 10.027357)
+
+[node name="arcade58" parent="." unique_id=1854899225 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, 9.128363)
+
+[node name="arcade59" parent="." unique_id=213080520 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, 8.2167425)
+
+[node name="arcade60" parent="." unique_id=211633540 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, 7.3113823)
+
+[node name="arcade61" parent="." unique_id=849248300 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, 6.399761)
+
+[node name="arcade62" parent="." unique_id=637531698 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, 5.491123)
+
+[node name="arcade63" parent="." unique_id=1930876852 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, 4.579502)
+
+[node name="arcade64" parent="." unique_id=1707254950 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, 3.6741428)
+
+[node name="arcade65" parent="." unique_id=1155519436 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, 2.7625217)
+
+[node name="arcade66" parent="." unique_id=778907352 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, 1.8635275)
+
+[node name="arcade67" parent="." unique_id=2015477102 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, 0.9519074)
+
+[node name="arcade68" parent="." unique_id=687560232 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, 0.046548083)
+
+[node name="arcade69" parent="." unique_id=1683452448 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, -0.86507297)
+
+[node name="arcade70" parent="." unique_id=1199231496 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, -1.7485063)
+
+[node name="arcade71" parent="." unique_id=31450410 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, -2.6601276)
+
+[node name="arcade72" parent="." unique_id=782701389 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, -3.565487)
+
+[node name="arcade73" parent="." unique_id=4369760 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, -4.477108)
+
+[node name="arcade74" parent="." unique_id=1298507962 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, -5.3761024)
+
+[node name="arcade75" parent="." unique_id=540251147 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, -6.2877226)
+
+[node name="arcade76" parent="." unique_id=1976194917 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, -7.193082)
+
+[node name="arcade77" parent="." unique_id=2048277154 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, -8.104702)
+
+[node name="arcade78" parent="." unique_id=1157370976 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, -8.9666395)
+
+[node name="arcade79" parent="." unique_id=2107231619 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, -9.871999)
+
+[node name="arcade80" parent="." unique_id=2050461554 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323, 1.2400162, -10.78362)
+
+[node name="arcade81" parent="." unique_id=970366233 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323002, 1.2400162, -11.667053)
+
+[node name="arcade82" parent="." unique_id=889837907 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323002, 1.2400162, -12.578674)
+
+[node name="arcade83" parent="." unique_id=1727311080 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323002, 1.2400162, -13.484034)
+
+[node name="arcade84" parent="." unique_id=1772984682 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323002, 1.2400162, -14.395655)
+
+[node name="arcade85" parent="." unique_id=537237015 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323002, 1.2400162, -15.294649)
+
+[node name="arcade86" parent="." unique_id=1777372301 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323002, 1.2400162, -16.206268)
+
+[node name="arcade87" parent="." unique_id=785543404 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323002, 1.2400162, -17.11163)
+
+[node name="arcade88" parent="." unique_id=1895243497 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323002, 1.2400162, -18.02325)
+
+[node name="arcade89" parent="." unique_id=208842694 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323002, 1.2400162, -18.922262)
+
+[node name="arcade90" parent="." unique_id=1680898573 instance=ExtResource("4_s6vih")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.323002, 1.2400162, -19.833883)
