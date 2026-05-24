@@ -5,6 +5,7 @@
 [ext_resource type="Material" uid="uid://dk7rispq45fn3" path="res://assets/concrete.tres" id="2_ppggm"]
 [ext_resource type="Material" uid="uid://d3vq7bpwvpdgl" path="res://assets/walls.tres" id="4_jl8ct"]
 [ext_resource type="PackedScene" uid="uid://c501t8n6e7iaj" path="res://models/bookshelf.tscn" id="6_7e42e"]
+[ext_resource type="PackedScene" uid="uid://dopin5px1enhc" path="res://scenes/proximity_prompt.tscn" id="6_jfgwc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lqm0d"]
 transparency = 1
@@ -308,7 +309,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -17.
 [node name="Bookshelf60" parent="." unique_id=1744430749 instance=ExtResource("6_7e42e")]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -17.3616, 0.2367137, -5.1393657)
 
-[node name="LadderInteract" type="Area3D" parent="." unique_id=511619524 groups=["ladder"]]
+[node name="LadderInteract" type="Area3D" parent="." unique_id=511619524]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.691269, 0.2128439, 17.21811)
 collision_layer = 2
 collision_mask = 2
@@ -320,7 +321,10 @@ shape = SubResource("BoxShape3D_7e42e")
 [node name="Teleport" type="Marker3D" parent="LadderInteract" unique_id=972171194]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7505479, 8.479312, -0.004699707)
 
-[node name="LadderInteract2" type="Area3D" parent="." unique_id=1540763496 groups=["ladder"]]
+[node name="ProximityPrompt" parent="LadderInteract" unique_id=25112644 instance=ExtResource("6_jfgwc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4573207, 0.6860359, 0)
+
+[node name="LadderInteract2" type="Area3D" parent="." unique_id=1540763496]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.691269, 0.2128439, 17.21811)
 collision_layer = 2
 collision_mask = 2
@@ -331,6 +335,9 @@ shape = SubResource("BoxShape3D_hktyn")
 
 [node name="Teleport" type="Marker3D" parent="LadderInteract2" unique_id=37031422]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7505479, 8.479312, -33.902405)
+
+[node name="ProximityPrompt" parent="LadderInteract2" unique_id=1255450580 instance=ExtResource("6_jfgwc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14555454, 1.2586778, -33.954033)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=408045465]
 
