@@ -3,6 +3,7 @@
 [ext_resource type="Material" uid="uid://bkflrnbbx7xx2" path="res://textures/backrooms/backrooms_floor.tres" id="1_f8fhv"]
 [ext_resource type="Material" uid="uid://clvv48g164mu1" path="res://textures/backrooms/backrooms.tres" id="2_r3bel"]
 [ext_resource type="Material" uid="uid://vteuwnbjul2s" path="res://textures/backrooms/ceiling.tres" id="2_r7vc5"]
+[ext_resource type="PackedScene" uid="uid://edny0xnsfjdt" path="res://door.tscn" id="4_p0q40"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1tr4m"]
 size = Vector3(536.332, 0.20703125, 307.3287)
@@ -22,9 +23,20 @@ size = Vector3(536.25604, 28.659912, 0.29296875)
 [sub_resource type="BoxMesh" id="BoxMesh_f8fhv"]
 material = ExtResource("2_r3bel")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_r7vc5"]
+size = Vector3(152.82678, 28.659912, 0.29296875)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kug8b"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s6vih"]
+material = SubResource("StandardMaterial3D_kug8b")
+
 [node name="backrooms" type="Node3D" unique_id=870095369]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=452484856]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1308954597]
 shape = SubResource("BoxShape3D_1tr4m")
@@ -48,3 +60,47 @@ shape = SubResource("BoxShape3D_f8fhv")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D2" unique_id=89060929]
 transform = Transform3D(536.292, 0, 0, 0, 29.394842, 0, 0, 0, 0.298, 0, 0, 0)
 mesh = SubResource("BoxMesh_f8fhv")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" unique_id=256742222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00064086914, 14.435342, -153.21875)
+shape = SubResource("BoxShape3D_f8fhv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D4" unique_id=1802395651]
+transform = Transform3D(536.292, 0, 0, 0, 29.394842, 0, 0, 0, 0.298, 0, 0, 0)
+mesh = SubResource("BoxMesh_f8fhv")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" unique_id=1179750028]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 267.984, 14.435, -77.2545)
+shape = SubResource("BoxShape3D_r7vc5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D5" unique_id=317009794]
+transform = Transform3D(152.807, 0, 0, 0, 29.854, 0, 0, 0, 0.303, 0, 0, 0)
+mesh = SubResource("BoxMesh_f8fhv")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D" unique_id=60642632]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 267.984, 14.435, 77.0284)
+shape = SubResource("BoxShape3D_r7vc5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D6" unique_id=1848751821]
+transform = Transform3D(152.807, 0, 0, 0, 29.854, 0, 0, 0, 0.303, 0, 0, 0)
+mesh = SubResource("BoxMesh_f8fhv")
+
+[node name="Begin_Pos" type="MeshInstance3D" parent="." unique_id=1621171527]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 268.06378)
+mesh = SubResource("BoxMesh_s6vih")
+
+[node name="End_Pos" type="MeshInstance3D" parent="." unique_id=1855802690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15627801, -268.09003)
+mesh = SubResource("BoxMesh_s6vih")
+
+[node name="DoorSpawn" type="Node3D" parent="." unique_id=697226144]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1296202, -258.20734)
+
+[node name="door" parent="DoorSpawn" unique_id=1515299434 instance=ExtResource("4_p0q40")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35170513, 0.70507133, -10.2094345)
+
+[node name="DoorSpawn2" type="Node3D" parent="." unique_id=698367634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1296202, 277.8246)
+
+[node name="door" parent="DoorSpawn2" unique_id=241892346 instance=ExtResource("4_p0q40")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35170513, 0.70507133, -10.2094345)
