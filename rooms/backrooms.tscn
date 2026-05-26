@@ -4,6 +4,7 @@
 [ext_resource type="Material" uid="uid://clvv48g164mu1" path="res://textures/backrooms/backrooms.tres" id="2_r3bel"]
 [ext_resource type="Material" uid="uid://vteuwnbjul2s" path="res://textures/backrooms/ceiling.tres" id="2_r7vc5"]
 [ext_resource type="PackedScene" uid="uid://edny0xnsfjdt" path="res://door.tscn" id="4_p0q40"]
+[ext_resource type="PackedScene" uid="uid://dlfnn8hxistuw" path="res://models/light.tscn" id="5_l5vtr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1tr4m"]
 size = Vector3(536.332, 0.20703125, 307.3287)
@@ -28,9 +29,6 @@ size = Vector3(152.82678, 28.659912, 0.29296875)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p0q40"]
 size = Vector3(152.82678, 28.659912, 0.29296875)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_l5vtr"]
-size = Vector3(1.523365, 26.529724, 0.29296875)
 
 [sub_resource type="BoxMesh" id="BoxMesh_p0q40"]
 material = ExtResource("2_r3bel")
@@ -94,14 +92,6 @@ shape = SubResource("BoxShape3D_p0q40")
 transform = Transform3D(152.807, 0, 0, 0, 29.854, 0, 0, 0, 0.303, 0, 0, 0)
 mesh = SubResource("BoxMesh_f8fhv")
 
-[node name="CollisionShape3D7" type="CollisionShape3D" parent="StaticBody3D" unique_id=894280942]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 267.984, 15.500095, -0.08994511)
-shape = SubResource("BoxShape3D_l5vtr")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D7" unique_id=1588020786]
-transform = Transform3D(1.58, 0, 0, 0, 28.587908, 0, 0, 0, 0.303, 0, 1.024, 0)
-mesh = SubResource("BoxMesh_p0q40")
-
 [node name="CollisionShape3D8" type="CollisionShape3D" parent="StaticBody3D" unique_id=267174895]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -267.922, 14.435, -77.25447)
 shape = SubResource("BoxShape3D_r7vc5")
@@ -118,13 +108,15 @@ shape = SubResource("BoxShape3D_p0q40")
 transform = Transform3D(152.807, 0, 0, 0, 29.854, 0, 0, 0, 0.303, 0, 0, 0)
 mesh = SubResource("BoxMesh_f8fhv")
 
-[node name="CollisionShape3D10" type="CollisionShape3D" parent="StaticBody3D" unique_id=1648992486]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -267.922, 15.500095, -0.08992168)
-shape = SubResource("BoxShape3D_l5vtr")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D10" unique_id=2021880849]
-transform = Transform3D(1.58, 0, 0, 0, 28.587908, 0, 0, 0, 0.303, 0, 1.024, 0)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1588020786]
+transform = Transform3D(-6.9063994e-08, 0, 0.303, 0, 28.587908, 0, -1.58, 0, -1.324455e-08, 267.984, 16.524096, -0.08994511)
 mesh = SubResource("BoxMesh_p0q40")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D" unique_id=2021880849]
+transform = Transform3D(-6.9063994e-08, 0, 0.303, 0, 28.587908, 0, -1.58, 0, -1.324455e-08, -267.922, 16.524096, -0.08992168)
+mesh = SubResource("BoxMesh_p0q40")
+skeleton = NodePath("")
 
 [node name="Begin_Pos" type="MeshInstance3D" parent="." unique_id=1621171527]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10546088, 0, 268.06378)
@@ -139,3 +131,59 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1296202, -258.20734)
 
 [node name="door" parent="DoorSpawn" unique_id=1515299434 instance=ExtResource("4_p0q40")]
 transform = Transform3D(1, 0, 0, 0, 1.0164682, 0, 0, 0, 1, -0.35170513, 0.70507133, -10.122101)
+
+[node name="GasstationLight_LOW" parent="." unique_id=75567483 instance=ExtResource("5_l5vtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.145117, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasstationLight_LOW" unique_id=1678667206]
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 31.114056
+
+[node name="GasstationLight_LOW2" parent="." unique_id=1149298624 instance=ExtResource("5_l5vtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.145117, 29.828484)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasstationLight_LOW2" unique_id=1284192382]
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 31.114056
+
+[node name="GasstationLight_LOW3" parent="." unique_id=793624153 instance=ExtResource("5_l5vtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.145117, 77.392204)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasstationLight_LOW3" unique_id=930629194]
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 31.114056
+
+[node name="GasstationLight_LOW4" parent="." unique_id=863647631 instance=ExtResource("5_l5vtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.145117, 152.15286)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasstationLight_LOW4" unique_id=1033091839]
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 31.114056
+
+[node name="GasstationLight_LOW5" parent="." unique_id=1502751154 instance=ExtResource("5_l5vtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.145117, 180.52248)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasstationLight_LOW5" unique_id=1992357420]
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 31.114056
+
+[node name="GasstationLight_LOW6" parent="." unique_id=245015011 instance=ExtResource("5_l5vtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.145117, 217.13332)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasstationLight_LOW6" unique_id=226785485]
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 31.114056
+
+[node name="GasstationLight_LOW7" parent="." unique_id=1913272019 instance=ExtResource("5_l5vtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.145117, 255.40428)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasstationLight_LOW7" unique_id=1545664899]
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 31.114056
