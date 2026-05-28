@@ -5,6 +5,7 @@
 [ext_resource type="Material" uid="uid://vteuwnbjul2s" path="res://textures/backrooms/ceiling.tres" id="2_r7vc5"]
 [ext_resource type="PackedScene" uid="uid://edny0xnsfjdt" path="res://door.tscn" id="4_p0q40"]
 [ext_resource type="PackedScene" uid="uid://dlfnn8hxistuw" path="res://models/light.tscn" id="5_l5vtr"]
+[ext_resource type="Texture2D" uid="uid://onhnwunvemy4" path="res://assets/entity_symbol.png" id="6_vigf0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1tr4m"]
 size = Vector3(536.332, 0.20703125, 307.3287)
@@ -33,6 +34,9 @@ size = Vector3(152.82678, 28.659912, 0.29296875)
 [sub_resource type="BoxShape3D" id="BoxShape3D_l5vtr"]
 size = Vector3(25.021927, 28.659912, 0.29296875)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ef214"]
+size = Vector3(25.021927, 28.659912, 0.29296875)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_vigf0"]
 size = Vector3(49.116627, 28.659912, 0.29296875)
 
@@ -45,6 +49,16 @@ albedo_color = Color(1, 1, 1, 0)
 
 [sub_resource type="BoxMesh" id="BoxMesh_s6vih"]
 material = SubResource("StandardMaterial3D_kug8b")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ef214"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.36282945, 0.36282945, 0.36282945, 1)
+albedo_texture = ExtResource("6_vigf0")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_l5vtr"]
+material = SubResource("StandardMaterial3D_ef214")
+size = Vector2(5, 5)
 
 [node name="backrooms" type="Node3D" unique_id=870095369]
 
@@ -122,6 +136,30 @@ shape = SubResource("BoxShape3D_l5vtr")
 transform = Transform3D(25.511507, 0, 0, 0, 29.854, 0, 0, 0, 0.30299997, 0, 0, 0)
 mesh = SubResource("BoxMesh_f8fhv")
 
+[node name="CollisionShape3D17" type="CollisionShape3D" parent="StaticBody3D" unique_id=1768541859]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -241.8859, 14.435, -41.34372)
+shape = SubResource("BoxShape3D_ef214")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D17" unique_id=110723491]
+transform = Transform3D(25.511507, 0, 0, 0, 29.854, 0, 0, 0, 0.30299997, 0, 0, 0)
+mesh = SubResource("BoxMesh_f8fhv")
+
+[node name="CollisionShape3D18" type="CollisionShape3D" parent="StaticBody3D" unique_id=582142144]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -255.17863, 14.435, -49.687504)
+shape = SubResource("BoxShape3D_ef214")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D18" unique_id=4318050]
+transform = Transform3D(25.511507, 0, 0, 0, 29.854, 0, 0, 0, 0.30299997, 0, 0, 0)
+mesh = SubResource("BoxMesh_f8fhv")
+
+[node name="CollisionShape3D19" type="CollisionShape3D" parent="StaticBody3D" unique_id=376468912]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -247.70499, 14.435, -75.384224)
+shape = SubResource("BoxShape3D_ef214")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D19" unique_id=1400966095]
+transform = Transform3D(25.511507, 0, 0, 0, 29.854, 0, 0, 0, 0.30299997, 0, 0, 0)
+mesh = SubResource("BoxMesh_f8fhv")
+
 [node name="CollisionShape3D13" type="CollisionShape3D" parent="StaticBody3D" unique_id=662238155]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -255.70932, 14.435, 37.27421)
 shape = SubResource("BoxShape3D_l5vtr")
@@ -151,6 +189,14 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -234
 shape = SubResource("BoxShape3D_vigf0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D14" unique_id=1043525709]
+transform = Transform3D(49.12, 0, 0, 0, 29.854, 0, 0, 0, 0.303, 0, 0, 0)
+mesh = SubResource("BoxMesh_f8fhv")
+
+[node name="CollisionShape3D20" type="CollisionShape3D" parent="StaticBody3D" unique_id=652996281]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -185.22827, 14.435, 1.8691325)
+shape = SubResource("BoxShape3D_vigf0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D20" unique_id=1253178949]
 transform = Transform3D(49.12, 0, 0, 0, 29.854, 0, 0, 0, 0.303, 0, 0, 0)
 mesh = SubResource("BoxMesh_f8fhv")
 
@@ -254,6 +300,70 @@ omni_range = 31.114056
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.145117, -254.50882)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="GasstationLight_LOW9" unique_id=1392724835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.21117973, 0)
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 31.114056
+
+[node name="GasstationLight_LOW15" parent="." unique_id=1290653866 instance=ExtResource("5_l5vtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.291603, 20.145117, -254.50882)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasstationLight_LOW15" unique_id=1792580037]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18135834, 0)
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 31.114056
+
+[node name="GasstationLight_LOW16" parent="." unique_id=1062590945 instance=ExtResource("5_l5vtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.23111, 20.145117, -227.42108)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasstationLight_LOW16" unique_id=1214628070]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.24716759, 0)
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 31.114056
+
+[node name="GasstationLight_LOW17" parent="." unique_id=1246234637 instance=ExtResource("5_l5vtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.23111, 20.145117, -255.787)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasstationLight_LOW17" unique_id=238712279]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.20002174, 0)
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 31.114056
+
+[node name="GasstationLight_LOW18" parent="." unique_id=275898897 instance=ExtResource("5_l5vtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.2427, 20.145117, -255.787)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasstationLight_LOW18" unique_id=1500744480]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.30228806, 0)
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 31.114056
+
+[node name="GasstationLight_LOW19" parent="." unique_id=989029142 instance=ExtResource("5_l5vtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.2427, 20.145117, -227.06592)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasstationLight_LOW19" unique_id=1973840259]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.39133453, 0)
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 31.114056
+
+[node name="GasstationLight_LOW20" parent="." unique_id=149405276 instance=ExtResource("5_l5vtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -127.94402, 20.145117, -227.06592)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasstationLight_LOW20" unique_id=472759919]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.20530128, 0)
+light_energy = 8.0
+shadow_enabled = true
+omni_range = 31.114056
+
+[node name="GasstationLight_LOW21" parent="." unique_id=1643305550 instance=ExtResource("5_l5vtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -127.94402, 20.145117, -255.7158)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GasstationLight_LOW21" unique_id=1371408003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.26638603, 0)
 light_energy = 8.0
 shadow_enabled = true
 omni_range = 31.114056
@@ -262,6 +372,7 @@ omni_range = 31.114056
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.145117, -224.84796)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="GasstationLight_LOW10" unique_id=757327233]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.340559, 0)
 light_energy = 8.0
 shadow_enabled = true
 omni_range = 31.114056
@@ -297,3 +408,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.145117, -46.83589)
 light_energy = 8.0
 shadow_enabled = true
 omni_range = 31.114056
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1694961860]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -149.58081, 5.1553025, -210.17213)
+mesh = SubResource("PlaneMesh_l5vtr")
