@@ -705,6 +705,16 @@ label_settings = SubResource("LabelSettings_5gb3g")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Someone" type="TextureRect" parent="GameUI" unique_id=1520531991]
+visible = false
+layout_mode = 0
+offset_left = 946.0
+offset_top = 13.0
+offset_right = 1114.0
+offset_bottom = 181.0
+texture = ExtResource("1_pm3rl")
+expand_mode = 1
+
 [node name="Pause" type="Panel" parent="." unique_id=1142944185]
 visible = false
 layout_mode = 0

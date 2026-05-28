@@ -108,7 +108,6 @@ func _build_interact_handlers():
 		"battery":    _interact_battery,
 		"ladder":     _interact_ladder,
 		"fake_door": _interact_fake_door,
-		"car":        _interact_car,
 	}
 
 func _ready() -> void:
@@ -214,7 +213,6 @@ func send_voice(frames: PackedVector2Array) -> void:
 			frames
 		)
 
-
 @rpc("authority", "unreliable")
 func receive_voice(frames: PackedVector2Array) -> void:
 	if voice_playback == null:
@@ -268,6 +266,11 @@ func _handle_wardrobe_timer(delta: float) -> void:
 		shadow_overlay.material.set_shader_parameter("strength", shadow_strength)
 	else:
 		shadow_overlay.modulate.a = shadow_strength
+
+func _spawn_someone() -> void:
+	if roomNum > 7:
+		if randi() % 5 == 0:
+			print("test")
 
 func _handle_camera_height(delta: float) -> void:
 	var target_cam_height = CROUCH_CAMERA_HEIGHT if is_crouching else STAND_CAMERA_HEIGHT
@@ -503,13 +506,9 @@ func _interact_fake_door(_collider) -> void:
 	await get_tree().create_timer(2).timeout
 	health -= 30
 
-func _interact_car(_collider) -> void:
-	if not is_multiplayer_authority():
-		return
-	print("pet")
-
 func on_room_advanced(new_respawn: Vector3) -> void:
 	roomNum += 1
+	_spawn_someone()
 	respawn_position = new_respawn
 	roomNumLabel.text = "Room: " + str(roomNum)
 	roomNumLabel.visible = true

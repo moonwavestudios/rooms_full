@@ -358,6 +358,11 @@ layout_mode = 2
 text = "Game by Moonwave Studios"
 label_settings = SubResource("LabelSettings_n5rqp")
 
+[node name="Label3" type="Label" parent="Credits/VBoxContainer" unique_id=1219393323]
+layout_mode = 2
+text = "Some characters originate  from Voidscape by Moonwave Studios"
+label_settings = SubResource("LabelSettings_n5rqp")
+
 [node name="Button" type="Button" parent="Credits" unique_id=1523876241]
 layout_mode = 0
 offset_left = 9.0
