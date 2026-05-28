@@ -29,6 +29,7 @@ var room_scenes: Array[PackedScene] = [
 	preload("res://rooms/arcade_room.tscn"),
 	preload("res://rooms/untitled_room_2.tscn"),
 	preload("res://rooms/backrooms.tscn"),
+	preload("res://rooms/world_3.tscn")
 ]
 
 var specialRooms = {

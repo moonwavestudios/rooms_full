@@ -159,12 +159,12 @@ shader_parameter/teal_shift = 0.0
 [sub_resource type="BoxMesh" id="BoxMesh_ejt1y"]
 material = SubResource("ShaderMaterial_bo11w")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kug8b"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mt2x8"]
 transparency = 1
 albedo_color = Color(1, 1, 1, 0)
 
 [sub_resource type="BoxMesh" id="BoxMesh_6er78"]
-material = SubResource("StandardMaterial3D_kug8b")
+material = SubResource("StandardMaterial3D_mt2x8")
 
 [node name="collab_room" type="Node3D" unique_id=676583748]
 
@@ -221,3 +221,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.483768, 0.4155748, 1.8155
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 27.180786, 0.4155748, -1.7155542)
 
 [node name="world_2" parent="." unique_id=826004647 instance=ExtResource("5_bo11w")]
+
+[node name="KeySpawn" type="Marker3D" parent="." unique_id=1600482916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.459051, 1.0156709, 0)
