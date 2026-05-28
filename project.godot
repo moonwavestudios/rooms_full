@@ -63,7 +63,6 @@ import/blender/enabled=false
 
 [global_group]
 
-item=""
 player=""
 giveHealth=""
 cat=""

@@ -413,6 +413,10 @@ func update_held_item() -> void:
 	var item_instance = item_scenes[item].instantiate()
 	item_holder.add_child(item_instance)
 	item_instance.rotation_degrees = Vector3(0, 90, 0)
+	
+	var prompt = item_instance.get_node_or_null("ProximityPrompt")
+	if prompt:
+		prompt.set_enabled(false)
 
 func _drop_current_item() -> void:
 	var item = inventory[selected_slot]

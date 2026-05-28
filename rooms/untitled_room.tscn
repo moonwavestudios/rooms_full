@@ -262,5 +262,5 @@ transform = Transform3D(8.34465e-07, 0, 1, 0, 4.6076393, 0, -4.4254813, 0, 1.788
 transform = Transform3D(8.34465e-07, 0, 1, 0, 4.6076393, 0, -4.4254813, 0, 1.7881393e-07, -8.104397, 2.8949046, -30.902332)
 
 [node name="painting" parent="." unique_id=1772902581 instance=ExtResource("9_3lydm")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -22.907671, 4.5288324, -8.326658)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -22.907671, 3.081027, -8.816223)
 image = ExtResource("10_13f5l")
