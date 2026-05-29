@@ -243,6 +243,22 @@ shape = SubResource("BoxShape3D_eklri")
 transform = Transform3D(68.76686, 0, 0, 0, 29.854, 0, 2.2737368e-13, 0, 0.303, 0, 0, 0)
 mesh = SubResource("BoxMesh_ks0jl")
 
+[node name="CollisionShape3D31" type="CollisionShape3D" parent="StaticBody3D" unique_id=2063343934]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -57.87248, 14.435, -23.958708)
+shape = SubResource("BoxShape3D_eklri")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D31" unique_id=481608749]
+transform = Transform3D(68.76686, 0, 0, 0, 29.854, 0, 2.2737368e-13, 0, 0.303, 0, 0, 0)
+mesh = SubResource("BoxMesh_ks0jl")
+
+[node name="CollisionShape3D33" type="CollisionShape3D" parent="StaticBody3D" unique_id=1542431097]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -40.587685, 14.435, -92.93967)
+shape = SubResource("BoxShape3D_eklri")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D33" unique_id=1658903041]
+transform = Transform3D(68.76686, 0, 0, 0, 29.854, 0, 2.2737368e-13, 0, 0.303, 0, 0, 0)
+mesh = SubResource("BoxMesh_ks0jl")
+
 [node name="CollisionShape3D25" type="CollisionShape3D" parent="StaticBody3D" unique_id=1941914075]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -126.64841, 14.435, 8.209486)
 shape = SubResource("BoxShape3D_eklri")
@@ -267,6 +283,30 @@ shape = SubResource("BoxShape3D_eklri")
 transform = Transform3D(68.76686, 0, 0, 0, 29.854, 0, 2.2737368e-13, 0, 0.303, 0, 0, 0)
 mesh = SubResource("BoxMesh_ks0jl")
 
+[node name="CollisionShape3D29" type="CollisionShape3D" parent="StaticBody3D" unique_id=1201056116]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -92.28772, 14.435, -54.571934)
+shape = SubResource("BoxShape3D_eklri")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D29" unique_id=1225895327]
+transform = Transform3D(68.76686, 0, 0, 0, 29.854, 0, 2.2737368e-13, 0, 0.303, 0, 0, 0)
+mesh = SubResource("BoxMesh_ks0jl")
+
+[node name="CollisionShape3D32" type="CollisionShape3D" parent="StaticBody3D" unique_id=1915152057]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -39.982346, 14.435, -58.38322)
+shape = SubResource("BoxShape3D_eklri")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D32" unique_id=720390615]
+transform = Transform3D(68.76686, 0, 0, 0, 29.854, 0, 2.2737368e-13, 0, 0.303, 0, 0, 0)
+mesh = SubResource("BoxMesh_ks0jl")
+
+[node name="CollisionShape3D30" type="CollisionShape3D" parent="StaticBody3D" unique_id=869311420]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -92.28773, 14.435, -134.16663)
+shape = SubResource("BoxShape3D_eklri")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D30" unique_id=1437648703]
+transform = Transform3D(68.76686, 0, 0, 0, 29.854, 0, 2.2737368e-13, 0, 0.303, 0, 0, 0)
+mesh = SubResource("BoxMesh_ks0jl")
+
 [node name="CollisionShape3D24" type="CollisionShape3D" parent="StaticBody3D" unique_id=2077052329]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -160.85858, 14.435, 5.0242705)
 shape = SubResource("BoxShape3D_ks0jl")
@@ -280,6 +320,14 @@ transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -92.
 shape = SubResource("BoxShape3D_57tyn")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D26" unique_id=954478496]
+transform = Transform3D(74.064, 0, -1.8634244e-15, 0, 29.902, 0, 4.554874e-13, 0, 0.303, 0, 0, 0)
+mesh = SubResource("BoxMesh_ef214")
+
+[node name="CollisionShape3D34" type="CollisionShape3D" parent="StaticBody3D" unique_id=1234315033]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -60.88013, 14.435, 12.626468)
+shape = SubResource("BoxShape3D_57tyn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D34" unique_id=383697536]
 transform = Transform3D(74.064, 0, -1.8634244e-15, 0, 29.902, 0, 4.554874e-13, 0, 0.303, 0, 0, 0)
 mesh = SubResource("BoxMesh_ef214")
 
