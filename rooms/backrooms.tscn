@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://onhnwunvemy4" path="res://assets/entity_symbol.png" id="6_vigf0"]
 [ext_resource type="PackedScene" uid="uid://ckkpxnv5lkthc" path="res://models/shelf.tscn" id="7_ef214"]
 [ext_resource type="PackedScene" uid="uid://fphemjocp54i" path="res://wardrobe.tscn" id="8_eklri"]
+[ext_resource type="PackedScene" uid="uid://bydgsi1jfy2oh" path="res://models/shelf_2.tscn" id="9_ks0jl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1tr4m"]
 size = Vector3(536.332, 0.20703125, 307.3287)
@@ -1784,3 +1785,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -152.30493, 0.37163258, -46.8
 
 [node name="Wardrobe" parent="." unique_id=1143442656 instance=ExtResource("8_eklri")]
 transform = Transform3D(4.425481, 0, 0, 0, 4.607639, 0, 0, 0, 1, 40.942703, 2.7380278, 8.894079)
+
+[node name="shelf5" parent="." unique_id=574443484 instance=ExtResource("9_ks0jl")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.844281, 0.37102854, 266.92413)
