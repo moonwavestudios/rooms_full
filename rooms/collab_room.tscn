@@ -6,7 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://bsessj80mq3bb" path="res://models/shelf_collab.tscn" id="5_ejt1y"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1rac2"]
-size = Vector3(1, 0.72998047, 1)
+size = Vector3(13, 0.72998047, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mt2x8"]
+size = Vector3(12.593872, 0.72998047, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mt2x8"]
 render_priority = 0
@@ -172,8 +175,12 @@ material = SubResource("StandardMaterial3D_mt2x8")
 transform = Transform3D(4.552266, 0, 0, 0, 0.5622734, 0, 0, 0, 4.696626, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=2132430206]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1350098, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.13500981, 0)
 shape = SubResource("BoxShape3D_1rac2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D2" unique_id=816584407]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.876209e-09, -0.13500981, -0.203064)
+shape = SubResource("BoxShape3D_mt2x8")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2" unique_id=409900725]
 transform = Transform3D(1, 0, 0, 0, 0.5509535, 0, 0, 0, 1, 0, 0, 0)
