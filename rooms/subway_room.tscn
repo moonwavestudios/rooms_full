@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://cb11deoo5uccj"]
 
 [ext_resource type="Material" uid="uid://c28gdvubm0bai" path="res://assets/tiles.tres" id="1_kapoa"]
-[ext_resource type="Material" uid="uid://dk7rispq45fn3" path="res://assets/concrete.tres" id="2_cym6l"]
 [ext_resource type="PackedScene" uid="uid://edny0xnsfjdt" path="res://door.tscn" id="2_g3n4d"]
+[ext_resource type="Texture2D" uid="uid://cjn0povi0fj4e" path="res://textures/dirt/Ground103_4K-JPG_AmbientOcclusion.jpg" id="3_n77ps"]
+[ext_resource type="Texture2D" uid="uid://oqea6c0dt6cw" path="res://textures/dirt/Ground103_4K-JPG_NormalGL.jpg" id="4_tec8t"]
+[ext_resource type="Texture2D" uid="uid://barhuc8rjchr8" path="res://textures/dirt/Ground103_4K-JPG_Roughness.jpg" id="5_2cnsa"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_888hv"]
 size = Vector3(9.173828, 0.32873535, 47.67871)
@@ -13,8 +15,22 @@ material = ExtResource("1_kapoa")
 [sub_resource type="BoxShape3D" id="BoxShape3D_g3n4d"]
 size = Vector3(9.173828, 0.32873535, 47.67871)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6yasx"]
+load_path = "res://.godot/imported/Ground103_4K-JPG_Color.jpg-c3df7ba24f31766226e5890785404b42.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ejfmt"]
+albedo_color = Color(0.5649617, 0.5649616, 0.5649616, 1)
+albedo_texture = SubResource("CompressedTexture2D_6yasx")
+roughness_texture = ExtResource("5_2cnsa")
+normal_enabled = true
+normal_texture = ExtResource("4_tec8t")
+ao_enabled = true
+ao_texture = ExtResource("3_n77ps")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
 [sub_resource type="BoxMesh" id="BoxMesh_g3n4d"]
-material = ExtResource("2_cym6l")
+material = SubResource("StandardMaterial3D_ejfmt")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i3xd6"]
 transparency = 1
