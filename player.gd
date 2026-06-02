@@ -352,9 +352,9 @@ func _handle_animation(direction: Vector3) -> void:
 		return
 	var is_moving := direction.length() > 0.1
 	if is_moving:
-		_anim_state_machine.travel("test_run" if not is_crouching else "test_walk")
+		_anim_state_machine.travel("test_run" if not is_crouching else "test_crouch_walk")
 	else:
-		_anim_state_machine.travel("test_idle")
+		_anim_state_machine.travel("test_idle" if not is_crouching else "test_crouch_idle")
 
 func _update_all_anim_blends() -> void:
 	var held = inventory[selected_slot]
