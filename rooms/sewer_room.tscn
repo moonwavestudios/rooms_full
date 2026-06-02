@@ -1,3 +1,38 @@
 [gd_scene format=3 uid="uid://08cqjq3t0fv8"]
 
+[ext_resource type="Shader" uid="uid://bcojkc3ju3ifo" path="res://shaders/horror_water.gdshader" id="1_2rx16"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n77ps"]
+render_priority = 0
+shader = ExtResource("1_2rx16")
+shader_parameter/deep_color = Color(0.01, 0.03, 0.04, 1)
+shader_parameter/shallow_color = Color(0, 0.23137255, 0, 1)
+shader_parameter/foam_color = Color(1, 1, 1, 1)
+shader_parameter/subsurface_color = Color(0.23023728, 0.395977, 0.36563623, 1)
+shader_parameter/wave_speed = 0.18
+shader_parameter/wave_strength = 0.38
+shader_parameter/wave_scale_a = 1.6
+shader_parameter/wave_scale_b = 3.2
+shader_parameter/depth_fade_distance = 2.8
+shader_parameter/refraction_strength = 0.055
+shader_parameter/roughness = 0.06
+shader_parameter/metallic = 0.0
+shader_parameter/specular = 0.72
+shader_parameter/foam_threshold = 0.18
+shader_parameter/foam_softness = 0.12
+shader_parameter/foam_speed = 0.08
+shader_parameter/blood_tint_strength = 0.0
+shader_parameter/blood_color = Color(0.18, 0.01, 0.01, 1)
+shader_parameter/oil_slick_strength = 0.22
+shader_parameter/darkness_vignette = 0.65
+shader_parameter/gust_frequency = 0.55
+shader_parameter/gust_strength = 0.28
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pq4ki"]
+material = SubResource("ShaderMaterial_n77ps")
+
 [node name="sewer_room" type="Node3D" unique_id=1588956837]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1903244625]
+transform = Transform3D(3.446063, 0, 0, 0, 1, 0, 0, 0, 23.973444, 7.719344, 0, 0)
+mesh = SubResource("PlaneMesh_pq4ki")
