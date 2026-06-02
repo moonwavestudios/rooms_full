@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cuj0jxt0hms76"]
+
+[ext_resource type="PackedScene" uid="uid://ehpy44iqxso0" path="res://models/entity_models/stalker/stalker.fbx" id="1_ngl5b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ngl5b"]
+albedo_color = Color(0.14767182, 0.14767179, 0.14767179, 1)
+
+[node name="stalker" unique_id=1357183460 instance=ExtResource("1_ngl5b")]
+
+[node name="body" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(2106325800) index="0" unique_id=725176108]
+surface_material_override/0 = SubResource("StandardMaterial3D_ngl5b")
