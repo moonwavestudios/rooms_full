@@ -1,5 +1,3 @@
-# CODE WRITTEN BY VIRUS
-
 extends CharacterBody3D
 
 const DEFAULT_SPEED := 10.0
@@ -105,7 +103,6 @@ var interact_handlers: Dictionary
 
 func _build_interact_handlers():
 	interact_handlers = {
-		"giveHealth": _interact_health,
 		"item":       _interact_item,
 		"battery":    _interact_battery,
 		"ladder":     _interact_ladder,
@@ -482,6 +479,12 @@ func on_coin_interacted(collider: Area3D) -> void:
 	var coin_path = get_path_to(collider)
 	rpc("sync_coin_collection", coin_path, collider.coins)
 	
+func on_bandage_interacted(collider: Area3D) -> void:
+	if not is_multiplayer_authority():
+		return
+	var coin_path = get_path_to(collider)
+	rpc("sync_bandage_collection", coin_path, collider.give_health)
+	
 func on_battery_interacted(collider: Area3D) -> void:
 	if not is_multiplayer_authority():
 		return
@@ -495,6 +498,14 @@ func sync_coin_collection(coin_path: NodePath, coin_value: int) -> void:
 		if is_multiplayer_authority():
 			coins += coin_value
 			$coin.play()
+		coin_node.queue_free()
+		
+@rpc("any_peer", "call_local", "reliable")
+func sync_bandage_collection(coin_path: NodePath, coin_value: int) -> void:
+	var coin_node = get_node_or_null(coin_path)
+	if coin_node and is_instance_valid(coin_node):
+		if is_multiplayer_authority():
+			health += coin_value
 		coin_node.queue_free()
 		
 @rpc("any_peer", "call_local", "reliable")
@@ -565,19 +576,6 @@ func _interact_ladder(collider: Area3D) -> void:
 		return
 	var target_pos = collider.get_node("Teleport").global_position
 	global_position = target_pos
-
-func _interact_health(collider) -> void:
-	if health >= max_health:
-		return
-	rpc("sync_health_pickup", get_path_to(collider), collider.give_health)
-
-@rpc("any_peer", "call_local", "reliable")
-func sync_health_pickup(health_path: NodePath, health_amount: int) -> void:
-	var health_pickup = get_node_or_null(health_path)
-	if health_pickup and is_instance_valid(health_pickup):
-		if is_multiplayer_authority():
-			health = min(health + health_amount, max_health)
-		health_pickup.queue_free()
 
 func _interact_battery(collider) -> void:
 	if batteries >= max_batteries:

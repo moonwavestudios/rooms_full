@@ -66,7 +66,6 @@ import/blender/enabled=false
 [global_group]
 
 player=""
-giveHealth=""
 cat=""
 fake_door=""
 painting=""

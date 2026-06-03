@@ -1,5 +1,3 @@
-# CODE WRITTEN BY VIRUS
-
 extends Node
 
 var peer = ENetMultiplayerPeer.new()
@@ -14,7 +12,7 @@ var rng := RandomNumberGenerator.new()
 
 const AUTHOR := "Moonwave Studios"
 const LICENSE := "MIT"
-const COPYRIGHT := "2024"
+const COPYRIGHT := "2026"
 
 var player_usernames := {}
 
