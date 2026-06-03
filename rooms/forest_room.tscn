@@ -17,6 +17,9 @@ albedo_color = Color(1, 1, 1, 0)
 [sub_resource type="BoxMesh" id="BoxMesh_euvbd"]
 material = SubResource("StandardMaterial3D_6yasx")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_euvbd"]
+size = Vector3(0.21484375, 2.6123047, 0.2775879)
+
 [node name="forest_room" type="Node3D" unique_id=288181413]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1039302987]
@@ -45,62 +48,377 @@ transform = Transform3D(1.1239843, 0, 0, 0, 1.1206244, 0, 0, 0, 1, -0.3189702, 0
 [node name="Pine" parent="." unique_id=312295467 instance=ExtResource("3_euvbd")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -67.146706, -0.41427398, 45.727245)
 
-[node name="Pine2" parent="." unique_id=1019360754 instance=ExtResource("3_euvbd")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 48.90399, -0.77621055, 61.023575)
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine" unique_id=966522202]
 
-[node name="Pine21" parent="." unique_id=675140327 instance=ExtResource("3_euvbd")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 86.37446, -0.77621055, 61.023575)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine/StaticBody3D" unique_id=1133416066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
 
-[node name="Pine4" parent="." unique_id=1999370680 instance=ExtResource("3_euvbd")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 22.55326, -0.77621055, -8.490028)
+[node name="Pine2" parent="." unique_id=2828822 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -11.311569, -0.41427398, 45.727245)
 
-[node name="Pine12" parent="." unique_id=645706062 instance=ExtResource("3_euvbd")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 22.55326, -0.77621055, -66.74647)
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine2" unique_id=860552880]
 
-[node name="Pine13" parent="." unique_id=428165916 instance=ExtResource("3_euvbd")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -43.853584, -0.77621055, -66.74647)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine2/StaticBody3D" unique_id=1208879989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
 
-[node name="Pine14" parent="." unique_id=401340791 instance=ExtResource("3_euvbd")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -93.01171, -0.77621055, -111.05528)
+[node name="Pine3" parent="." unique_id=1736171288 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -11.311569, -0.41427398, 117.476135)
 
-[node name="Pine15" parent="." unique_id=2077391982 instance=ExtResource("3_euvbd")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -93.01171, -0.77621055, -21.806236)
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine3" unique_id=1144113198]
 
-[node name="Pine16" parent="." unique_id=919049182 instance=ExtResource("3_euvbd")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -52.719276, -0.77621055, -31.860136)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine3/StaticBody3D" unique_id=196857689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
 
-[node name="Pine6" parent="." unique_id=1516391377 instance=ExtResource("3_euvbd")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 22.55326, -0.77621055, 25.902122)
+[node name="Pine4" parent="." unique_id=500013090 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -74.61488, -0.41427398, 117.476135)
 
-[node name="Pine17" parent="." unique_id=1216198721 instance=ExtResource("3_euvbd")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 101.71503, -0.77621055, 25.902122)
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine4" unique_id=2041241111]
 
-[node name="Pine18" parent="." unique_id=115811420 instance=ExtResource("3_euvbd")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 88.99898, -0.77621055, 107.067276)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine4/StaticBody3D" unique_id=161462519]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
 
-[node name="Pine19" parent="." unique_id=2108678074 instance=ExtResource("3_euvbd")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 142.10077, -0.77621055, 65.157295)
+[node name="Pine5" parent="." unique_id=242392533 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -38.203056, -0.41427398, 90.57032)
 
-[node name="Pine20" parent="." unique_id=886833290 instance=ExtResource("3_euvbd")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 118.99242, -0.77621055, 91.98106)
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine5" unique_id=1885889161]
 
-[node name="Pine11" parent="." unique_id=2081499182 instance=ExtResource("3_euvbd")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -48.89428, -0.77621055, 11.350719)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine5/StaticBody3D" unique_id=861913185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
 
-[node name="Pine7" parent="." unique_id=257459710 instance=ExtResource("3_euvbd")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 22.55326, -0.77621055, 103.62848)
+[node name="Pine6" parent="." unique_id=1342492593 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -38.033607, -0.41427398, 128.14645)
 
-[node name="Pine8" parent="." unique_id=1708326665 instance=ExtResource("3_euvbd")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 35.09807, -0.77621055, 84.73987)
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine6" unique_id=1852894236]
 
-[node name="Pine9" parent="." unique_id=1223050237 instance=ExtResource("3_euvbd")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -24.268436, -0.77621055, 72.2491)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine6/StaticBody3D" unique_id=1420934666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
 
-[node name="Pine10" parent="." unique_id=198857895 instance=ExtResource("3_euvbd")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -11.723629, -0.77621055, 53.36049)
+[node name="Pine7" parent="." unique_id=341164603 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -38.033607, -0.41427398, 168.1147)
 
-[node name="Pine5" parent="." unique_id=2607644 instance=ExtResource("3_euvbd")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 73.53207, -0.77621055, 5.7908745)
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine7" unique_id=1558115175]
 
-[node name="Pine3" parent="." unique_id=2067772535 instance=ExtResource("3_euvbd")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -12.585579, -0.77621055, 100.51077)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine7/StaticBody3D" unique_id=1138074483]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine8" parent="." unique_id=1245893657 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -58.9377, -0.41427398, 168.1147)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine8" unique_id=1353099409]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine8/StaticBody3D" unique_id=437417830]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine9" parent="." unique_id=701486684 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -46.583435, -0.41427398, -92.88991)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine9" unique_id=1988671699]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine9/StaticBody3D" unique_id=1702802338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine10" parent="." unique_id=1426736240 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 9.251701, -0.41427398, -92.88991)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine10" unique_id=1042230370]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine10/StaticBody3D" unique_id=131315180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine11" parent="." unique_id=1689107827 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 9.251701, -0.41427398, -21.141022)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine11" unique_id=728014463]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine11/StaticBody3D" unique_id=446493355]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine12" parent="." unique_id=29017055 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -54.051613, -0.41427398, -21.141022)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine12" unique_id=1285432507]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine12/StaticBody3D" unique_id=1760467280]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine13" parent="." unique_id=856588714 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -17.639786, -0.41427398, -48.046837)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine13" unique_id=1911530967]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine13/StaticBody3D" unique_id=1872145837]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine14" parent="." unique_id=456549701 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -17.470337, -0.41427398, -10.470703)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine14" unique_id=1098475963]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine14/StaticBody3D" unique_id=1643336066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine15" parent="." unique_id=286058375 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -17.470337, -0.41427398, 29.497543)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine15" unique_id=1443995507]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine15/StaticBody3D" unique_id=627081295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine16" parent="." unique_id=1008933822 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -38.374428, -0.41427398, 29.497543)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine16" unique_id=419520441]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine16/StaticBody3D" unique_id=1316680695]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine17" parent="." unique_id=1168103539 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -121.06138, -0.41427398, -121.478836)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine17" unique_id=936226078]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine17/StaticBody3D" unique_id=1058966413]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine18" parent="." unique_id=893921611 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -65.22624, -0.41427398, -121.478836)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine18" unique_id=315122529]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine18/StaticBody3D" unique_id=2110992016]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine19" parent="." unique_id=1170990137 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -65.22624, -0.41427398, -49.729946)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine19" unique_id=1661074120]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine19/StaticBody3D" unique_id=1575689645]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine20" parent="." unique_id=1012281706 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -128.52957, -0.41427398, -49.729946)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine20" unique_id=1794484363]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine20/StaticBody3D" unique_id=1883093317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine21" parent="." unique_id=445297406 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -92.11773, -0.41427398, -76.63576)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine21" unique_id=380955464]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine21/StaticBody3D" unique_id=667941095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine22" parent="." unique_id=452731922 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -91.94828, -0.41427398, -39.059628)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine22" unique_id=610509147]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine22/StaticBody3D" unique_id=451173746]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine23" parent="." unique_id=2063297289 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -91.94828, -0.41427398, 0.9086189)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine23" unique_id=1393979600]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine23/StaticBody3D" unique_id=1216516339]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine24" parent="." unique_id=1990309693 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -112.85237, -0.41427398, 0.9086189)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine24" unique_id=689889638]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine24/StaticBody3D" unique_id=1852619408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine25" parent="." unique_id=1956848223 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -169.03879, -0.41427398, -91.51428)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine25" unique_id=2096002939]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine25/StaticBody3D" unique_id=1554530398]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine26" parent="." unique_id=323480787 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -113.20365, -0.41427398, -91.51428)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine26" unique_id=1809163073]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine26/StaticBody3D" unique_id=560507213]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine27" parent="." unique_id=405436957 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -113.20365, -0.41427398, -19.765388)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine27" unique_id=1015591695]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine27/StaticBody3D" unique_id=51081027]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine28" parent="." unique_id=482110139 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -176.50699, -0.41427398, -19.765388)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine28" unique_id=223482880]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine28/StaticBody3D" unique_id=1947348911]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine29" parent="." unique_id=1776507045 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -140.09514, -0.41427398, -46.6712)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine29" unique_id=1047032499]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine29/StaticBody3D" unique_id=1801884985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine30" parent="." unique_id=1383850971 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -139.92569, -0.41427398, -9.09507)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine30" unique_id=273469165]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine30/StaticBody3D" unique_id=1710858032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine31" parent="." unique_id=579306872 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -139.92569, -0.41427398, 30.873177)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine31" unique_id=970896155]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine31/StaticBody3D" unique_id=801512451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine32" parent="." unique_id=567949666 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -160.82977, -0.41427398, 30.873177)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine32" unique_id=1921576144]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine32/StaticBody3D" unique_id=375178769]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine33" parent="." unique_id=1435613582 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -149.48717, -0.41427398, 68.286934)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine33" unique_id=312424326]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine33/StaticBody3D" unique_id=17048959]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine34" parent="." unique_id=1165264232 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -93.65203, -0.41427398, 68.286934)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine34" unique_id=439695827]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine34/StaticBody3D" unique_id=6208620]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine35" parent="." unique_id=259846266 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -93.65203, -0.41427398, 140.03583)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine35" unique_id=647698586]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine35/StaticBody3D" unique_id=97350287]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine36" parent="." unique_id=490349168 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -156.95537, -0.41427398, 140.03583)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine36" unique_id=1646812896]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine36/StaticBody3D" unique_id=464820105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine37" parent="." unique_id=332957219 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -120.54352, -0.41427398, 113.13002)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine37" unique_id=1582156999]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine37/StaticBody3D" unique_id=203403587]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine41" parent="." unique_id=1451322356 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -120.54352, -0.41427398, 84.78925)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine41" unique_id=1297328746]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine41/StaticBody3D" unique_id=1472285637]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine42" parent="." unique_id=1018253305 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -97.05479, -0.41427398, 35.73281)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine42" unique_id=2078411092]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine42/StaticBody3D" unique_id=2122943542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine38" parent="." unique_id=354488705 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -120.37407, -0.41427398, 150.70615)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine38" unique_id=824047123]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine38/StaticBody3D" unique_id=98980705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine39" parent="." unique_id=742273700 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -120.37407, -0.41427398, 190.6744)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine39" unique_id=1440363171]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine39/StaticBody3D" unique_id=1310075596]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine40" parent="." unique_id=1715349632 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -141.27815, -0.41427398, 190.6744)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine40" unique_id=62365721]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine40/StaticBody3D" unique_id=890816384]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
