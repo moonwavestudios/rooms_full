@@ -1,4 +1,7 @@
+# CODE WRITTEN BY VIRUS
+
 extends Node
+
 var peer = ENetMultiplayerPeer.new()
 @export var player_Scene: PackedScene
 @export var use_seed := false

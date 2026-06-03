@@ -1,3 +1,5 @@
+# CODE WRITTEN BY VIRUS
+
 extends CharacterBody3D
 
 const DEFAULT_SPEED := 10.0
