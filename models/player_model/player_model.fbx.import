@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://d27x54ra7jhta"
-path="res://.godot/imported/character_base.fbx-538ed04be5f34f99c51f70db01749fbb.scn"
+uid="uid://drkmc82qdnrfn"
+path="res://.godot/imported/player_model.fbx-ecba4f658cb05067950ed87ce7808883.scn"
 
 [deps]
 
-source_file="res://models/player_model/character_base.fbx"
-dest_files=["res://.godot/imported/character_base.fbx-538ed04be5f34f99c51f70db01749fbb.scn"]
+source_file="res://models/player_model/player_model.fbx"
+dest_files=["res://.godot/imported/player_model.fbx-ecba4f658cb05067950ed87ce7808883.scn"]
 
 [params]
 
@@ -37,14 +37,7 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"materials": {
-"@MATERIAL:0": {
-"use_external/enabled": true,
-"use_external/path": "uid://c3itf5rl112l8"
-}
-}
-}
+_subresources={}
 fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=1

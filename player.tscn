@@ -16,13 +16,14 @@
 [ext_resource type="Animation" uid="uid://df3sclhe6ywr5" path="res://models/player_model/animations/idle/mixamo_com.res" id="9_nvl01"]
 [ext_resource type="Animation" uid="uid://bsajranvnlsa2" path="res://models/player_model/animations/mixamo_com.res" id="10_n7ghd"]
 [ext_resource type="Animation" uid="uid://c0gkraub4asit" path="res://models/player_model/animations/crouch/walk/mixamo_com.res" id="10_urp6f"]
-[ext_resource type="Animation" uid="uid://3gpj8a5gs4p4" path="res://models/player_model/animations/pills/Armature_mixamo_com.tres" id="13_606se"]
 [ext_resource type="Animation" uid="uid://kgrqluyopnl1" path="res://models/player_model/animations/imaginary_remote/hold/Armature_mixamo_com.tres" id="13_pylmc"]
-[ext_resource type="PackedScene" uid="uid://d27x54ra7jhta" path="res://models/player_model/character_base.fbx" id="14_bwjto"]
 [ext_resource type="Animation" uid="uid://sffw2mei1qe4" path="res://models/player_model/animations/keycard/Armature_mixamo_com.tres" id="14_op7ga"]
 [ext_resource type="Animation" uid="uid://betayvu8y5xe5" path="res://models/player_model/animations/imaginary_remote/use/Armature_mixamo_com.tres" id="16_q13i1"]
-[ext_resource type="Animation" uid="uid://byysd3p5n6rdc" path="res://models/player_model/animations/pills/take/Armature_mixamo_com.tres" id="17_pbfsw"]
+[ext_resource type="Animation" uid="uid://b4icpumy3fjko" path="res://models/player_model/animations/pills/take/Armature_mixamo_com.res" id="18_7lmhl"]
+[ext_resource type="Animation" uid="uid://s5ga8uo38jtu" path="res://models/player_model/animations/pills/hold/Armature_mixamo_com.res" id="18_dx0e4"]
+[ext_resource type="Animation" uid="uid://bh7dncwo48054" path="res://models/player_model/animations/pills/equip/Armature_mixamo_com.res" id="18_jm5j8"]
 [ext_resource type="FontFile" uid="uid://dxsjhqed312w" path="res://fonts/daidaidaidaidaaisuki_free.otf" id="23_7lmhl"]
+[ext_resource type="PackedScene" uid="uid://drkmc82qdnrfn" path="res://models/player_model/player_model.fbx" id="24_dx0e4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
 
@@ -55,8 +56,9 @@ _data = {
 &"idle": ExtResource("9_nvl01"),
 &"keycard_hold": ExtResource("14_op7ga"),
 &"keycard_use": ExtResource("9_5tmop"),
-&"pills_hold": ExtResource("13_606se"),
-&"pills_take": ExtResource("17_pbfsw"),
+&"pills_equip": ExtResource("18_jm5j8"),
+&"pills_hold": ExtResource("18_dx0e4"),
+&"pills_take": ExtResource("18_7lmhl"),
 &"remote_imaginary": ExtResource("16_q13i1"),
 &"run": ExtResource("9_b26j0"),
 &"stalker_death": ExtResource("9_7ahtn")
@@ -182,6 +184,7 @@ filter_enabled = true
 filters = ["Skeleton3D:mixamorig_RightArm", "Skeleton3D:mixamorig_RightForeArm", "Skeleton3D:mixamorig_RightHand", "Skeleton3D:mixamorig_RightHandIndex1", "Skeleton3D:mixamorig_RightHandIndex2", "Skeleton3D:mixamorig_RightHandIndex3", "Skeleton3D:mixamorig_RightHandMiddle1", "Skeleton3D:mixamorig_RightHandMiddle2", "Skeleton3D:mixamorig_RightHandMiddle3", "Skeleton3D:mixamorig_RightHandPinky1", "Skeleton3D:mixamorig_RightHandPinky2", "Skeleton3D:mixamorig_RightHandPinky3", "Skeleton3D:mixamorig_RightHandRing1", "Skeleton3D:mixamorig_RightHandRing2", "Skeleton3D:mixamorig_RightHandRing3", "Skeleton3D:mixamorig_RightHandThumb1", "Skeleton3D:mixamorig_RightHandThumb2", "Skeleton3D:mixamorig_RightHandThumb3", "Skeleton3D:mixamorig_RightShoulder"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_urp6f"]
+graph_offset = Vector2(-250.80441, -35.107346)
 nodes/output/position = Vector2(2380, 140)
 nodes/Blend2/node = SubResource("AnimationNodeBlend2_bwjto")
 nodes/Blend2/position = Vector2(560, 100)
@@ -284,12 +287,12 @@ stream = ExtResource("5_sweqy")
 [node name="coin" type="AudioStreamPlayer3D" parent="." unique_id=718088625]
 stream = ExtResource("7_1jxqw")
 
+[node name="character_base" parent="." unique_id=456759892 instance=ExtResource("24_dx0e4")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.927, 0.313)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2102045550]
 root_node = NodePath("../character_base")
 libraries/test = SubResource("AnimationLibrary_n7ghd")
-
-[node name="character_base" parent="." unique_id=1433541331 instance=ExtResource("14_bwjto")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.9265607, 0.3130011)
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=391400258]
 root_node = NodePath("../character_base")
