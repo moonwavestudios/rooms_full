@@ -13,11 +13,11 @@
 [ext_resource type="Animation" uid="uid://chitmt3wd2utx" path="res://models/player_model/animations/flashlight/Armature_mixamo_com.tres" id="9_606se"]
 [ext_resource type="Animation" uid="uid://b5ejyxwknyupq" path="res://models/player_model/animations/run/mixamo_com.res" id="9_b26j0"]
 [ext_resource type="Animation" uid="uid://dr8ggkmrac0ma" path="res://models/player_model/animations/crouch/mixamo_com.res" id="9_ivps1"]
-[ext_resource type="Animation" uid="uid://df3sclhe6ywr5" path="res://models/player_model/animations/idle/mixamo_com.res" id="9_nvl01"]
 [ext_resource type="Animation" uid="uid://bsajranvnlsa2" path="res://models/player_model/animations/mixamo_com.res" id="10_n7ghd"]
 [ext_resource type="Animation" uid="uid://c0gkraub4asit" path="res://models/player_model/animations/crouch/walk/mixamo_com.res" id="10_urp6f"]
 [ext_resource type="Animation" uid="uid://kgrqluyopnl1" path="res://models/player_model/animations/imaginary_remote/hold/Armature_mixamo_com.tres" id="13_pylmc"]
 [ext_resource type="Animation" uid="uid://sffw2mei1qe4" path="res://models/player_model/animations/keycard/Armature_mixamo_com.tres" id="14_op7ga"]
+[ext_resource type="Animation" uid="uid://ccf0uymi17hag" path="res://models/player_model/animations/idle/Armature_mixamo_com.res" id="15_dx0e4"]
 [ext_resource type="Animation" uid="uid://betayvu8y5xe5" path="res://models/player_model/animations/imaginary_remote/use/Armature_mixamo_com.tres" id="16_q13i1"]
 [ext_resource type="Animation" uid="uid://b4icpumy3fjko" path="res://models/player_model/animations/pills/take/Armature_mixamo_com.res" id="18_7lmhl"]
 [ext_resource type="Animation" uid="uid://s5ga8uo38jtu" path="res://models/player_model/animations/pills/hold/Armature_mixamo_com.res" id="18_dx0e4"]
@@ -53,7 +53,7 @@ _data = {
 &"flash": ExtResource("9_606se"),
 &"flashlight": ExtResource("10_n7ghd"),
 &"hold_remote": ExtResource("13_pylmc"),
-&"idle": ExtResource("9_nvl01"),
+&"idle": ExtResource("15_dx0e4"),
 &"keycard_hold": ExtResource("14_op7ga"),
 &"keycard_use": ExtResource("9_5tmop"),
 &"pills_equip": ExtResource("18_jm5j8"),
@@ -184,7 +184,6 @@ filter_enabled = true
 filters = ["Skeleton3D:mixamorig_RightArm", "Skeleton3D:mixamorig_RightForeArm", "Skeleton3D:mixamorig_RightHand", "Skeleton3D:mixamorig_RightHandIndex1", "Skeleton3D:mixamorig_RightHandIndex2", "Skeleton3D:mixamorig_RightHandIndex3", "Skeleton3D:mixamorig_RightHandMiddle1", "Skeleton3D:mixamorig_RightHandMiddle2", "Skeleton3D:mixamorig_RightHandMiddle3", "Skeleton3D:mixamorig_RightHandPinky1", "Skeleton3D:mixamorig_RightHandPinky2", "Skeleton3D:mixamorig_RightHandPinky3", "Skeleton3D:mixamorig_RightHandRing1", "Skeleton3D:mixamorig_RightHandRing2", "Skeleton3D:mixamorig_RightHandRing3", "Skeleton3D:mixamorig_RightHandThumb1", "Skeleton3D:mixamorig_RightHandThumb2", "Skeleton3D:mixamorig_RightHandThumb3", "Skeleton3D:mixamorig_RightShoulder"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_urp6f"]
-graph_offset = Vector2(1337.9762, 525.1626)
 nodes/output/position = Vector2(2380, 140)
 nodes/Blend2/node = SubResource("AnimationNodeBlend2_bwjto")
 nodes/Blend2/position = Vector2(560, 100)
