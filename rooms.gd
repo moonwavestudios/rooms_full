@@ -48,6 +48,10 @@ var secret_rooms := [
 		"chance": 0.01,
 	},
 	{
+		"scene": preload("res://rooms/forest_room.tscn"),
+		"chance": 0.001,
+	},
+	{
 		"scene": preload("res://rooms/placeholder_room.tscn"),
 		"chance": 0.1,
 	},

@@ -1,3 +1,42 @@
 [gd_scene format=3 uid="uid://d36u5mooc6asn"]
 
+[ext_resource type="Material" uid="uid://bhmd23wltt75j" path="res://assets/grass.tres" id="1_1wtxe"]
+[ext_resource type="PackedScene" uid="uid://edny0xnsfjdt" path="res://door.tscn" id="2_6vgtl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vestg"]
+size = Vector3(502.8655, 0.37646484, 754.21094)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vestg"]
+material = ExtResource("1_1wtxe")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6yasx"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_euvbd"]
+material = SubResource("StandardMaterial3D_6yasx")
+
 [node name="forest_room" type="Node3D" unique_id=288181413]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1039302987]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=118176002]
+shape = SubResource("BoxShape3D_vestg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=875601633]
+transform = Transform3D(503.7402, 0, 0, 0, 0.35881984, 0, 0, 0, 766.00555, 0, 0, 0)
+mesh = SubResource("BoxMesh_vestg")
+
+[node name="Begin_Pos" type="MeshInstance3D" parent="." unique_id=2096619722]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.037490442, -0.274, 23.721855)
+mesh = SubResource("BoxMesh_euvbd")
+
+[node name="End_Pos" type="MeshInstance3D" parent="." unique_id=1689856788]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08, -0.274, -23.71655)
+mesh = SubResource("BoxMesh_euvbd")
+
+[node name="DoorSpawn" type="Node3D" parent="." unique_id=2082506892]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15809119, 0.6556103, -24.145664)
+
+[node name="door" parent="DoorSpawn" unique_id=1515299434 instance=ExtResource("2_6vgtl")]
+transform = Transform3D(1.1239843, 0, 0, 0, 1.1206244, 0, 0, 0, 1, -0.3189702, 0, 0)
