@@ -3,6 +3,7 @@
 [ext_resource type="Material" uid="uid://bhmd23wltt75j" path="res://assets/grass.tres" id="1_1wtxe"]
 [ext_resource type="PackedScene" uid="uid://edny0xnsfjdt" path="res://door.tscn" id="2_6vgtl"]
 [ext_resource type="PackedScene" uid="uid://pqx566c4myg5" path="res://models/pine.tscn" id="3_euvbd"]
+[ext_resource type="PackedScene" uid="uid://c8a3ua2fwww81" path="res://models/fence.tscn" id="4_juaim"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vestg"]
 size = Vector3(502.8655, 0.37646484, 754.21094)
@@ -177,6 +178,24 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -17.470337, -0.41427398, 29.4
 [node name="StaticBody3D" type="StaticBody3D" parent="Pine15" unique_id=1443995507]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pine15/StaticBody3D" unique_id=627081295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine45" parent="." unique_id=399696990 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -17.470337, -0.41427398, 0.48139954)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine45" unique_id=916143848]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine45/StaticBody3D" unique_id=1100997749]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine46" parent="." unique_id=1511405146 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 18.963833, -0.41427398, -41.40111)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine46" unique_id=866539605]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine46/StaticBody3D" unique_id=423822134]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
 shape = SubResource("BoxShape3D_euvbd")
 
@@ -440,3 +459,21 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -141.27815, -0.41427398, 190.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pine40/StaticBody3D" unique_id=890816384]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
 shape = SubResource("BoxShape3D_euvbd")
+
+[node name="fence" parent="." unique_id=1769708350 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, 0)
+
+[node name="fence2" parent="." unique_id=1506259806 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, 5.5898476)
+
+[node name="fence3" parent="." unique_id=892642157 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, 11.167022)
+
+[node name="fence4" parent="." unique_id=468569974 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -16.71715)
+
+[node name="fence5" parent="." unique_id=170229059 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -11.127302)
+
+[node name="fence6" parent="." unique_id=997935897 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -5.550128)

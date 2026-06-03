@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c8a3ua2fwww81"]
+
+[ext_resource type="ArrayMesh" uid="uid://7shycu2xjcxi" path="res://models/fence/source/Untitled.obj" id="1_61cgq"]
+[ext_resource type="Texture2D" uid="uid://b8xqntu07jj6b" path="res://models/fence/textures/Alpha_BaseColor.png" id="2_yjfah"]
+[ext_resource type="Texture2D" uid="uid://cjy0tlrpbnaaw" path="res://models/fence/textures/01_DefaultMaterial_Metallic.png" id="3_46bx1"]
+[ext_resource type="Texture2D" uid="uid://ceun8gcqf4ixl" path="res://models/fence/textures/01_DefaultMaterial_Normal.png" id="3_si0va"]
+[ext_resource type="Texture2D" uid="uid://8u6n6q3rjlck" path="res://models/fence/textures/01_DefaultMaterial_Roughness.png" id="5_87m04"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_si0va"]
+transparency = 1
+albedo_texture = ExtResource("2_yjfah")
+metallic = 1.0
+metallic_texture = ExtResource("3_46bx1")
+roughness_texture = ExtResource("5_87m04")
+normal_enabled = true
+normal_texture = ExtResource("3_si0va")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_87m04"]
+size = Vector3(5.4802246, 3.511795, 0.12872314)
+
+[node name="fence" type="Node3D" unique_id=1769708350]
+
+[node name="Untitled" type="MeshInstance3D" parent="." unique_id=1359814645]
+mesh = ExtResource("1_61cgq")
+surface_material_override/0 = SubResource("StandardMaterial3D_si0va")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1385617476]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=958604782]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.018920898, 1.7491379, -0.031829834)
+shape = SubResource("BoxShape3D_87m04")
