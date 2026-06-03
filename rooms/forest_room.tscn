@@ -2,6 +2,7 @@
 
 [ext_resource type="Material" uid="uid://bhmd23wltt75j" path="res://assets/grass.tres" id="1_1wtxe"]
 [ext_resource type="PackedScene" uid="uid://edny0xnsfjdt" path="res://door.tscn" id="2_6vgtl"]
+[ext_resource type="PackedScene" uid="uid://pqx566c4myg5" path="res://models/pine.tscn" id="3_euvbd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vestg"]
 size = Vector3(502.8655, 0.37646484, 754.21094)
@@ -40,3 +41,39 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15809119, 0.6556103, -24.1
 
 [node name="door" parent="DoorSpawn" unique_id=1515299434 instance=ExtResource("2_6vgtl")]
 transform = Transform3D(1.1239843, 0, 0, 0, 1.1206244, 0, 0, 0, 1, -0.3189702, 0, 0)
+
+[node name="Pine" parent="." unique_id=312295467 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -67.146706, -0.41427398, 45.727245)
+
+[node name="Pine2" parent="." unique_id=1019360754 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 48.90399, -0.77621055, 61.023575)
+
+[node name="Pine4" parent="." unique_id=1999370680 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 22.55326, -0.77621055, -8.490028)
+
+[node name="Pine12" parent="." unique_id=645706062 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 22.55326, -0.77621055, -66.74647)
+
+[node name="Pine6" parent="." unique_id=1516391377 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 22.55326, -0.77621055, 25.902122)
+
+[node name="Pine11" parent="." unique_id=2081499182 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -48.89428, -0.77621055, 11.350719)
+
+[node name="Pine7" parent="." unique_id=257459710 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 22.55326, -0.77621055, 103.62848)
+
+[node name="Pine8" parent="." unique_id=1708326665 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 35.09807, -0.77621055, 84.73987)
+
+[node name="Pine9" parent="." unique_id=1223050237 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -24.268436, -0.77621055, 72.2491)
+
+[node name="Pine10" parent="." unique_id=198857895 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -11.723629, -0.77621055, 53.36049)
+
+[node name="Pine5" parent="." unique_id=2607644 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 73.53207, -0.77621055, 5.7908745)
+
+[node name="Pine3" parent="." unique_id=2067772535 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -12.585579, -0.77621055, 100.51077)
