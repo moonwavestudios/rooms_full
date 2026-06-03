@@ -6,6 +6,7 @@
 [ext_resource type="Material" uid="uid://d3vq7bpwvpdgl" path="res://assets/walls.tres" id="4_htglj"]
 [ext_resource type="PackedScene" uid="uid://dlfnn8hxistuw" path="res://models/light.tscn" id="6_8315p"]
 [ext_resource type="Material" uid="uid://dk7rispq45fn3" path="res://assets/concrete.tres" id="7_8462o"]
+[ext_resource type="PackedScene" uid="uid://bydgsi1jfy2oh" path="res://models/shelf_2.tscn" id="7_kaosq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n77ps"]
 render_priority = 0
@@ -58,6 +59,9 @@ size = Vector3(9.372368, 5.4229736, 0.22753906)
 
 [sub_resource type="BoxMesh" id="BoxMesh_twtni"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_2tr76"]
+size = Vector3(6.5020275, 4.661682, 0.22753906)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_8315p"]
 size = Vector3(6.5040283, 0.6768799, 1.2167969)
 
@@ -78,6 +82,24 @@ material = SubResource("StandardMaterial3D_2tr76")
 
 [sub_resource type="BoxMesh" id="BoxMesh_htglj"]
 material = ExtResource("7_8462o")
+
+[sub_resource type="GDScript" id="GDScript_kaosq"]
+script/source = "extends Area3D
+
+func _on_body_entered(body: Node3D) -> void:
+	if body.is_in_group(\"player\"):
+		body.die()
+"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kaosq"]
+size = Vector3(6.408386, 1, 47.77092)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kaosq"]
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2tr76"]
+material = SubResource("StandardMaterial3D_kaosq")
 
 [node name="sewer_room" type="Node3D" unique_id=1588956837]
 
@@ -170,6 +192,24 @@ shape = SubResource("BoxShape3D_akvsb")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2/CollisionShape3D7" unique_id=156964406]
 transform = Transform3D(9.401527, 0, 0, 0, 5.4070506, 0, 0, 0, 0.2584682, 0, 0, 0)
+mesh = SubResource("BoxMesh_twtni")
+surface_material_override/0 = ExtResource("7_8462o")
+
+[node name="CollisionShape3D13" type="CollisionShape3D" parent="StaticBody3D2" unique_id=344339092]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.8297167, 3.250099, -23.678959)
+shape = SubResource("BoxShape3D_2tr76")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2/CollisionShape3D13" unique_id=291152135]
+transform = Transform3D(6.6954813, 0, 0, 0, 4.6203523, 0, 0, 0, 0.2584682, 0, 0, 0)
+mesh = SubResource("BoxMesh_twtni")
+surface_material_override/0 = ExtResource("7_8462o")
+
+[node name="CollisionShape3D14" type="CollisionShape3D" parent="StaticBody3D2" unique_id=398725101]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.83, 3.25, 23.737)
+shape = SubResource("BoxShape3D_2tr76")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2/CollisionShape3D14" unique_id=149315936]
+transform = Transform3D(6.6954813, 0, 0, 0, 4.6203523, 0, 0, 0, 0.2584682, 0, 0, 0)
 mesh = SubResource("BoxMesh_twtni")
 surface_material_override/0 = ExtResource("7_8462o")
 
@@ -287,3 +327,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.39020157, 0)
 light_energy = 8.0
 shadow_enabled = true
 omni_range = 25.0
+
+[node name="shelf2" parent="." unique_id=574443484 instance=ExtResource("7_kaosq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.206326, 0.4347636, 22.740858)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1633292714]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.846723, -0.42329562, -1.5244274)
+script = SubResource("GDScript_kaosq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2035225642]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004547596, 0, 1.4874344)
+shape = SubResource("BoxShape3D_kaosq")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=725117791]
+transform = Transform3D(7.5593386, 0, 0, 0, 1.83599, 0, 0, 0, 0.2584682, 8.054573, 0.04192555, 23.861666)
+mesh = SubResource("BoxMesh_2tr76")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1698150843]
+transform = Transform3D(7.5593386, 0, 0, 0, 1.83599, 0, 0, 0, 0.2584682, 8.054573, 0.04467106, -23.796827)
+mesh = SubResource("BoxMesh_2tr76")
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
