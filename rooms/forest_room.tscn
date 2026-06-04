@@ -34,7 +34,7 @@ transform = Transform3D(502.852, 0, 0, 0, 0.357, 0, 0, 0, 308.926, 0, 0, 0)
 mesh = SubResource("BoxMesh_vestg")
 
 [node name="Begin_Pos" type="MeshInstance3D" parent="." unique_id=2096619722]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 137.71095, -0.274, 184.19221)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -0.23928112, 376.88293)
 mesh = SubResource("BoxMesh_euvbd")
 
 [node name="End_Pos" type="MeshInstance3D" parent="." unique_id=1689856788]
@@ -494,6 +494,15 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 40.21056, -0.41427398, 140.12
 [node name="StaticBody3D" type="StaticBody3D" parent="Pine118" unique_id=1370968805]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pine118/StaticBody3D" unique_id=1973572950]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine148" parent="." unique_id=2058410255 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 61.783646, -0.41427398, 132.88696)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine148" unique_id=899712896]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine148/StaticBody3D" unique_id=1210271534]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
 shape = SubResource("BoxShape3D_euvbd")
 
