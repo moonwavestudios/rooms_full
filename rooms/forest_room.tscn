@@ -1270,6 +1270,162 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.6
 [node name="fence24" parent="." unique_id=148201168 instance=ExtResource("4_juaim")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -38.972683)
 
+[node name="fence83" parent="." unique_id=1520869107 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -128.25246)
+
+[node name="fence85" parent="." unique_id=2052029118 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -122.662605)
+
+[node name="fence86" parent="." unique_id=1486093373 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -117.085434)
+
+[node name="fence87" parent="." unique_id=1599794562 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -144.9696)
+
+[node name="fence88" parent="." unique_id=1262573253 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -139.37976)
+
+[node name="fence89" parent="." unique_id=1173604777 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -133.80258)
+
+[node name="fence95" parent="." unique_id=70252452 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -161.74512)
+
+[node name="fence96" parent="." unique_id=1070786160 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -156.15526)
+
+[node name="fence97" parent="." unique_id=2118846948 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -150.5781)
+
+[node name="fence98" parent="." unique_id=94393293 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -178.46227)
+
+[node name="fence99" parent="." unique_id=642464322 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -172.87242)
+
+[node name="fence100" parent="." unique_id=1294379395 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -167.29524)
+
+[node name="fence101" parent="." unique_id=1619274962 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -184.00598)
+
+[node name="fence102" parent="." unique_id=1083538660 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -200.7815)
+
+[node name="fence103" parent="." unique_id=154848867 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -195.19164)
+
+[node name="fence104" parent="." unique_id=1498499720 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -189.61447)
+
+[node name="fence105" parent="." unique_id=2102337651 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -217.49864)
+
+[node name="fence106" parent="." unique_id=740074986 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -211.9088)
+
+[node name="fence107" parent="." unique_id=382523654 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -206.33162)
+
+[node name="fence108" parent="." unique_id=355972743 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -234.24577)
+
+[node name="fence109" parent="." unique_id=1099545911 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -228.65591)
+
+[node name="fence110" parent="." unique_id=848801605 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -223.07875)
+
+[node name="fence111" parent="." unique_id=66223471 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -250.96292)
+
+[node name="fence112" parent="." unique_id=1816778991 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -245.37308)
+
+[node name="fence113" parent="." unique_id=1420013641 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -239.7959)
+
+[node name="fence114" parent="." unique_id=240208490 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -256.5888)
+
+[node name="fence115" parent="." unique_id=386052882 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -273.33594)
+
+[node name="fence116" parent="." unique_id=1947918668 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -267.7461)
+
+[node name="fence117" parent="." unique_id=1692521493 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -262.16895)
+
+[node name="fence118" parent="." unique_id=1155926649 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -290.0531)
+
+[node name="fence119" parent="." unique_id=1253657113 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -284.46326)
+
+[node name="fence120" parent="." unique_id=1190379409 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -278.88608)
+
+[node name="fence121" parent="." unique_id=154067959 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -301.16583)
+
+[node name="fence122" parent="." unique_id=575285755 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -295.576)
+
+[node name="fence123" parent="." unique_id=36571018 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -317.883)
+
+[node name="fence124" parent="." unique_id=932386691 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -312.29315)
+
+[node name="fence125" parent="." unique_id=2129029501 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -306.71597)
+
+[node name="fence126" parent="." unique_id=1511152852 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -329.05383)
+
+[node name="fence127" parent="." unique_id=393515158 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -323.464)
+
+[node name="fence128" parent="." unique_id=1766286675 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -345.771)
+
+[node name="fence129" parent="." unique_id=1969856744 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -340.18115)
+
+[node name="fence130" parent="." unique_id=1132168422 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -334.60397)
+
+[node name="fence131" parent="." unique_id=769188037 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -362.51144)
+
+[node name="fence134" parent="." unique_id=1954208821 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -368.1657)
+
+[node name="fence135" parent="." unique_id=247492370 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -373.78732)
+
+[node name="fence132" parent="." unique_id=160702336 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -356.9216)
+
+[node name="fence133" parent="." unique_id=189119804 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -351.34442)
+
+[node name="fence90" parent="." unique_id=313037676 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -94.7751)
+
+[node name="fence91" parent="." unique_id=77615120 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -89.18525)
+
+[node name="fence92" parent="." unique_id=1384998828 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -111.49225)
+
+[node name="fence93" parent="." unique_id=2002593254 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -105.902405)
+
+[node name="fence94" parent="." unique_id=699555069 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -100.325226)
+
 [node name="fence37" parent="." unique_id=415602470 instance=ExtResource("4_juaim")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, 200.49364)
 
