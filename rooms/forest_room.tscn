@@ -199,6 +199,42 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 18.963833, -0.41427398, -41.4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
 shape = SubResource("BoxShape3D_euvbd")
 
+[node name="Pine47" parent="." unique_id=642278971 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 19.826195, -0.41427398, -12.377434)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine47" unique_id=2137039913]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine47/StaticBody3D" unique_id=263969816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine48" parent="." unique_id=822622927 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 29.538326, -0.41427398, -32.637524)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine48" unique_id=1206995348]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine48/StaticBody3D" unique_id=2044616556]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine49" parent="." unique_id=1748211571 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 19.826195, -0.41427398, -60.136036)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine49" unique_id=245030890]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine49/StaticBody3D" unique_id=1223841525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
+[node name="Pine50" parent="." unique_id=1058408207 instance=ExtResource("3_euvbd")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 29.538326, -0.41427398, -80.396126)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pine50" unique_id=1751169910]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pine50/StaticBody3D" unique_id=56326055]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009277344, 0.80615234, 0.007446289)
+shape = SubResource("BoxShape3D_euvbd")
+
 [node name="Pine16" parent="." unique_id=1008933822 instance=ExtResource("3_euvbd")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -38.374428, -0.41427398, 29.497543)
 
@@ -495,3 +531,39 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.6
 
 [node name="fence12" parent="." unique_id=211441503 instance=ExtResource("4_juaim")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, 27.927227)
+
+[node name="fence13" parent="." unique_id=25070297 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -66.89991)
+
+[node name="fence14" parent="." unique_id=1899608895 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -61.310062)
+
+[node name="fence15" parent="." unique_id=999130589 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -55.732887)
+
+[node name="fence16" parent="." unique_id=447578725 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -83.61706)
+
+[node name="fence17" parent="." unique_id=368631706 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -78.027214)
+
+[node name="fence18" parent="." unique_id=1693778884 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -72.450035)
+
+[node name="fence19" parent="." unique_id=1420175913 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -33.422558)
+
+[node name="fence20" parent="." unique_id=358193088 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -27.832706)
+
+[node name="fence21" parent="." unique_id=1312242411 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -22.255535)
+
+[node name="fence22" parent="." unique_id=827671243 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -50.139706)
+
+[node name="fence23" parent="." unique_id=11581030 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -44.54986)
+
+[node name="fence24" parent="." unique_id=148201168 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, -38.972683)
