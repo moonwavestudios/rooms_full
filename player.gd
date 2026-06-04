@@ -45,6 +45,7 @@ var item_renders := {
 	"key":        "res://assets/card_render.png",
 	"flashlight": "res://assets/flashlight_render.png",
 	"pills":      "res://assets/pills_render.png",
+	"crucifix": "",
 }
 
 var item_scenes := {
@@ -52,6 +53,7 @@ var item_scenes := {
 	"flashlight": preload("res://models/flashlight.tscn"),
 	"key":        preload("res://models/key.tscn"),
 	"clicker":    preload("res://models/clicker/clicker.tscn"),
+	"crucifix": preload("res://models/crucifix/crucifix.tscn"),
 }
 
 var sensitivity := 0.010

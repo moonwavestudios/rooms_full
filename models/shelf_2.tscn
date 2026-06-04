@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bl4pss0w5v8wg" path="res://models/pills.tscn" id="7_vvbss"]
 [ext_resource type="PackedScene" uid="uid://dc0j0jjdves3a" path="res://bandage.tscn" id="8_uypnd"]
 [ext_resource type="PackedScene" uid="uid://gctp1g3lxleq" path="res://models/battery/Battery.tscn" id="9_oni4c"]
+[ext_resource type="PackedScene" uid="uid://mig07etelhmk" path="res://models/crucifix/crucifix.tscn" id="11_8coco"]
 [ext_resource type="PackedScene" uid="uid://dopin5px1enhc" path="res://scenes/proximity_prompt.tscn" id="12_gdoxv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5n2l1"]
@@ -55,7 +56,7 @@ transform = Transform3D(6.5012474, 0, 0, 0, 7.952936, 0, 0, 0, 4.997593, 52.1466
 transform = Transform3D(0.45945656, 0, 0, 0, 0.2468592, 0, 0, 0, 0.3723157, -7.804861, 1.118545, 0)
 mesh = SubResource("BoxMesh_6o16g")
 script = ExtResource("4_1ptd5")
-spawn_scenes = Array[PackedScene]([ExtResource("5_gdoxv"), ExtResource("6_8coco"), ExtResource("7_vvbss"), ExtResource("8_uypnd"), ExtResource("9_oni4c")])
+spawn_scenes = Array[PackedScene]([ExtResource("5_gdoxv"), ExtResource("6_8coco"), ExtResource("7_vvbss"), ExtResource("8_uypnd"), ExtResource("9_oni4c"), ExtResource("11_8coco")])
 
 [node name="ProximityPrompt" parent="Shelf2Door" unique_id=25112644 instance=ExtResource("12_gdoxv")]
 transform = Transform3D(6.9306245, 0, 0, 0, 7.936508, 0, 0, 0, 5.2276535, 6.634038, 2.8660111, -8.279467)
@@ -94,7 +95,7 @@ transform = Transform3D(6.5012474, 0, 0, 0, 7.952936, 0, 0, 0, 4.9975934, 52.146
 transform = Transform3D(0.45945656, 0, 0, 0, 0.2468592, 0, 0, 0, 0.3723157, -7.804861, 1.118545, 0)
 mesh = SubResource("BoxMesh_6o16g")
 script = ExtResource("4_1ptd5")
-spawn_scenes = Array[PackedScene]([ExtResource("5_gdoxv"), ExtResource("6_8coco"), ExtResource("7_vvbss"), ExtResource("8_uypnd"), ExtResource("9_oni4c")])
+spawn_scenes = Array[PackedScene]([ExtResource("5_gdoxv"), ExtResource("6_8coco"), ExtResource("7_vvbss"), ExtResource("8_uypnd"), ExtResource("9_oni4c"), ExtResource("11_8coco")])
 
 [node name="ProximityPrompt3" parent="Shelf2Door3" unique_id=1481073302 instance=ExtResource("12_gdoxv")]
 transform = Transform3D(6.9306245, 0, 0, 0, 7.936508, 0, 0, 0, 5.2276535, 6.634038, 2.344961, -8.279467)

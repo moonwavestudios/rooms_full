@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://mig07etelhmk"]
+
+[ext_resource type="ArrayMesh" uid="uid://df0rjodu4wv0j" path="res://models/crucifix/crucifix.obj" id="1_88fkg"]
+[ext_resource type="Material" uid="uid://d3vq7bpwvpdgl" path="res://assets/walls.tres" id="2_88htj"]
+[ext_resource type="PackedScene" uid="uid://dopin5px1enhc" path="res://scenes/proximity_prompt.tscn" id="3_xesak"]
+
+[node name="crucifix" type="Node3D" unique_id=241741693]
+
+[node name="Crucifix" type="MeshInstance3D" parent="." unique_id=1012485162]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = ExtResource("1_88fkg")
+surface_material_override/0 = ExtResource("2_88htj")
+surface_material_override/1 = ExtResource("2_88htj")
+
+[node name="ProximityPrompt" parent="." unique_id=25112644 instance=ExtResource("3_xesak")]

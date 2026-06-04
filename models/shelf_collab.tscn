@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bl4pss0w5v8wg" path="res://models/pills.tscn" id="8_tgoc4"]
 [ext_resource type="PackedScene" uid="uid://dc0j0jjdves3a" path="res://bandage.tscn" id="9_c76q2"]
 [ext_resource type="PackedScene" uid="uid://gctp1g3lxleq" path="res://models/battery/Battery.tscn" id="10_yqdn2"]
+[ext_resource type="PackedScene" uid="uid://mig07etelhmk" path="res://models/crucifix/crucifix.tscn" id="11_b82xv"]
 [ext_resource type="AudioStream" uid="uid://2jf3080tfb13" path="res://sfx/drawer_open.mp3" id="11_egy07"]
 [ext_resource type="PackedScene" uid="uid://dopin5px1enhc" path="res://scenes/proximity_prompt.tscn" id="12_exn6n"]
 
@@ -300,7 +301,7 @@ transform = Transform3D(6.5012474, 0, 0, 0, 7.952936, 0, 0, 0, 4.997593, 52.1466
 transform = Transform3D(0.45945656, 0, 0, 0, 0.2468592, 0, 0, 0, 0.3723157, -7.804861, 1.118545, 0)
 mesh = SubResource("BoxMesh_emwm5")
 script = ExtResource("5_ihmgw")
-spawn_scenes = Array[PackedScene]([ExtResource("6_0c5y7"), ExtResource("7_ti856"), ExtResource("8_tgoc4"), ExtResource("9_c76q2"), ExtResource("10_yqdn2")])
+spawn_scenes = Array[PackedScene]([ExtResource("6_0c5y7"), ExtResource("7_ti856"), ExtResource("8_tgoc4"), ExtResource("9_c76q2"), ExtResource("10_yqdn2"), ExtResource("11_b82xv")])
 
 [node name="Open" type="AudioStreamPlayer3D" parent="." unique_id=713065446]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.98542035, 0.5596032, -1.6998062)
