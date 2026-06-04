@@ -4,7 +4,20 @@
 [ext_resource type="Material" uid="uid://d3vq7bpwvpdgl" path="res://assets/walls.tres" id="2_88htj"]
 [ext_resource type="PackedScene" uid="uid://dopin5px1enhc" path="res://scenes/proximity_prompt.tscn" id="3_xesak"]
 
+[sub_resource type="GDScript" id="GDScript_xesak"]
+script/source = "extends Node3D
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
 [node name="crucifix" type="Node3D" unique_id=241741693]
+script = SubResource("GDScript_xesak")
 
 [node name="Crucifix" type="MeshInstance3D" parent="." unique_id=1012485162]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)

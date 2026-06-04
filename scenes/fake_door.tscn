@@ -5,6 +5,7 @@
 [ext_resource type="ArrayMesh" uid="uid://b24hkbwbqgtg3" path="res://models/door/door.obj" id="4_aty7x"]
 [ext_resource type="Material" uid="uid://5r4jqpwqj063" path="res://assets/metal.tres" id="5_lvj0u"]
 [ext_resource type="AudioStream" uid="uid://mlawjlxnjwcp" path="res://sfx/growl.mp3" id="5_nlgyn"]
+[ext_resource type="PackedScene" uid="uid://dopin5px1enhc" path="res://scenes/proximity_prompt.tscn" id="6_wirgs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hun61"]
 size = Vector3(1.6589966, 2.2031174, 0.1586914)
@@ -22,15 +23,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3189702, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=911589613]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35040283, 0.582016, 0.4206543)
-shape = SubResource("BoxShape3D_hun61")
-
-[node name="Area3D" type="Area3D" parent="." unique_id=846809152 groups=["fake_door"]]
-transform = Transform3D(0.99141276, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1181543638]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39364624, 0.57907486, 0.4206543)
 shape = SubResource("BoxShape3D_hun61")
 
 [node name="OpenSound" type="AudioStreamPlayer3D" parent="." unique_id=1021229183]
@@ -52,3 +44,8 @@ mesh = SubResource("BoxMesh_nlgyn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3323541, -2.7269316)
 stream = ExtResource("5_nlgyn")
 volume_db = -17.944
+
+[node name="ProximityPrompt" parent="." unique_id=25112644 instance=ExtResource("6_wirgs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.77959085, 0.4559644)
+hold_duration = 0.0
+max_activations = 1

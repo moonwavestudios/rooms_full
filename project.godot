@@ -67,7 +67,6 @@ import/blender/enabled=false
 
 player=""
 cat=""
-fake_door=""
 painting=""
 interactors=""
 eye_monster=""

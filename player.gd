@@ -98,7 +98,6 @@ const ANIM_BLEND_TABLE := {
 	"pills":      ["parameters/Blend2Again/blend_amount",  "parameters/pills take/blend_amount"],
 	"key":        ["parameters/Blend2 2/blend_amount",     "parameters/keycard_use/blend_amount"],
 	"remote":     ["parameters/Blend2 3/blend_amount",     ""],
-	"keycard":    ["parameters/Blend2 4/blend_amount",     "parameters/keycard_use/blend_amount"],
 }
 
 var interact_handlers: Dictionary
@@ -108,7 +107,6 @@ func _build_interact_handlers():
 		"item":       _interact_item,
 		"battery":    _interact_battery,
 		"ladder":     _interact_ladder,
-		"fake_door": _interact_fake_door,
 	}
 
 func _ready() -> void:
