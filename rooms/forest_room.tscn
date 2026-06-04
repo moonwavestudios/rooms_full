@@ -29,7 +29,7 @@ size = Vector3(0.21484375, 2.6123047, 0.2775879)
 shape = SubResource("BoxShape3D_vestg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=875601633]
-transform = Transform3D(503.7402, 0, 0, 0, 0.35881984, 0, 0, 0, 766.00555, 0, 0, 0)
+transform = Transform3D(496.02, 0, 0, 0, 0.353, 0, 0, 0, 754.266, 0, 0, 0)
 mesh = SubResource("BoxMesh_vestg")
 
 [node name="Begin_Pos" type="MeshInstance3D" parent="." unique_id=2096619722]
@@ -1341,6 +1341,39 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.6
 
 [node name="fence60" parent="." unique_id=1786255668 instance=ExtResource("4_juaim")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, 295.25616)
+
+[node name="fence73" parent="." unique_id=1498859009 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, 323.08398)
+
+[node name="fence74" parent="." unique_id=335290979 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, 328.67383)
+
+[node name="fence75" parent="." unique_id=2047276619 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, 334.25098)
+
+[node name="fence76" parent="." unique_id=1325083683 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, 317.5338)
+
+[node name="fence77" parent="." unique_id=259722639 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, 345.32053)
+
+[node name="fence78" parent="." unique_id=1474696022 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, 350.91037)
+
+[node name="fence79" parent="." unique_id=330316699 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, 356.48752)
+
+[node name="fence80" parent="." unique_id=1649549019 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, 339.77036)
+
+[node name="fence81" parent="." unique_id=1222441509 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, 367.59827)
+
+[node name="fence82" parent="." unique_id=1548958478 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, 373.1881)
+
+[node name="fence84" parent="." unique_id=865682832 instance=ExtResource("4_juaim")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, 362.0481)
 
 [node name="fence61" parent="." unique_id=1361441790 instance=ExtResource("4_juaim")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 84.60682, 0, 133.59373)

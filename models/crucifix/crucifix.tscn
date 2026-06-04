@@ -26,3 +26,5 @@ surface_material_override/0 = ExtResource("2_88htj")
 surface_material_override/1 = ExtResource("2_88htj")
 
 [node name="ProximityPrompt" parent="." unique_id=25112644 instance=ExtResource("3_xesak")]
+hold_duration = 0.0
+max_activations = 1
