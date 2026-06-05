@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@export var speed := 15.0
+@export var speed := 30.0
 var target_position: Vector3
 
 @onready var raycast = $RayCast3D

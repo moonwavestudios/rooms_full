@@ -89,6 +89,7 @@ var roomNum := 1
 
 var RushMonsters: Array[PackedScene] = [
 	preload("res://monster.tscn"),
+	preload("res://monster_faster.tscn")
 ]
 
 const STALKER_MONSTER_SCENE := preload("res://stalker.tscn")
