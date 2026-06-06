@@ -59,6 +59,8 @@ func _on_host_pressed() -> void:
 	_apply_seed()
 		
 func _on_single_pressed() -> void:
+	$"CanvasLayer/UI/Panel2".visible = true
+	
 	$"CanvasLayer/UI/Click".play()
 	$"CanvasLayer/UI/AudioStreamPlayer".stop()
 	$"Game/Ambience".play()

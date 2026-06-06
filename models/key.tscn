@@ -36,9 +36,11 @@ shape = SubResource("BoxShape3D_q2jce")
 mesh = SubResource("BoxMesh_q2jce")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Area3D/CollisionShape3D/MeshInstance3D" unique_id=641818233]
+light_color = Color(0.8980392, 0.9490196, 1, 1)
 light_energy = 2.0
 shadow_enabled = true
 omni_range = 1.6791937
+omni_shadow_mode = 0
 
 [node name="ProximityPrompt" parent="." unique_id=25112644 instance=ExtResource("4_e3wcc")]
 hold_duration = 0.0

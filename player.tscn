@@ -16,7 +16,7 @@
 [ext_resource type="Animation" uid="uid://ndfvv6vnpfv2" path="res://models/player_model/animations/flashlight/hold/Armature_flashlight_hold.res" id="12_7lmhl"]
 [ext_resource type="Animation" uid="uid://ctobh0djif7nl" path="res://models/player_model/animations/flashlight/equip/Armature_flashlight_equip.res" id="12_dx0e4"]
 [ext_resource type="Animation" uid="uid://kgrqluyopnl1" path="res://models/player_model/animations/imaginary_remote/hold/Armature_mixamo_com.tres" id="13_pylmc"]
-[ext_resource type="Animation" uid="uid://d30jaxspa60x7" path="res://models/player_model/animations/flashlight/use/Armature_flashlight_equip.res" id="14_jm5j8"]
+[ext_resource type="Animation" uid="uid://c4n5ttvl1wrwl" path="res://models/player_model/animations/flashlight/use/Armature_flashlight_equip.res" id="14_jm5j8"]
 [ext_resource type="Animation" uid="uid://sffw2mei1qe4" path="res://models/player_model/animations/keycard/Armature_mixamo_com.tres" id="14_op7ga"]
 [ext_resource type="Animation" uid="uid://5mmnwboxfapi" path="res://models/player_model/animations/idle/Armature_mixamo_com.res" id="15_dx0e4"]
 [ext_resource type="Animation" uid="uid://betayvu8y5xe5" path="res://models/player_model/animations/imaginary_remote/use/Armature_mixamo_com.tres" id="16_q13i1"]

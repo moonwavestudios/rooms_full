@@ -51,6 +51,13 @@ font_size = 26
 font = ExtResource("1_n5ude")
 font_size = 26
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b2p7n"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_b2p7n"]
+font = ExtResource("1_n5ude")
+font_size = 73
+
 [node name="UI" type="Control" unique_id=672674785]
 layout_mode = 3
 anchors_preset = 15
@@ -383,6 +390,22 @@ stream = ExtResource("15_etlur")
 
 [node name="roll" type="AudioStreamPlayer" parent="." unique_id=2008573026]
 stream = ExtResource("17_nvb2n")
+
+[node name="Panel2" type="Panel" parent="." unique_id=630017736]
+visible = false
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_b2p7n")
+
+[node name="Label" type="Label" parent="Panel2" unique_id=1953683557]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 647.0
+text = "LOADING"
+label_settings = SubResource("LabelSettings_b2p7n")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Panel/VBoxContainer/Multiplayer" to="Panel/VBoxContainer/Multiplayer" method="_on_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Settings" to="Panel/VBoxContainer/Settings" method="_on_pressed"]

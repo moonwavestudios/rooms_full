@@ -262,57 +262,27 @@ locked = true
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=335606416]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.874463, 18.882086)
-light_energy = 8.0
+light_color = Color(0.8980392, 0.9490196, 1, 1)
+light_energy = 5.0
 shadow_enabled = true
-omni_range = 20.03786
+omni_range = 20.0
+omni_shadow_mode = 0
 
-[node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=323787775]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.39098, 7.9050617, 18.882086)
-light_energy = 8.0
+[node name="OmniLight3D10" type="OmniLight3D" parent="." unique_id=957985674]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.874463, 2.3649902)
+light_color = Color(0.8980392, 0.9490196, 1, 1)
+light_energy = 5.0
 shadow_enabled = true
-omni_range = 13.379678
+omni_range = 20.0
+omni_shadow_mode = 0
 
-[node name="OmniLight3D5" type="OmniLight3D" parent="." unique_id=1719845354]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.39098, 7.9050617, 8.122871)
-light_energy = 8.0
+[node name="OmniLight3D11" type="OmniLight3D" parent="." unique_id=1101937073]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.874463, -14.5325775)
+light_color = Color(0.8980392, 0.9490196, 1, 1)
+light_energy = 5.0
 shadow_enabled = true
-omni_range = 13.379678
-
-[node name="OmniLight3D6" type="OmniLight3D" parent="." unique_id=1981929858]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.39098, 7.9050617, -2.8016834)
-light_energy = 8.0
-shadow_enabled = true
-omni_range = 13.379678
-
-[node name="OmniLight3D7" type="OmniLight3D" parent="." unique_id=849586990]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.497139, 7.9050617, 18.882086)
-light_energy = 8.0
-shadow_enabled = true
-omni_range = 13.379678
-
-[node name="OmniLight3D8" type="OmniLight3D" parent="." unique_id=691870697]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.497139, 7.9050617, 8.122871)
-light_energy = 8.0
-shadow_enabled = true
-omni_range = 13.379678
-
-[node name="OmniLight3D9" type="OmniLight3D" parent="." unique_id=193411673]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.497139, 7.9050617, -2.8016834)
-light_energy = 8.0
-shadow_enabled = true
-omni_range = 13.379678
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=921382940]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.874463, 2.4011974)
-light_energy = 8.0
-shadow_enabled = true
-omni_range = 20.03786
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=195475028]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.874463, -14.782045)
-light_energy = 8.0
-shadow_enabled = true
-omni_range = 20.03786
+omni_range = 20.0
+omni_shadow_mode = 0
 
 [node name="Sidedoor" parent="." unique_id=7598830 instance=ExtResource("5_k3gku")]
 transform = Transform3D(-4.5189136e-08, 0, 1, 0, 1, 0, -1.0338069, 0, -4.371139e-08, -9.9614525, 0.7237394, -2.3604264)
@@ -334,14 +304,16 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.99
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=139778114]
 transform = Transform3D(0.76516867, 0.46080792, -0.44963652, 0, 0.69837785, 0.7157293, 0.6438299, -0.5476536, 0.53437686, -20.801235, 8.310852, -9.176502)
-light_energy = 8.0
+light_color = Color(0.8980392, 0.9490196, 1, 1)
+light_energy = 5.0
 shadow_enabled = true
 spot_range = 17.593428
 spot_angle = 52.070988
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=731008266]
 transform = Transform3D(0.8285004, -0.4008001, 0.39108357, 4.1991427e-08, 0.69837785, 0.7157293, -0.5599885, -0.59298193, 0.57860637, 20.944729, 8.310852, -9.176502)
-light_energy = 8.0
+light_color = Color(0.8980392, 0.9490196, 1, 1)
+light_energy = 5.0
 shadow_enabled = true
 spot_range = 17.593428
 spot_angle = 52.070988
@@ -408,6 +380,66 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.784099, 2.3853605)
 
 [node name="GasstationLight_LOW2" parent="." unique_id=1060958023 instance=ExtResource("10_k7a5o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.784099, 18.773119)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=723872075]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.097792, 8.641625, 18.882086)
+light_color = Color(0.8980392, 0.9490196, 1, 1)
+shadow_enabled = true
+omni_range = 20.0
+omni_shadow_mode = 0
+
+[node name="GasstationLight_LOW4" parent="." unique_id=1925336594 instance=ExtResource("10_k7a5o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.097792, 9.551261, 18.773119)
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=15164305]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.097792, 8.641625, 8.008033)
+light_color = Color(0.8980392, 0.9490196, 1, 1)
+shadow_enabled = true
+omni_range = 20.0
+omni_shadow_mode = 0
+
+[node name="GasstationLight_LOW5" parent="." unique_id=1879403819 instance=ExtResource("10_k7a5o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.097792, 9.551261, 7.899066)
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=895432880]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.097792, 8.641625, -1.877347)
+light_color = Color(0.8980392, 0.9490196, 1, 1)
+shadow_enabled = true
+omni_range = 20.0
+omni_shadow_mode = 0
+
+[node name="GasstationLight_LOW6" parent="." unique_id=631800855 instance=ExtResource("10_k7a5o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.097792, 9.551261, -1.9863138)
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="." unique_id=2054086555]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.643469, 8.641625, -3.293123)
+light_color = Color(0.8980392, 0.9490196, 1, 1)
+shadow_enabled = true
+omni_range = 20.0
+omni_shadow_mode = 0
+
+[node name="GasstationLight_LOW7" parent="." unique_id=1249899621 instance=ExtResource("10_k7a5o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.643469, 9.551261, -3.4020898)
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="." unique_id=1025829108]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.438511, 8.641625, 7.0157948)
+light_color = Color(0.8980392, 0.9490196, 1, 1)
+shadow_enabled = true
+omni_range = 20.0
+omni_shadow_mode = 0
+
+[node name="GasstationLight_LOW8" parent="." unique_id=731821235 instance=ExtResource("10_k7a5o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.438511, 9.551261, 6.906828)
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="." unique_id=788288324]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.438511, 8.641625, 17.530426)
+light_color = Color(0.8980392, 0.9490196, 1, 1)
+shadow_enabled = true
+omni_range = 20.0
+omni_shadow_mode = 0
+
+[node name="GasstationLight_LOW9" parent="." unique_id=767943718 instance=ExtResource("10_k7a5o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.438511, 9.551261, 17.42146)
 
 [node name="GasstationLight_LOW3" parent="." unique_id=945510514 instance=ExtResource("10_k7a5o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.784099, -14.597078)

@@ -8,6 +8,8 @@
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Tischlampe" unique_id=115567143]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.040848613, 0.49096704, -1.7855496e-09)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.08856246, 0.24407196, -3.871188e-09)
+light_color = Color(0.8980392, 0.9490196, 1, 1)
 shadow_enabled = true
 omni_range = 1.2118014
+omni_shadow_mode = 0
