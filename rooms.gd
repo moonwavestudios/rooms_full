@@ -204,10 +204,9 @@ func is_player_looking_backward(player: Node) -> bool:
 	else:
 		return false
 
-	var player_forward = -head.global_transform.basis.z.normalized()
+	var player_forward = -player.global_transform.basis.z.normalized()
 	var look_dir = -head.global_transform.basis.z.normalized()
-	var backward_dir = head.global_transform.basis.z.normalized()  # true backward
-	return look_dir.dot(backward_dir) > 0.5  # within ~60° of looking directly behind
+	return look_dir.dot(player_forward) < -0.5
 
 func spawn_stalker_monster(player: Node):
 	if not multiplayer.is_server():
@@ -222,10 +221,9 @@ func spawn_stalker_monster(player: Node):
 	add_child(stalker)
 	active_stalker = stalker
 	stalker.global_transform.origin = spawn_pos
+	stalker.current_state = stalker.State.STALKING
 
-	print("Stalker spawned behind player at %s" % spawn_pos)
 	emit_signal("stalker_spawned", stalker)
-
 	rpc("sync_stalker_spawn", spawn_pos)
 
 @rpc("authority", "call_local", "reliable")

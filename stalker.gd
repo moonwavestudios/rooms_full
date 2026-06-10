@@ -65,7 +65,7 @@ func _physics_process(delta):
 			pass  # Do nothing — kill sequence is handled via signal/await
 
 func _process_stalking(_delta):
-	_play_animation("stalker/walk")  # play your walk animation name here
+	_play_animation("stalker/walk")
 	if not is_instance_valid(target_player):
 		current_state = State.IDLE
 		return
@@ -76,19 +76,29 @@ func _process_stalking(_delta):
 	if distance_to_player <= ATTACK_DISTANCE:
 		current_state = State.ATTACKING
 		return
-	var direction = (target_player.global_transform.origin - global_transform.origin).normalized()
-	velocity = direction * MOVE_SPEED
+	if nav_agent:
+		nav_agent.target_position = target_player.global_transform.origin
+		var next_pos = nav_agent.get_next_path_position()
+		var direction = (next_pos - global_transform.origin).normalized()
+		velocity = direction * MOVE_SPEED
+	else:
+		velocity = (target_player.global_transform.origin - global_transform.origin).normalized() * MOVE_SPEED
 	look_at(target_player.global_transform.origin, Vector3.UP)
 	move_and_slide()
 
 func _process_retreating(_delta):
-	_play_animation("stalker/walk")  # or a run animation if you have one
+	_play_animation("stalker/walk")
 	var distance_to_retreat = global_transform.origin.distance_to(retreat_position)
 	if distance_to_retreat <= 1.0:
 		current_state = State.IDLE
 		return
-	var direction = (retreat_position - global_transform.origin).normalized()
-	velocity = direction * RUN_AWAY_SPEED
+	if nav_agent:
+		nav_agent.target_position = retreat_position
+		var next_pos = nav_agent.get_next_path_position()
+		var direction = (next_pos - global_transform.origin).normalized()
+		velocity = direction * RUN_AWAY_SPEED
+	else:
+		velocity = (retreat_position - global_transform.origin).normalized() * RUN_AWAY_SPEED
 	look_at(retreat_position, Vector3.UP)
 	move_and_slide()
 

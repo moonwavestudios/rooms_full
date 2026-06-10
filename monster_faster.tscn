@@ -43,4 +43,5 @@ max_distance = 20.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1593445627]
 light_color = Color(0.65882355, 0, 1, 1)
-light_energy = 8.0
+light_energy = 5.0
+omni_shadow_mode = 0
