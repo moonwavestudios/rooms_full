@@ -307,39 +307,51 @@ transform = Transform3D(1, 0, 0, 0, 1.0519301, 0, 0, 0, 1, -0.17138928, 2.084112
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=718806663]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.6013365, 0)
-light_energy = 8.0
+light_color = Color(0.8980392, 0.9490196, 1, 1)
+light_energy = 5.0
 shadow_enabled = true
 omni_range = 17.0
+omni_shadow_mode = 0
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=241346248]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.6013365, -10.986074)
-light_energy = 8.0
+light_color = Color(0.8980392, 0.9490196, 1, 1)
+light_energy = 5.0
 shadow_enabled = true
 omni_range = 17.0
+omni_shadow_mode = 0
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=1950285861]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.6013365, 11.942807)
-light_energy = 8.0
+light_color = Color(0.8980392, 0.9490196, 1, 1)
+light_energy = 5.0
 shadow_enabled = true
 omni_range = 17.0
+omni_shadow_mode = 0
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=1052425807]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.356377, 11.6013365, 0)
-light_energy = 8.0
+light_color = Color(0.8980392, 0.9490196, 1, 1)
+light_energy = 5.0
 shadow_enabled = true
 omni_range = 17.0
+omni_shadow_mode = 0
 
 [node name="OmniLight3D5" type="OmniLight3D" parent="." unique_id=963700656]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.356377, 11.6013365, -10.986074)
-light_energy = 8.0
+light_color = Color(0.8980392, 0.9490196, 1, 1)
+light_energy = 5.0
 shadow_enabled = true
 omni_range = 17.0
+omni_shadow_mode = 0
 
 [node name="OmniLight3D6" type="OmniLight3D" parent="." unique_id=970555231]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.356377, 11.6013365, 11.942807)
-light_energy = 8.0
+light_color = Color(0.8980392, 0.9490196, 1, 1)
+light_energy = 5.0
 shadow_enabled = true
 omni_range = 17.0
+omni_shadow_mode = 0
 
 [node name="GasstationLight_LOW" parent="." unique_id=75567483 instance=ExtResource("14_tnglc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.548256, 0)
@@ -370,3 +382,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.68599, -0.72221494, -11.45
 
 [node name="KeySpawn4" type="Marker3D" parent="." unique_id=1131770702]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1198664, 1.3293593, -15.544062)
+
+[node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=1491570560]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.8098736, 3.010662, 0)
+light_color = Color(0.8980392, 0.9490196, 1, 1)
+light_energy = 5.0
+shadow_enabled = true
+area_range = 14.73
+area_size = Vector2(41.92984, 3.8742905)

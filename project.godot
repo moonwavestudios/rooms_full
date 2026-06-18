@@ -30,7 +30,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Rooms"
 run/main_scene="uid://cqow47bch5ocs"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 boot_splash/show_image=false
 boot_splash/use_filter=false
 config/icon="uid://c60bb1213ohd"
