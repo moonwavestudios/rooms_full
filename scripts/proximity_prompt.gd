@@ -25,11 +25,14 @@ var _exhausted: bool = false
 var _ui_label: Label
 var _ui_container: Control
 var _is_priority: bool = false
+var _is_mobile: bool = false
+var _touch_holding: bool = false
 
 func _ready() -> void:
 	if not InputMap.has_action(action_key):
 		push_error("ProximityPrompt: Action '%s' not found in Input Map! Please add it via Project > Input Map." % action_key)
 
+	_is_mobile = OS.has_feature("mobile")
 	ProximityPromptManager.register(self)
 	_build_ui()
 	_set_ui_visible(false)
@@ -67,17 +70,27 @@ func _process(delta: float) -> void:
 	_set_ui_visible(true)
 	_update_ui_position()
 
-	if Input.is_action_pressed(action_key):
-		if hold_duration > 0.0:
+	if _is_mobile:
+		if _touch_holding and hold_duration > 0.0:
 			_is_holding = true
 			_hold_timer += delta
 			_update_progress_bar(_hold_timer / hold_duration)
 			if _hold_timer >= hold_duration:
 				_try_activate(_closest_player)
 				_reset_hold()
+				_touch_holding = false
 	else:
-		if _is_holding:
-			_reset_hold()
+		if Input.is_action_pressed(action_key):
+			if hold_duration > 0.0:
+				_is_holding = true
+				_hold_timer += delta
+				_update_progress_bar(_hold_timer / hold_duration)
+				if _hold_timer >= hold_duration:
+					_try_activate(_closest_player)
+					_reset_hold()
+		else:
+			if _is_holding:
+				_reset_hold()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not enabled:
@@ -92,9 +105,39 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	if _exhausted or (max_activations >= 0 and _activation_count >= max_activations):
 		return
+	if _is_mobile:
+		return
 
 	if event.is_action_pressed(action_key):
 		_try_activate(_closest_player)
+
+func _on_panel_gui_input(event: InputEvent) -> void:
+	if not enabled:
+		return
+	if _closest_player == null:
+		return
+	if not _is_priority:
+		return
+	if _exhausted or (max_activations >= 0 and _activation_count >= max_activations):
+		return
+
+	if event is InputEventScreenTouch:
+		if hold_duration <= 0.0:
+			if event.pressed:
+				_try_activate(_closest_player)
+		else:
+			_touch_holding = event.pressed
+			if not event.pressed:
+				_reset_hold()
+	elif event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if hold_duration <= 0.0:
+				if event.pressed:
+					_try_activate(_closest_player)
+			else:
+				_touch_holding = event.pressed
+				if not event.pressed:
+					_reset_hold()
 
 func _try_activate(interactor: Node) -> void:
 	if _cooldown_timer > 0.0:
@@ -170,7 +213,8 @@ func _build_ui() -> void:
 
 	var panel := PanelContainer.new()
 	panel.name = "Panel"
-	panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	panel.mouse_filter = Control.MOUSE_FILTER_STOP if _is_mobile else Control.MOUSE_FILTER_IGNORE
+	panel.connect("gui_input", _on_panel_gui_input)
 
 	var style := StyleBoxFlat.new()
 	style.bg_color = Color(0, 0, 0, 0.65)
