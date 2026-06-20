@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c8opek0wv0kdr"
-path="res://.godot/imported/player_anims_crouch.fbx-488e3d794fbced029aa2c4d5a636c10c.scn"
+uid="uid://da4fkv86i8dcw"
+path="res://.godot/imported/player_anims_crouch_walk.fbx-9f2dd2031ce13fe630806376a83836e2.scn"
 
 [deps]
 
-source_file="res://models/player_model/animations/player_anims_crouch.fbx"
-dest_files=["res://.godot/imported/player_anims_crouch.fbx-488e3d794fbced029aa2c4d5a636c10c.scn"]
+source_file="res://models/player_model/animations/player_anims_crouch_walk.fbx"
+dest_files=["res://.godot/imported/player_anims_crouch_walk.fbx-9f2dd2031ce13fe630806376a83836e2.scn"]
 
 [params]
 
@@ -41,11 +41,11 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "animations": {
-"Armature|crouch_idle": {
+"Armature|crouch_walk": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://models/player_model/animations/crouch/idle/Armature_crouch_idle.res",
+"save_to_file/fallback_path": "res://models/player_model/animations/crouch/walk/Armature_crouch_walk.res",
 "save_to_file/keep_custom_tracks": true,
-"save_to_file/path": "uid://calcus0f5t8is",
+"save_to_file/path": "uid://ctpmuohb3c3ft",
 "settings/loop_mode": 1,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
