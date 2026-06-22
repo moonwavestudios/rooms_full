@@ -131,11 +131,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8994555, 9.616089, 67.9931)
 shape = SubResource("BoxShape3D_jc84a")
 
 [node name="Begin_Pos" type="MeshInstance3D" parent="." unique_id=294603327]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08, -0.24454138, 68.287186)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08, -0.3, 68.287186)
 mesh = SubResource("BoxMesh_4so63")
 
 [node name="End_Pos" type="MeshInstance3D" parent="." unique_id=57828443]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08, -0.224, -68.375916)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08, -0.3, -68.375916)
 mesh = SubResource("BoxMesh_4so63")
 
 [node name="DoorSpawn" type="Node3D" parent="." unique_id=1832689003]

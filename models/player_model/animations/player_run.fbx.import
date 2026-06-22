@@ -41,11 +41,11 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "animations": {
-"Armature|flashlight_equip": {
+"Armature|walk": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://models/player_model/animations/run/run.res",
+"save_to_file/fallback_path": "res://models/player_model/animations/run/Armature_walk.res",
 "save_to_file/keep_custom_tracks": true,
-"save_to_file/path": "uid://c0s85naimitji",
+"save_to_file/path": "uid://cocbabq5hw0ya",
 "settings/loop_mode": 1,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,

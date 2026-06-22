@@ -10,8 +10,8 @@
 [ext_resource type="AudioStream" uid="uid://d3dcpdvhoiab7" path="res://sfx/coin.mp3" id="7_1jxqw"]
 [ext_resource type="Animation" uid="uid://drup8hranx6xr" path="res://models/player_model/animations/keycard/use/Armature_mixamo_com.tres" id="9_5tmop"]
 [ext_resource type="Animation" uid="uid://c2q11813c5jls" path="res://models/entity_models/stalker/animations/kill/Player_mixamo_com_001.tres" id="9_7ahtn"]
-[ext_resource type="Animation" uid="uid://bxbh80pw2542i" path="res://models/player_model/animations/crouch/idle/Armature_crouch_idle.res" id="10_jm5j8"]
-[ext_resource type="Animation" uid="uid://b51kikrbd2u6e" path="res://models/player_model/animations/crouch/walk/Armature_crouch_walk.res" id="11_jm5j8"]
+[ext_resource type="Animation" uid="uid://calcus0f5t8is" path="res://models/player_model/animations/crouch/idle/Armature_crouch_idle.res" id="10_jm5j8"]
+[ext_resource type="Animation" uid="uid://ctpmuohb3c3ft" path="res://models/player_model/animations/crouch/walk/Armature_crouch_walk.res" id="11_jm5j8"]
 [ext_resource type="Animation" uid="uid://ndfvv6vnpfv2" path="res://models/player_model/animations/flashlight/hold/Armature_flashlight_hold.res" id="12_7lmhl"]
 [ext_resource type="Animation" uid="uid://ctobh0djif7nl" path="res://models/player_model/animations/flashlight/equip/Armature_flashlight_equip.res" id="12_dx0e4"]
 [ext_resource type="Animation" uid="uid://kgrqluyopnl1" path="res://models/player_model/animations/imaginary_remote/hold/Armature_mixamo_com.tres" id="13_pylmc"]
@@ -23,7 +23,7 @@
 [ext_resource type="Animation" uid="uid://s5ga8uo38jtu" path="res://models/player_model/animations/pills/hold/Armature_mixamo_com.res" id="18_dx0e4"]
 [ext_resource type="Animation" uid="uid://bh7dncwo48054" path="res://models/player_model/animations/pills/equip/Armature_mixamo_com.res" id="18_jm5j8"]
 [ext_resource type="FontFile" uid="uid://dxsjhqed312w" path="res://fonts/daidaidaidaidaaisuki_free.otf" id="23_7lmhl"]
-[ext_resource type="Animation" uid="uid://c0s85naimitji" path="res://models/player_model/animations/run/run.res" id="23_jm5j8"]
+[ext_resource type="Animation" uid="uid://cm7hhyxq7ycdy" path="res://models/player_model/animations/run/Armature_walk.res" id="23_jm5j8"]
 [ext_resource type="PackedScene" uid="uid://drkmc82qdnrfn" path="res://models/player_model/player_model.fbx" id="24_dx0e4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
@@ -186,7 +186,6 @@ filter_enabled = true
 filters = ["Skeleton3D:mixamorig_RightArm", "Skeleton3D:mixamorig_RightForeArm", "Skeleton3D:mixamorig_RightHand", "Skeleton3D:mixamorig_RightHandIndex1", "Skeleton3D:mixamorig_RightHandIndex2", "Skeleton3D:mixamorig_RightHandIndex3", "Skeleton3D:mixamorig_RightHandMiddle1", "Skeleton3D:mixamorig_RightHandMiddle2", "Skeleton3D:mixamorig_RightHandMiddle3", "Skeleton3D:mixamorig_RightHandPinky1", "Skeleton3D:mixamorig_RightHandPinky2", "Skeleton3D:mixamorig_RightHandPinky3", "Skeleton3D:mixamorig_RightHandRing1", "Skeleton3D:mixamorig_RightHandRing2", "Skeleton3D:mixamorig_RightHandRing3", "Skeleton3D:mixamorig_RightHandThumb1", "Skeleton3D:mixamorig_RightHandThumb2", "Skeleton3D:mixamorig_RightHandThumb3", "Skeleton3D:mixamorig_RightShoulder"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_urp6f"]
-graph_offset = Vector2(-14.818115, -12.363647)
 nodes/output/position = Vector2(2380, 140)
 nodes/Blend2/node = SubResource("AnimationNodeBlend2_bwjto")
 nodes/Blend2/position = Vector2(560, 100)
