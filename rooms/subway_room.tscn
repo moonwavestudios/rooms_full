@@ -335,3 +335,6 @@ light_energy = 5.0
 shadow_enabled = true
 omni_range = 25.0
 omni_shadow_mode = 0
+
+[node name="KeySpawn" type="Marker3D" parent="." unique_id=1592879465]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.607814, 0.9969418, -21.887117)

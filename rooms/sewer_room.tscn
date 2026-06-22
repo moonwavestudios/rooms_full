@@ -347,4 +347,7 @@ mesh = SubResource("BoxMesh_2tr76")
 transform = Transform3D(7.5593386, 0, 0, 0, 1.83599, 0, 0, 0, 0.2584682, 8.054573, 0.04467106, -23.796827)
 mesh = SubResource("BoxMesh_2tr76")
 
+[node name="KeySpawn" type="Marker3D" parent="." unique_id=773076103]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.607814, 0.9969418, 22.271294)
+
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
