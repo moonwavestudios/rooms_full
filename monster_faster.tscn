@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bp4hxphh837mq"]
 
 [ext_resource type="Script" uid="uid://qsk0nhkim5e" path="res://monster.gd" id="1_g7vmb"]
-[ext_resource type="Texture2D" uid="uid://bcf08ats5ojj6" path="res://assets/rush.png" id="2_ln4e8"]
+[ext_resource type="Texture2D" uid="uid://bbmuiiqvh2f3d" path="res://assets/faster.png" id="2_g7vmb"]
 [ext_resource type="AudioStream" uid="uid://bq56uss2x2cd7" path="res://sfx/placeholder.mp3" id="3_7y8mf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c5q2p"]
@@ -18,7 +18,7 @@ disabled = true
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 billboard = 1
 shaded = true
-texture = ExtResource("2_ln4e8")
+texture = ExtResource("2_g7vmb")
 
 [node name="RayCast3D" type="RayCast3D" parent="." unique_id=1029214065]
 transform = Transform3D(-4.371141e-08, -21.168442, 0, 1.0000005, -9.2530195e-07, 0, 0, 0, 13.487436, 0, 0, 0)
@@ -39,7 +39,7 @@ hit_from_inside = true
 [node name="Scream" type="AudioStreamPlayer3D" parent="." unique_id=183313605]
 stream = ExtResource("3_7y8mf")
 pitch_scale = 1.6
-max_distance = 20.0
+max_distance = 40.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1593445627]
 light_color = Color(0.65882355, 0, 1, 1)
