@@ -8,7 +8,7 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_q2jce"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gy4nl"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jy5qb"]
 albedo_texture = ExtResource("1_tlda4")
 roughness_texture = ExtResource("3_hee8u")
 normal_enabled = true
@@ -18,7 +18,7 @@ uv1_offset = Vector3(0.35, 0, -0.57)
 uv1_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_q2jce"]
-material = SubResource("StandardMaterial3D_gy4nl")
+material = SubResource("StandardMaterial3D_jy5qb")
 
 [node name="key" type="Node3D" unique_id=1383148317]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.092, -0.273, -0.135)

@@ -7,24 +7,43 @@
 [sub_resource type="GDScript" id="GDScript_xesak"]
 script/source = "extends Node3D
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$ProximityPrompt.prompt_triggered.connect(_on_interacted)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_interacted(interactor: Node) -> void:
+	interactor._interact_item($Area3D)
 "
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xesak"]
+size = Vector3(1.1518555, 249.20532, 4.11438)
 
 [node name="crucifix" type="Node3D" unique_id=241741693]
 script = SubResource("GDScript_xesak")
 
-[node name="Crucifix" type="MeshInstance3D" parent="." unique_id=1012485162]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = ExtResource("1_88fkg")
-surface_material_override/0 = ExtResource("2_88htj")
-surface_material_override/1 = ExtResource("2_88htj")
-
 [node name="ProximityPrompt" parent="." unique_id=25112644 instance=ExtResource("3_xesak")]
 hold_duration = 0.0
 max_activations = 1
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1893094990]
+transform = Transform3D(0.133, 0, -1.7484556e-08, 0, -0.005, 0, 1.1627229e-08, 0, 0.2, 0, 0, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1097698661]
+transform = Transform3D(1, 0, -3.424816e-12, 0, 1, 0, -1.0658141e-14, 0, 0.9999747, 0, 0, 0)
+shape = SubResource("BoxShape3D_xesak")
+
+[node name="Crucifix" type="MeshInstance3D" parent="Area3D/CollisionShape3D" unique_id=1012485162]
+transform = Transform3D(1.8796992, 0, 1.6432851e-07, 0, -50, 0, -1.0927846e-07, 0, 1.2499999, 0, 0, 0)
+mesh = ExtResource("1_88fkg")
+skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("2_88htj")
+surface_material_override/1 = ExtResource("2_88htj")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Area3D/CollisionShape3D/Crucifix" unique_id=465748872]
+transform = Transform3D(4, 0, -3.496911e-07, 0, -4, 0, 3.496911e-07, 0, 4, 0, 0, 0)
+light_color = Color(0.8980392, 0.9490196, 1, 1)
+light_energy = 2.0
+shadow_enabled = true
+omni_range = 1.6791937
+omni_shadow_mode = 0

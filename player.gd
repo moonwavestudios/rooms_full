@@ -407,6 +407,11 @@ func update_held_item() -> void:
 	if item == "" or not item_scenes.has(item):
 		update_hotbar_ui()
 		return
+		
+	if item == "crucifix":
+		CrucifixHeld = true
+	else:
+		CrucifixHeld = false
 
 	update_hotbar_ui()
 	var item_instance = item_scenes[item].instantiate()
@@ -482,6 +487,9 @@ func on_coin_interacted(collider: Area3D) -> void:
 func on_bandage_interacted(collider: Area3D) -> void:
 	if not is_multiplayer_authority():
 		return
+	if health >= max_health:
+		return
+		
 	var coin_path = get_path_to(collider)
 	rpc("sync_bandage_collection", coin_path, collider.give_health)
 	
@@ -505,7 +513,7 @@ func sync_bandage_collection(coin_path: NodePath, coin_value: int) -> void:
 	var coin_node = get_node_or_null(coin_path)
 	if coin_node and is_instance_valid(coin_node):
 		if is_multiplayer_authority():
-			health += coin_value
+			health = min(health + coin_value, max_health)
 		coin_node.queue_free()
 		
 @rpc("any_peer", "call_local", "reliable")
