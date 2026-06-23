@@ -175,6 +175,24 @@ font_size = 36
 outline_size = 6
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="GDScript" id="GDScript_qrc3h"]
+script/source = "extends Button
+
+func _on_button_down() -> void:
+	Input.action_press(\"crouch\")
+
+
+func _on_button_up() -> void:
+	Input.action_release(\"crouch\")
+"
+
+[sub_resource type="GDScript" id="GDScript_wrpa1"]
+script/source = "extends Button
+
+func _on_pressed() -> void:
+	Input.action_press(\"use\")
+"
+
 [sub_resource type="LabelSettings" id="LabelSettings_jvi5b"]
 font = ExtResource("5_lyh3y")
 font_size = 45
@@ -738,6 +756,7 @@ offset_top = 487.0
 offset_right = 1082.0
 offset_bottom = 628.0
 text = "Crouch"
+script = SubResource("GDScript_qrc3h")
 
 [node name="Button3" type="Button" parent="Mobile" unique_id=1778633006]
 layout_mode = 0
@@ -746,6 +765,7 @@ offset_top = 343.0
 offset_right = 1153.0
 offset_bottom = 481.0
 text = "Use"
+script = SubResource("GDScript_wrpa1")
 
 [node name="Pause" type="Panel" parent="." unique_id=1142944185]
 visible = false
@@ -840,5 +860,8 @@ layout_mode = 2
 
 [connection signal="value_changed" from="GameUI/health/Health" to="GameUI/health/Health" method="_on_value_changed"]
 [connection signal="pressed" from="GameUI/shop/Panel/Button" to="GameUI/shop/Panel/Button" method="_on_pressed"]
+[connection signal="button_down" from="Mobile/Button2" to="Mobile/Button2" method="_on_button_down"]
+[connection signal="button_up" from="Mobile/Button2" to="Mobile/Button2" method="_on_button_up"]
+[connection signal="pressed" from="Mobile/Button3" to="Mobile/Button3" method="_on_pressed"]
 [connection signal="pressed" from="Pause/Button" to="Pause/Button" method="_on_pressed"]
 [connection signal="pressed" from="Pause/Button2" to="Pause/Button2" method="_on_pressed"]
