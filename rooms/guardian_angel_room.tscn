@@ -35,6 +35,11 @@ albedo_color = Color(0, 0, 0, 1)
 material = SubResource("StandardMaterial3D_2akng")
 orientation = 0
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_bjrtk"]
+material = SubResource("StandardMaterial3D_2akng")
+flip_faces = true
+orientation = 0
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i3xd6"]
 transparency = 1
 albedo_color = Color(1, 1, 1, 0)
@@ -72,6 +77,10 @@ mesh = SubResource("PlaneMesh_2akng")
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1197937650]
 transform = Transform3D(45.875, 0, 0, 0, 45.875, 0, 0, 0, 45.875, -39.542057, 21.616945, 0)
 mesh = SubResource("PlaneMesh_4orgk")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=419746449]
+transform = Transform3D(45.875, 0, 0, 0, 45.875, 0, 0, 0, 45.875, 37.180573, 21.616945, 0)
+mesh = SubResource("PlaneMesh_bjrtk")
 
 [node name="Begin_Pos" type="MeshInstance3D" parent="." unique_id=1960463423]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08, -0.4143965, 40.01322)

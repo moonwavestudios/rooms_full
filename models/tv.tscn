@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://7d24kiahvj4t"]
+
+[ext_resource type="PackedScene" uid="uid://dopin5px1enhc" path="res://scenes/proximity_prompt.tscn" id="1_hjlg1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_86q0k"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_86q0k"]
+
+[node name="tv" type="Node3D" unique_id=1052508112]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1635504674]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1436683067]
+shape = SubResource("BoxShape3D_86q0k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=151742305]
+mesh = SubResource("BoxMesh_86q0k")
+
+[node name="ProximityPrompt" parent="." unique_id=25112644 instance=ExtResource("1_hjlg1")]
+prompt_text = "Hold [E] to enter"
+max_activations = 1
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=2127844849]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0.34566724)
+light_color = Color(0.8980392, 0.9490196, 1, 1)
+light_energy = 5.0

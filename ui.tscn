@@ -43,10 +43,6 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2l4f"]
 bg_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_e2l4f"]
-font = ExtResource("1_n5ude")
-font_size = 26
-
 [sub_resource type="LabelSettings" id="LabelSettings_n5rqp"]
 font = ExtResource("1_n5ude")
 font_size = 26
@@ -326,11 +322,6 @@ layout_mode = 0
 offset_right = 230.0
 offset_bottom = 50.0
 alignment = 1
-
-[node name="Label" type="Label" parent="Credits/VBoxContainer" unique_id=169505028]
-layout_mode = 2
-text = "Bandage model by: Tactical_Beard"
-label_settings = SubResource("LabelSettings_e2l4f")
 
 [node name="LinkButton" type="LinkButton" parent="Credits/VBoxContainer" unique_id=1753129683]
 layout_mode = 2

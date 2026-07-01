@@ -36,7 +36,6 @@ func host_lobby(player_name: String) -> Error:
 	multiplayer.multiplayer_peer = peer
 	players[1] = player_name
 	lobby_ready.emit()
-	print("lobby created")
 	return OK
 
 func join_lobby(code: String, player_name: String) -> Error:
