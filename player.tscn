@@ -19,11 +19,11 @@
 [ext_resource type="Animation" uid="uid://sffw2mei1qe4" path="res://models/player_model/animations/keycard/Armature_mixamo_com.tres" id="14_op7ga"]
 [ext_resource type="Animation" uid="uid://5mmnwboxfapi" path="res://models/player_model/animations/idle/Armature_mixamo_com.res" id="15_dx0e4"]
 [ext_resource type="Animation" uid="uid://betayvu8y5xe5" path="res://models/player_model/animations/imaginary_remote/use/Armature_mixamo_com.tres" id="16_q13i1"]
-[ext_resource type="Animation" uid="uid://b4icpumy3fjko" path="res://models/player_model/animations/pills/take/Armature_mixamo_com.res" id="18_7lmhl"]
-[ext_resource type="Animation" uid="uid://s5ga8uo38jtu" path="res://models/player_model/animations/pills/hold/Armature_mixamo_com.res" id="18_dx0e4"]
-[ext_resource type="Animation" uid="uid://bh7dncwo48054" path="res://models/player_model/animations/pills/equip/Armature_mixamo_com.res" id="18_jm5j8"]
+[ext_resource type="Animation" uid="uid://cxytxy40byhht" path="res://models/player_model/animations/pills/take/Armature_mixamo_com.res" id="18_7lmhl"]
+[ext_resource type="Animation" uid="uid://mctk02icc85e" path="res://models/player_model/animations/pills/hold/Armature_mixamo_com.res" id="18_dx0e4"]
+[ext_resource type="Animation" uid="uid://g628e06c2yye" path="res://models/player_model/animations/pills/equip/Armature_mixamo_com.res" id="18_jm5j8"]
 [ext_resource type="FontFile" uid="uid://dxsjhqed312w" path="res://fonts/daidaidaidaidaaisuki_free.otf" id="23_7lmhl"]
-[ext_resource type="Animation" uid="uid://cm7hhyxq7ycdy" path="res://models/player_model/animations/run/Armature_walk.res" id="23_jm5j8"]
+[ext_resource type="Animation" uid="uid://cocbabq5hw0ya" path="res://models/player_model/animations/run/Armature_walk.res" id="23_jm5j8"]
 [ext_resource type="PackedScene" uid="uid://drkmc82qdnrfn" path="res://models/player_model/player_model.fbx" id="24_dx0e4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
@@ -83,6 +83,9 @@ animation = &"test/pills_take"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7lmhl"]
 animation = &"test/keycard_use"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jm5j8"]
+animation = &"test/flashlight_use"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_urp6f"]
 animation = &"test/flashlight_hold"
@@ -177,6 +180,9 @@ states/test_run/node = SubResource("AnimationNodeAnimation_606se")
 states/test_run/position = Vector2(556, 128)
 transitions = ["Start", "test_idle", SubResource("AnimationNodeStateMachineTransition_u1c27"), "test_idle", "test_run", SubResource("AnimationNodeStateMachineTransition_op7ga"), "test_run", "test_idle", SubResource("AnimationNodeStateMachineTransition_urp6f"), "test_run", "test_crouch_idle", SubResource("AnimationNodeStateMachineTransition_q13i1"), "test_crouch_idle", "test_run", SubResource("AnimationNodeStateMachineTransition_pylmc"), "test_crouch_idle", "test_crouch_walk", SubResource("AnimationNodeStateMachineTransition_pbfsw"), "test_crouch_walk", "test_crouch_idle", SubResource("AnimationNodeStateMachineTransition_5tmop"), "test_idle", "test_crouch_idle", SubResource("AnimationNodeStateMachineTransition_bwjto"), "test_crouch_idle", "test_idle", SubResource("AnimationNodeStateMachineTransition_606se"), "test_idle", "test_crouch_walk", SubResource("AnimationNodeStateMachineTransition_7ahtn"), "test_crouch_walk", "test_idle", SubResource("AnimationNodeStateMachineTransition_7lmhl"), "test_crouch_walk", "End", SubResource("AnimationNodeStateMachineTransition_dx0e4")]
 
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_7hik5"]
+filters = ["Armature/Skeleton3D:mixamorig_RightArm", "Armature/Skeleton3D:mixamorig_RightForeArm", "Armature/Skeleton3D:mixamorig_RightHand", "Armature/Skeleton3D:mixamorig_RightHandIndex1", "Armature/Skeleton3D:mixamorig_RightHandIndex2", "Armature/Skeleton3D:mixamorig_RightHandIndex3", "Armature/Skeleton3D:mixamorig_RightHandMiddle1", "Armature/Skeleton3D:mixamorig_RightHandMiddle2", "Armature/Skeleton3D:mixamorig_RightHandMiddle3", "Armature/Skeleton3D:mixamorig_RightHandPinky1", "Armature/Skeleton3D:mixamorig_RightHandPinky2", "Armature/Skeleton3D:mixamorig_RightHandPinky3", "Armature/Skeleton3D:mixamorig_RightHandRing1", "Armature/Skeleton3D:mixamorig_RightHandRing2", "Armature/Skeleton3D:mixamorig_RightHandRing3", "Armature/Skeleton3D:mixamorig_RightHandThumb1", "Armature/Skeleton3D:mixamorig_RightHandThumb2", "Armature/Skeleton3D:mixamorig_RightHandThumb3", "Armature/Skeleton3D:mixamorig_RightShoulder"]
+
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_dx0e4"]
 filter_enabled = true
 filters = ["Skeleton3D:mixamorig_RightArm", "Skeleton3D:mixamorig_RightForeArm", "Skeleton3D:mixamorig_RightHand", "Skeleton3D:mixamorig_RightHandIndex1", "Skeleton3D:mixamorig_RightHandIndex2", "Skeleton3D:mixamorig_RightHandIndex3", "Skeleton3D:mixamorig_RightHandMiddle1", "Skeleton3D:mixamorig_RightHandMiddle2", "Skeleton3D:mixamorig_RightHandMiddle3", "Skeleton3D:mixamorig_RightHandPinky1", "Skeleton3D:mixamorig_RightHandPinky2", "Skeleton3D:mixamorig_RightHandPinky3", "Skeleton3D:mixamorig_RightHandRing1", "Skeleton3D:mixamorig_RightHandRing2", "Skeleton3D:mixamorig_RightHandRing3", "Skeleton3D:mixamorig_RightHandThumb1", "Skeleton3D:mixamorig_RightHandThumb2", "Skeleton3D:mixamorig_RightHandThumb3", "Skeleton3D:mixamorig_RightShoulder"]
@@ -186,8 +192,8 @@ filter_enabled = true
 filters = ["Armature/Skeleton3D:mixamorig_RightArm", "Armature/Skeleton3D:mixamorig_RightForeArm", "Armature/Skeleton3D:mixamorig_RightHand", "Armature/Skeleton3D:mixamorig_RightHandIndex1", "Armature/Skeleton3D:mixamorig_RightHandIndex2", "Armature/Skeleton3D:mixamorig_RightHandIndex3", "Armature/Skeleton3D:mixamorig_RightHandMiddle1", "Armature/Skeleton3D:mixamorig_RightHandMiddle2", "Armature/Skeleton3D:mixamorig_RightHandMiddle3", "Armature/Skeleton3D:mixamorig_RightHandPinky1", "Armature/Skeleton3D:mixamorig_RightHandPinky2", "Armature/Skeleton3D:mixamorig_RightHandPinky3", "Armature/Skeleton3D:mixamorig_RightHandRing1", "Armature/Skeleton3D:mixamorig_RightHandRing2", "Armature/Skeleton3D:mixamorig_RightHandRing3", "Armature/Skeleton3D:mixamorig_RightHandThumb1", "Armature/Skeleton3D:mixamorig_RightHandThumb2", "Armature/Skeleton3D:mixamorig_RightHandThumb3", "Armature/Skeleton3D:mixamorig_RightShoulder", "Skeleton3D:mixamorig_RightArm", "Skeleton3D:mixamorig_RightForeArm", "Skeleton3D:mixamorig_RightHand", "Skeleton3D:mixamorig_RightHandIndex1", "Skeleton3D:mixamorig_RightHandIndex2", "Skeleton3D:mixamorig_RightHandIndex3", "Skeleton3D:mixamorig_RightHandMiddle1", "Skeleton3D:mixamorig_RightHandMiddle2", "Skeleton3D:mixamorig_RightHandMiddle3", "Skeleton3D:mixamorig_RightHandPinky1", "Skeleton3D:mixamorig_RightHandPinky2", "Skeleton3D:mixamorig_RightHandPinky3", "Skeleton3D:mixamorig_RightHandRing1", "Skeleton3D:mixamorig_RightHandRing2", "Skeleton3D:mixamorig_RightHandRing3", "Skeleton3D:mixamorig_RightHandThumb1", "Skeleton3D:mixamorig_RightHandThumb2", "Skeleton3D:mixamorig_RightHandThumb3", "Skeleton3D:mixamorig_RightShoulder"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_urp6f"]
-graph_offset = Vector2(1355.5, 195)
-nodes/output/position = Vector2(2380, 140)
+graph_offset = Vector2(1656.0012, 276.8962)
+nodes/output/position = Vector2(2740, 120)
 nodes/Blend2/node = SubResource("AnimationNodeBlend2_bwjto")
 nodes/Blend2/position = Vector2(560, 100)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_606se")
@@ -218,7 +224,11 @@ nodes/keycard_use/node = SubResource("AnimationNodeBlend2_dx0e4")
 nodes/keycard_use/position = Vector2(2140, 240)
 "nodes/Animation 7/node" = SubResource("AnimationNodeAnimation_7lmhl")
 "nodes/Animation 7/position" = Vector2(1960, 480)
-node_connections = [&"output", 0, &"keycard_use", &"Blend2", 0, &"StateMachine", &"Blend2", 1, &"Animation", &"Blend2 2", 0, &"Blend2Again", &"Blend2 2", 1, &"Animation 3", &"Blend2Again", 0, &"Blend2", &"Blend2Again", 1, &"Animation 2", &"Blend2 3", 0, &"Blend2 2", &"Blend2 3", 1, &"Animation 4", &"Blend2 4", 0, &"Blend2 3", &"Blend2 4", 1, &"Animation 5", &"pills take", 0, &"Blend2 4", &"pills take", 1, &"Animation 6", &"keycard_use", 0, &"pills take", &"keycard_use", 1, &"Animation 7"]
+nodes/flashlight_use/node = SubResource("AnimationNodeBlend2_7hik5")
+nodes/flashlight_use/position = Vector2(2420, 200)
+"nodes/Animation 8/node" = SubResource("AnimationNodeAnimation_jm5j8")
+"nodes/Animation 8/position" = Vector2(2220, 560)
+node_connections = [&"output", 0, &"flashlight_use", &"Blend2", 0, &"StateMachine", &"Blend2", 1, &"Animation", &"Blend2 2", 0, &"Blend2Again", &"Blend2 2", 1, &"Animation 3", &"Blend2Again", 0, &"Blend2", &"Blend2Again", 1, &"Animation 2", &"Blend2 3", 0, &"Blend2 2", &"Blend2 3", 1, &"Animation 4", &"Blend2 4", 0, &"Blend2 3", &"Blend2 4", 1, &"Animation 5", &"pills take", 0, &"Blend2 4", &"pills take", 1, &"Animation 6", &"keycard_use", 0, &"pills take", &"keycard_use", 1, &"Animation 7", &"flashlight_use", 0, &"keycard_use", &"flashlight_use", 1, &"Animation 8"]
 
 [sub_resource type="Gradient" id="Gradient_ewgrv"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -307,6 +317,7 @@ parameters/Blend2Again/blend_amount = 0.0
 "parameters/Blend2 4/blend_amount" = 0.0
 "parameters/pills take/blend_amount" = 0.0
 parameters/keycard_use/blend_amount = 0.0
+parameters/flashlight_use/blend_amount = 0.0
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1413757057]
 transform = Transform3D(0.3439886, 0, 0, 0, 25.11346, 0, 0, 0, 0.18295921, 0.0014820099, 0.6776033, 0.15254295)

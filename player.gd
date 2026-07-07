@@ -45,7 +45,7 @@ var item_renders := {
 	"key":        "res://assets/card_render.png",
 	"flashlight": "res://assets/flashlight_render.png",
 	"pills":      "res://assets/pills_render.png",
-	"crucifix": "",
+	"crucifix": "res://icon.svg",
 }
 
 var item_scenes := {
@@ -94,7 +94,7 @@ var _anim_state_machine: AnimationNodeStateMachinePlayback
 var roomNum = 1
 
 const ANIM_BLEND_TABLE := {
-	"flashlight": ["parameters/Blend2/blend_amount",       ""],
+	"flashlight": ["parameters/Blend2/blend_amount",       "parameters/flashlight_use/blend_amount"],
 	"pills":      ["parameters/Blend2Again/blend_amount",  "parameters/pills take/blend_amount"],
 	"key":        ["parameters/Blend2 2/blend_amount",     "parameters/keycard_use/blend_amount"],
 	"remote":     ["parameters/Blend2 3/blend_amount",     ""],
