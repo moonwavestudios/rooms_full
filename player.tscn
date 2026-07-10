@@ -8,17 +8,17 @@
 [ext_resource type="Shader" uid="uid://cqs6dvvim2f4" path="res://glitch.gdshader" id="4_sweqy"]
 [ext_resource type="AudioStream" uid="uid://cufk6ebx4b66b" path="res://sfx/glitch.mp3" id="5_sweqy"]
 [ext_resource type="AudioStream" uid="uid://d3dcpdvhoiab7" path="res://sfx/coin.mp3" id="7_1jxqw"]
-[ext_resource type="Animation" uid="uid://drup8hranx6xr" path="res://models/player_model/animations/keycard/use/Armature_mixamo_com.tres" id="9_5tmop"]
 [ext_resource type="Animation" uid="uid://c2q11813c5jls" path="res://models/entity_models/stalker/animations/kill/Player_mixamo_com_001.tres" id="9_7ahtn"]
+[ext_resource type="Animation" uid="uid://b0nmqkx638aal" path="res://models/player_model/animations/keycard/hold/Armature_hold.res" id="10_7hik5"]
 [ext_resource type="Animation" uid="uid://calcus0f5t8is" path="res://models/player_model/animations/crouch/idle/Armature_crouch_idle.res" id="10_jm5j8"]
 [ext_resource type="Animation" uid="uid://ctpmuohb3c3ft" path="res://models/player_model/animations/crouch/walk/Armature_crouch_walk.res" id="11_jm5j8"]
 [ext_resource type="Animation" uid="uid://ndfvv6vnpfv2" path="res://models/player_model/animations/flashlight/hold/Armature_flashlight_hold.res" id="12_7lmhl"]
 [ext_resource type="Animation" uid="uid://ctobh0djif7nl" path="res://models/player_model/animations/flashlight/equip/Armature_flashlight_equip.res" id="12_dx0e4"]
 [ext_resource type="Animation" uid="uid://kgrqluyopnl1" path="res://models/player_model/animations/imaginary_remote/hold/Armature_mixamo_com.tres" id="13_pylmc"]
 [ext_resource type="Animation" uid="uid://c4n5ttvl1wrwl" path="res://models/player_model/animations/flashlight/use/Armature_flashlight_equip.res" id="14_jm5j8"]
-[ext_resource type="Animation" uid="uid://sffw2mei1qe4" path="res://models/player_model/animations/keycard/Armature_mixamo_com.tres" id="14_op7ga"]
 [ext_resource type="Animation" uid="uid://5mmnwboxfapi" path="res://models/player_model/animations/idle/Armature_mixamo_com.res" id="15_dx0e4"]
 [ext_resource type="Animation" uid="uid://betayvu8y5xe5" path="res://models/player_model/animations/imaginary_remote/use/Armature_mixamo_com.tres" id="16_q13i1"]
+[ext_resource type="Animation" uid="uid://cxg2ythwwe18x" path="res://models/player_model/animations/keycard/use/Armature_use.res" id="18_7hik5"]
 [ext_resource type="Animation" uid="uid://cxytxy40byhht" path="res://models/player_model/animations/pills/take/Armature_mixamo_com.res" id="18_7lmhl"]
 [ext_resource type="Animation" uid="uid://mctk02icc85e" path="res://models/player_model/animations/pills/hold/Armature_mixamo_com.res" id="18_dx0e4"]
 [ext_resource type="Animation" uid="uid://g628e06c2yye" path="res://models/player_model/animations/pills/equip/Armature_mixamo_com.res" id="18_jm5j8"]
@@ -56,8 +56,8 @@ _data = {
 &"flashlight_use": ExtResource("14_jm5j8"),
 &"hold_remote": ExtResource("13_pylmc"),
 &"idle": ExtResource("15_dx0e4"),
-&"keycard_hold": ExtResource("14_op7ga"),
-&"keycard_use": ExtResource("9_5tmop"),
+&"keycard_hold": ExtResource("10_7hik5"),
+&"keycard_use": ExtResource("18_7hik5"),
 &"pills_equip": ExtResource("18_jm5j8"),
 &"pills_hold": ExtResource("18_dx0e4"),
 &"pills_take": ExtResource("18_7lmhl"),
@@ -192,7 +192,7 @@ filter_enabled = true
 filters = ["Armature/Skeleton3D:mixamorig_RightArm", "Armature/Skeleton3D:mixamorig_RightForeArm", "Armature/Skeleton3D:mixamorig_RightHand", "Armature/Skeleton3D:mixamorig_RightHandIndex1", "Armature/Skeleton3D:mixamorig_RightHandIndex2", "Armature/Skeleton3D:mixamorig_RightHandIndex3", "Armature/Skeleton3D:mixamorig_RightHandMiddle1", "Armature/Skeleton3D:mixamorig_RightHandMiddle2", "Armature/Skeleton3D:mixamorig_RightHandMiddle3", "Armature/Skeleton3D:mixamorig_RightHandPinky1", "Armature/Skeleton3D:mixamorig_RightHandPinky2", "Armature/Skeleton3D:mixamorig_RightHandPinky3", "Armature/Skeleton3D:mixamorig_RightHandRing1", "Armature/Skeleton3D:mixamorig_RightHandRing2", "Armature/Skeleton3D:mixamorig_RightHandRing3", "Armature/Skeleton3D:mixamorig_RightHandThumb1", "Armature/Skeleton3D:mixamorig_RightHandThumb2", "Armature/Skeleton3D:mixamorig_RightHandThumb3", "Armature/Skeleton3D:mixamorig_RightShoulder", "Skeleton3D:mixamorig_RightArm", "Skeleton3D:mixamorig_RightForeArm", "Skeleton3D:mixamorig_RightHand", "Skeleton3D:mixamorig_RightHandIndex1", "Skeleton3D:mixamorig_RightHandIndex2", "Skeleton3D:mixamorig_RightHandIndex3", "Skeleton3D:mixamorig_RightHandMiddle1", "Skeleton3D:mixamorig_RightHandMiddle2", "Skeleton3D:mixamorig_RightHandMiddle3", "Skeleton3D:mixamorig_RightHandPinky1", "Skeleton3D:mixamorig_RightHandPinky2", "Skeleton3D:mixamorig_RightHandPinky3", "Skeleton3D:mixamorig_RightHandRing1", "Skeleton3D:mixamorig_RightHandRing2", "Skeleton3D:mixamorig_RightHandRing3", "Skeleton3D:mixamorig_RightHandThumb1", "Skeleton3D:mixamorig_RightHandThumb2", "Skeleton3D:mixamorig_RightHandThumb3", "Skeleton3D:mixamorig_RightShoulder"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_urp6f"]
-graph_offset = Vector2(1656.0012, 276.8962)
+graph_offset = Vector2(567.44714, 182.51196)
 nodes/output/position = Vector2(2740, 120)
 nodes/Blend2/node = SubResource("AnimationNodeBlend2_bwjto")
 nodes/Blend2/position = Vector2(560, 100)
