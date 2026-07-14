@@ -1,0 +1,44 @@
+# Blender 5.1.2 MTL File: 'clock_animation_shot1.blend'
+# www.blender.org
+
+newmtl Numbers
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.012500 0.012500 0.012500
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+
+newmtl clock_metal
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.050000 0.050000 0.050000
+Ks 0.250000 0.250000 0.250000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump -s 10 10 10 -bm 0.030000 C:/Users/virus/Downloads/clock/source/textures/dust1_seamless_mormal.tif
+
+newmtl dial
+Ns 39.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -s 7 7 7 -bm 0.075000 C:/Users/virus/Downloads/clock/source/textures/dust1_seamless_mormal.tif
+
+newmtl hands_plastic
+Ns 490.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3

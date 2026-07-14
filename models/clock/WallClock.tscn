@@ -1,16 +1,99 @@
 [gd_scene format=3 uid="uid://b3iiycsbaobvr"]
 
-[ext_resource type="ArrayMesh" uid="uid://bvd0x7qvpwq67" path="res://models/clock/objs/wall_clock.obj" id="1_cpjdu"]
-[ext_resource type="Texture2D" uid="uid://qdhr4f8fh3o" path="res://models/clock/pngs/wall_clock.png" id="2_qpbon"]
+[ext_resource type="ArrayMesh" uid="uid://cso1leudt0v0v" path="res://models/clock/clock.obj" id="1_cpjdu"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cpjdu"]
-diffuse_mode = 3
-specular_mode = 1
-albedo_texture = ExtResource("2_qpbon")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qpbon"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wudbs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tyblq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t64yc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgfry"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k1wc5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_327dw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gk6h6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1yjfa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c7y7t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_parlw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pe31e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6oqks"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oowee"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8tovh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0pafm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_12ysv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3kr2u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_02dxh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_64c8e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v0ad6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_itbke"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cyu7q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qq8vk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c87rw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4v8lv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i8ttt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ffckq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hef0c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6v5sc"]
 
 [node name="WallClock" type="Node3D" unique_id=393554048]
 
-[node name="WallClock" type="MeshInstance3D" parent="." unique_id=1844558720]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+[node name="Clock" type="MeshInstance3D" parent="." unique_id=974288088]
+transform = Transform3D(0.07, 0, 0, 0, -3.059797e-09, -0.07, 0, 0.07, -3.059797e-09, 0, 0, -0.016728684)
 mesh = ExtResource("1_cpjdu")
-surface_material_override/0 = SubResource("StandardMaterial3D_cpjdu")
+surface_material_override/0 = SubResource("StandardMaterial3D_qpbon")
+surface_material_override/1 = SubResource("StandardMaterial3D_wudbs")
+surface_material_override/2 = SubResource("StandardMaterial3D_tyblq")
+surface_material_override/3 = SubResource("StandardMaterial3D_t64yc")
+surface_material_override/4 = SubResource("StandardMaterial3D_hgfry")
+surface_material_override/5 = SubResource("StandardMaterial3D_k1wc5")
+surface_material_override/6 = SubResource("StandardMaterial3D_327dw")
+surface_material_override/7 = SubResource("StandardMaterial3D_gk6h6")
+surface_material_override/8 = SubResource("StandardMaterial3D_1yjfa")
+surface_material_override/9 = SubResource("StandardMaterial3D_c7y7t")
+surface_material_override/10 = SubResource("StandardMaterial3D_parlw")
+surface_material_override/11 = SubResource("StandardMaterial3D_pe31e")
+surface_material_override/12 = SubResource("StandardMaterial3D_6oqks")
+surface_material_override/13 = SubResource("StandardMaterial3D_oowee")
+surface_material_override/14 = SubResource("StandardMaterial3D_8tovh")
+surface_material_override/15 = SubResource("StandardMaterial3D_0pafm")
+surface_material_override/16 = SubResource("StandardMaterial3D_12ysv")
+surface_material_override/17 = SubResource("StandardMaterial3D_3kr2u")
+surface_material_override/18 = SubResource("StandardMaterial3D_02dxh")
+surface_material_override/19 = SubResource("StandardMaterial3D_64c8e")
+surface_material_override/20 = SubResource("StandardMaterial3D_v0ad6")
+surface_material_override/21 = SubResource("StandardMaterial3D_itbke")
+surface_material_override/22 = SubResource("StandardMaterial3D_cyu7q")
+surface_material_override/23 = SubResource("StandardMaterial3D_qq8vk")
+surface_material_override/24 = SubResource("StandardMaterial3D_c87rw")
+surface_material_override/25 = SubResource("StandardMaterial3D_4v8lv")
+surface_material_override/26 = SubResource("StandardMaterial3D_i8ttt")
+surface_material_override/27 = SubResource("StandardMaterial3D_ffckq")
+surface_material_override/28 = SubResource("StandardMaterial3D_hef0c")
+surface_material_override/29 = SubResource("StandardMaterial3D_6v5sc")
