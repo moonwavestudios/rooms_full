@@ -129,6 +129,9 @@ func _ready() -> void:
 	_setup_voice_chat()
 
 func _setup_voice_chat() -> void:
+	if _is_singleplayer():
+		return
+
 	if is_multiplayer_authority():
 		var bus_idx = AudioServer.get_bus_index("Voice")
 		voice_capture = AudioServer.get_bus_effect(bus_idx, 0)
@@ -141,6 +144,9 @@ func _setup_voice_chat() -> void:
 	voice_player.play()
 
 	voice_playback = voice_player.get_stream_playback()
+
+func _is_singleplayer() -> bool:
+	return multiplayer.multiplayer_peer is OfflineMultiplayerPeer
 
 func set_username(new_username: String) -> void:
 	username = new_username
@@ -192,6 +198,8 @@ func _physics_process(delta: float) -> void:
 
 func _process_voice_chat() -> void:
 	if not is_multiplayer_authority():
+		return
+	if _is_singleplayer():
 		return
 	if voice_capture == null:
 		return
