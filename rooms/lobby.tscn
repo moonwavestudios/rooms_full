@@ -1,3 +1,103 @@
 [gd_scene format=3 uid="uid://crewel6h86rd5"]
 
+[ext_resource type="Material" uid="uid://c28gdvubm0bai" path="res://assets/tiles.tres" id="1_83mw5"]
+[ext_resource type="ArrayMesh" uid="uid://cri5xtip1m506" path="res://models/pipes.obj" id="2_dmh4e"]
+[ext_resource type="Material" uid="uid://5r4jqpwqj063" path="res://assets/metal.tres" id="3_oxlrl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dmh4e"]
+transparency = 1
+albedo_color = Color(0, 1, 1, 0.43529412)
+
+[sub_resource type="SphereMesh" id="SphereMesh_83mw5"]
+material = SubResource("StandardMaterial3D_dmh4e")
+radius = 0.1
+height = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oxlrl"]
+transparency = 1
+albedo_color = Color(0, 1, 1, 0.3254902)
+
 [node name="Lobby" type="Node3D" unique_id=1186829522]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1521159582]
+use_collision = true
+size = Vector3(45.588013, 0.033081055, 37.816345)
+material = ExtResource("1_83mw5")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=453322580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.76915, 4.3055267, 0)
+use_collision = true
+size = Vector3(0.049713135, 8.592316, 37.816345)
+material = ExtResource("1_83mw5")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="." unique_id=1148089660]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.013557, 7.705798, 0)
+amount = 15
+lifetime = 4.779999999999999
+speed_scale = 1.5
+mesh = SubResource("SphereMesh_83mw5")
+emission_shape = 1
+emission_sphere_radius = 0.3
+
+[node name="Pipes" type="MeshInstance3D" parent="." unique_id=19479221]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0.5, -2.1855694e-08, 2.1855694e-08, 2.1855694e-08, 0.5, 9.553427e-16, 22.132433, 7.7935324, -16.01904)
+mesh = ExtResource("2_dmh4e")
+surface_material_override/0 = ExtResource("3_oxlrl")
+surface_material_override/1 = ExtResource("3_oxlrl")
+surface_material_override/2 = ExtResource("3_oxlrl")
+
+[node name="Pipes2" type="MeshInstance3D" parent="." unique_id=701924038]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0.5, -2.1855694e-08, 2.1855694e-08, 2.1855694e-08, 0.5, 9.553427e-16, 22.132433, 7.7935324, -11.697527)
+mesh = ExtResource("2_dmh4e")
+surface_material_override/0 = ExtResource("3_oxlrl")
+surface_material_override/1 = ExtResource("3_oxlrl")
+surface_material_override/2 = ExtResource("3_oxlrl")
+
+[node name="Pipes3" type="MeshInstance3D" parent="." unique_id=1206201346]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0.5, -2.1855694e-08, 2.1855694e-08, 2.1855694e-08, 0.5, 9.553427e-16, 22.132433, 7.7935324, -7.2967653)
+mesh = ExtResource("2_dmh4e")
+surface_material_override/0 = ExtResource("3_oxlrl")
+surface_material_override/1 = ExtResource("3_oxlrl")
+surface_material_override/2 = ExtResource("3_oxlrl")
+
+[node name="Pipes4" type="MeshInstance3D" parent="." unique_id=961472751]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0.5, -2.1855694e-08, 2.1855694e-08, 2.1855694e-08, 0.5, 9.553427e-16, 22.132433, 7.7935324, -2.975253)
+mesh = ExtResource("2_dmh4e")
+surface_material_override/0 = ExtResource("3_oxlrl")
+surface_material_override/1 = ExtResource("3_oxlrl")
+surface_material_override/2 = ExtResource("3_oxlrl")
+
+[node name="Pipes5" type="MeshInstance3D" parent="." unique_id=717573000]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0.5, -2.1855694e-08, 2.1855694e-08, 2.1855694e-08, 0.5, 9.553427e-16, 22.132433, 7.7935324, 1.3644004)
+mesh = ExtResource("2_dmh4e")
+surface_material_override/0 = ExtResource("3_oxlrl")
+surface_material_override/1 = ExtResource("3_oxlrl")
+surface_material_override/2 = ExtResource("3_oxlrl")
+
+[node name="Pipes6" type="MeshInstance3D" parent="." unique_id=1421662733]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0.5, -2.1855694e-08, 2.1855694e-08, 2.1855694e-08, 0.5, 9.553427e-16, 22.132433, 7.7935324, 5.6859126)
+mesh = ExtResource("2_dmh4e")
+surface_material_override/0 = ExtResource("3_oxlrl")
+surface_material_override/1 = ExtResource("3_oxlrl")
+surface_material_override/2 = ExtResource("3_oxlrl")
+
+[node name="Pipes7" type="MeshInstance3D" parent="." unique_id=509762715]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0.5, -2.1855694e-08, 2.1855694e-08, 2.1855694e-08, 0.5, 9.553427e-16, 22.132433, 7.7935324, 10.086674)
+mesh = ExtResource("2_dmh4e")
+surface_material_override/0 = ExtResource("3_oxlrl")
+surface_material_override/1 = ExtResource("3_oxlrl")
+surface_material_override/2 = ExtResource("3_oxlrl")
+
+[node name="Pipes8" type="MeshInstance3D" parent="." unique_id=546945426]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0.5, -2.1855694e-08, 2.1855694e-08, 2.1855694e-08, 0.5, 9.553427e-16, 22.132433, 7.7935324, 14.408186)
+mesh = ExtResource("2_dmh4e")
+surface_material_override/0 = ExtResource("3_oxlrl")
+surface_material_override/1 = ExtResource("3_oxlrl")
+surface_material_override/2 = ExtResource("3_oxlrl")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=1141961984]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.944252, 0.027526855, 0)
+radius = 1.4072266
+height = 0.033813477
+sides = 63
+material = SubResource("StandardMaterial3D_oxlrl")
