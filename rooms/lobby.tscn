@@ -5,6 +5,7 @@
 [ext_resource type="Material" uid="uid://d3vq7bpwvpdgl" path="res://assets/walls.tres" id="2_oxlrl"]
 [ext_resource type="Material" uid="uid://bhmd23wltt75j" path="res://assets/grass.tres" id="2_sirua"]
 [ext_resource type="Material" uid="uid://5r4jqpwqj063" path="res://assets/metal.tres" id="3_oxlrl"]
+[ext_resource type="Material" uid="uid://1hu3ofq6gp4q" path="res://assets/glass.tres" id="4_i3a1l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dmh4e"]
 transparency = 1
@@ -63,10 +64,22 @@ use_collision = true
 size = Vector3(0.049713135, 1.5052567, 5.9072685)
 material = ExtResource("2_oxlrl")
 
+[node name="CSGBox3D10" type="CSGBox3D" parent="." unique_id=582366450]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.642504, 2.7229867, -5.473265)
+use_collision = true
+size = Vector3(0.049713135, 2.4412088, 5.7723494)
+material = ExtResource("4_i3a1l")
+
 [node name="CSGBox3D7" type="CSGBox3D" parent="." unique_id=1851001099]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.642504, 6.270028, -5.4990883)
 use_collision = true
 size = Vector3(0.049713135, 4.664278, 5.9072685)
+material = ExtResource("2_oxlrl")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="." unique_id=1505635201]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.642504, 5.596498, 1.1114149)
+use_collision = true
+size = Vector3(0.049713135, 6.011338, 3.5512905)
 material = ExtResource("2_oxlrl")
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="." unique_id=1148089660]
