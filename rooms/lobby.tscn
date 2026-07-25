@@ -6,6 +6,12 @@
 [ext_resource type="Material" uid="uid://bhmd23wltt75j" path="res://assets/grass.tres" id="2_sirua"]
 [ext_resource type="Material" uid="uid://5r4jqpwqj063" path="res://assets/metal.tres" id="3_oxlrl"]
 [ext_resource type="Material" uid="uid://1hu3ofq6gp4q" path="res://assets/glass.tres" id="4_i3a1l"]
+[ext_resource type="ArrayMesh" uid="uid://bk06lfxe0y5r8" path="res://models/van/source/van.obj" id="7_dwquf"]
+[ext_resource type="Texture2D" uid="uid://rnwl1ckumhid" path="res://models/van/textures/Material_BaseColor.png" id="8_2yylu"]
+[ext_resource type="Texture2D" uid="uid://b56b8fjr6ifmw" path="res://models/van/textures/internal_ground_ao_texture.jpeg" id="9_ccn2f"]
+[ext_resource type="Texture2D" uid="uid://dscpfdaus6enc" path="res://models/van/textures/Material_Metallic.png" id="9_hox17"]
+[ext_resource type="Texture2D" uid="uid://tsdmcr8k86yn" path="res://models/van/textures/Material_Roughness.png" id="10_sc4t8"]
+[ext_resource type="Texture2D" uid="uid://b3tp71ko3i8na" path="res://models/van/textures/Material_Normal.png" id="11_wj3lf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dmh4e"]
 transparency = 1
@@ -19,6 +25,16 @@ height = 0.2
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oxlrl"]
 transparency = 1
 albedo_color = Color(0, 1, 1, 0.3254902)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2yylu"]
+albedo_texture = ExtResource("8_2yylu")
+metallic = 1.0
+metallic_texture = ExtResource("9_hox17")
+roughness_texture = ExtResource("10_sc4t8")
+normal_enabled = true
+normal_texture = ExtResource("11_wj3lf")
+ao_enabled = true
+ao_texture = ExtResource("9_ccn2f")
 
 [node name="Lobby" type="Node3D" unique_id=1186829522]
 
@@ -216,3 +232,8 @@ radius = 1.4072266
 height = 0.033813477
 sides = 63
 material = SubResource("StandardMaterial3D_oxlrl")
+
+[node name="Van" type="MeshInstance3D" parent="." unique_id=900256103]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -53.536427, 0.016540527, 3.2997465)
+mesh = ExtResource("7_dwquf")
+surface_material_override/0 = SubResource("StandardMaterial3D_2yylu")
