@@ -1,10 +1,20 @@
 [gd_scene format=3 uid="uid://c2ijepdw4fsud"]
 
 [ext_resource type="Material" uid="uid://c28gdvubm0bai" path="res://assets/tiles.tres" id="1_5c1wh"]
+[ext_resource type="PackedScene" uid="uid://edny0xnsfjdt" path="res://door.tscn" id="2_q21oe"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_86q0k"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_86q0k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tx27i"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5c1wh"]
+lightmap_size_hint = Vector2i(14, 21)
+material = SubResource("StandardMaterial3D_tx27i")
+add_uv2 = true
 
 [node name="room_physics" type="Node3D" unique_id=1801123231]
 
@@ -21,3 +31,62 @@ shape = SubResource("BoxShape3D_86q0k")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D/CollisionShape3D" unique_id=1622230054]
 mesh = SubResource("BoxMesh_86q0k")
+
+[node name="RigidBody3D4" type="RigidBody3D" parent="." unique_id=512759282]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5283368, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D4" unique_id=1848377821]
+shape = SubResource("BoxShape3D_86q0k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D4/CollisionShape3D" unique_id=54437433]
+mesh = SubResource("BoxMesh_86q0k")
+
+[node name="RigidBody3D5" type="RigidBody3D" parent="." unique_id=1304217667]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0205799, 1.5283368, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D5" unique_id=1494423249]
+shape = SubResource("BoxShape3D_86q0k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D5/CollisionShape3D" unique_id=577815047]
+mesh = SubResource("BoxMesh_86q0k")
+
+[node name="RigidBody3D6" type="RigidBody3D" parent="." unique_id=1814599553]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.016177, 1.5283368, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D6" unique_id=718532721]
+shape = SubResource("BoxShape3D_86q0k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D6/CollisionShape3D" unique_id=1054926774]
+mesh = SubResource("BoxMesh_86q0k")
+
+[node name="RigidBody3D2" type="RigidBody3D" parent="." unique_id=678118079]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0221269, 0.52348644, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D2" unique_id=275300327]
+shape = SubResource("BoxShape3D_86q0k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D2/CollisionShape3D" unique_id=1835266630]
+mesh = SubResource("BoxMesh_86q0k")
+
+[node name="RigidBody3D3" type="RigidBody3D" parent="." unique_id=2002551712]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0263426, 0.52348644, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D3" unique_id=940631771]
+shape = SubResource("BoxShape3D_86q0k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D3/CollisionShape3D" unique_id=264926777]
+mesh = SubResource("BoxMesh_86q0k")
+
+[node name="Begin_Pos" type="MeshInstance3D" parent="." unique_id=95581890]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.4820043, 15.968868)
+mesh = SubResource("BoxMesh_5c1wh")
+
+[node name="End_Pos" type="MeshInstance3D" parent="." unique_id=1089339321]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.48071212, -15.750641)
+mesh = SubResource("BoxMesh_5c1wh")
+
+[node name="DoorSpawn" type="Node3D" parent="." unique_id=41046799]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.36257458)
+
+[node name="door" parent="DoorSpawn" unique_id=1515299434 instance=ExtResource("2_q21oe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.321123, 0.50176674, -16.760212)

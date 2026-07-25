@@ -20,14 +20,15 @@ albedo_color = Color(0, 1, 1, 0.3254902)
 [node name="Lobby" type="Node3D" unique_id=1186829522]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1521159582]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.1781769)
 use_collision = true
-size = Vector3(45.588013, 0.033081055, 37.816345)
+size = Vector3(45.588013, 0.033081055, 40.1727)
 material = ExtResource("1_83mw5")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=453322580]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.76915, 4.3055267, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.76915, 4.3055267, 1.1464996)
 use_collision = true
-size = Vector3(0.049713135, 8.592316, 37.816345)
+size = Vector3(0.049713135, 8.592316, 40.109344)
 material = ExtResource("1_83mw5")
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="." unique_id=1148089660]
@@ -81,6 +82,34 @@ surface_material_override/0 = ExtResource("3_oxlrl")
 surface_material_override/1 = ExtResource("3_oxlrl")
 surface_material_override/2 = ExtResource("3_oxlrl")
 
+[node name="Pipes10" type="MeshInstance3D" parent="." unique_id=1714475421]
+transform = Transform3D(-1.8874475e-08, 1.8946238e-15, 0.25, -3.774895e-08, -0.25, -9.553427e-16, 0.25, -3.774895e-08, 1.8874475e-08, 22.132433, 6.4181995, 5.6859126)
+mesh = ExtResource("2_dmh4e")
+surface_material_override/0 = ExtResource("3_oxlrl")
+surface_material_override/1 = ExtResource("3_oxlrl")
+surface_material_override/2 = ExtResource("3_oxlrl")
+
+[node name="Pipes11" type="MeshInstance3D" parent="." unique_id=944536707]
+transform = Transform3D(-1.8874475e-08, 1.8946238e-15, 0.25, -3.774895e-08, -0.25, -9.553427e-16, 0.25, -3.774895e-08, 1.8874475e-08, 22.132433, 4.2423153, 5.6859126)
+mesh = ExtResource("2_dmh4e")
+surface_material_override/0 = ExtResource("3_oxlrl")
+surface_material_override/1 = ExtResource("3_oxlrl")
+surface_material_override/2 = ExtResource("3_oxlrl")
+
+[node name="Pipes12" type="MeshInstance3D" parent="." unique_id=911308751]
+transform = Transform3D(-1.8874475e-08, 1.8946238e-15, 0.25, -3.774895e-08, -0.25, -9.553427e-16, 0.25, -3.774895e-08, 1.8874475e-08, 22.132433, 2.035377, 5.6859126)
+mesh = ExtResource("2_dmh4e")
+surface_material_override/0 = ExtResource("3_oxlrl")
+surface_material_override/1 = ExtResource("3_oxlrl")
+surface_material_override/2 = ExtResource("3_oxlrl")
+
+[node name="Pipes13" type="MeshInstance3D" parent="." unique_id=1223427895]
+transform = Transform3D(-1.8874475e-08, 1.8946238e-15, 0.25, -3.774895e-08, -0.25, -9.553427e-16, 0.25, -3.774895e-08, 1.8874475e-08, 22.132433, -0.16035175, 5.6859126)
+mesh = ExtResource("2_dmh4e")
+surface_material_override/0 = ExtResource("3_oxlrl")
+surface_material_override/1 = ExtResource("3_oxlrl")
+surface_material_override/2 = ExtResource("3_oxlrl")
+
 [node name="Pipes7" type="MeshInstance3D" parent="." unique_id=509762715]
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0.5, -2.1855694e-08, 2.1855694e-08, 2.1855694e-08, 0.5, 9.553427e-16, 22.132433, 7.7935324, 10.086674)
 mesh = ExtResource("2_dmh4e")
@@ -90,6 +119,13 @@ surface_material_override/2 = ExtResource("3_oxlrl")
 
 [node name="Pipes8" type="MeshInstance3D" parent="." unique_id=546945426]
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0.5, -2.1855694e-08, 2.1855694e-08, 2.1855694e-08, 0.5, 9.553427e-16, 22.132433, 7.7935324, 14.408186)
+mesh = ExtResource("2_dmh4e")
+surface_material_override/0 = ExtResource("3_oxlrl")
+surface_material_override/1 = ExtResource("3_oxlrl")
+surface_material_override/2 = ExtResource("3_oxlrl")
+
+[node name="Pipes9" type="MeshInstance3D" parent="." unique_id=1257763673]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0.5, -2.1855694e-08, 2.1855694e-08, 2.1855694e-08, 0.5, 9.553427e-16, 22.132433, 7.7935324, 18.788498)
 mesh = ExtResource("2_dmh4e")
 surface_material_override/0 = ExtResource("3_oxlrl")
 surface_material_override/1 = ExtResource("3_oxlrl")

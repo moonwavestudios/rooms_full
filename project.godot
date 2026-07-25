@@ -61,7 +61,7 @@ project/assembly_name="Rooms"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/kanban_tasks/plugin.cfg")
 
 [filesystem]
 

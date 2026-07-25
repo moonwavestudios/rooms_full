@@ -1,0 +1,50 @@
+{
+	"categories": [
+		{
+			"uuid": "e8b9a3b6-1a01-4aaf-b28d-6c4f33cca0ad",
+			"title": "Task",
+			"color": "569eff"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "83887b09-34b0-4ebc-864b-1c57f11399b1",
+			"title": "Todo",
+			"tasks": [
+				"9de3433e-bbce-4250-bce6-a6def5220d65"
+			]
+		},
+		{
+			"uuid": "3c1b8f1d-6f37-480d-99f4-a4066e99f96e",
+			"title": "Doing",
+			"tasks": []
+		},
+		{
+			"uuid": "25b6a6be-e27b-4257-90f5-22a3718a8825",
+			"title": "Done",
+			"tasks": []
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "9de3433e-bbce-4250-bce6-a6def5220d65",
+			"title": "gachapoon",
+			"description": "Gacha system for charms",
+			"category": "e8b9a3b6-1a01-4aaf-b28d-6c4f33cca0ad",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"83887b09-34b0-4ebc-864b-1c57f11399b1"
+			],
+			[
+				"3c1b8f1d-6f37-480d-99f4-a4066e99f96e"
+			],
+			[
+				"25b6a6be-e27b-4257-90f5-22a3718a8825"
+			]
+		]
+	}
+}
