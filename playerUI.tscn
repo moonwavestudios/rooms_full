@@ -305,8 +305,8 @@ script = ExtResource("3_lyh3y")
 
 [node name="CenterContainer" type="CenterContainer" parent="GameUI" unique_id=861348515]
 layout_mode = 0
-offset_right = 1156.0
-offset_bottom = 649.0
+offset_right = 1919.0
+offset_bottom = 1080.0
 
 [node name="TextureRect2" type="TextureRect" parent="GameUI/CenterContainer" unique_id=205883420]
 layout_mode = 2
@@ -416,10 +416,10 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_v6544")
 
 [node name="Button" type="Button" parent="GameUI/Revive" unique_id=332286889]
 layout_mode = 0
-offset_left = 411.0
-offset_top = 3.0
-offset_right = 708.0
-offset_bottom = 55.0
+offset_left = 818.0
+offset_top = 6.0
+offset_right = 1115.0
+offset_bottom = 80.0
 theme_override_fonts/font = ExtResource("5_lyh3y")
 theme_override_font_sizes/font_size = 46
 theme_override_styles/normal = SubResource("StyleBoxFlat_3bkiv")
@@ -429,12 +429,12 @@ text = "Revive"
 [node name="Jumpscares" type="Panel" parent="GameUI" unique_id=313728627]
 visible = false
 layout_mode = 0
-offset_right = 1153.0
-offset_bottom = 649.0
+offset_right = 1919.0
+offset_bottom = 1084.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_5yvkk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GameUI/Jumpscares" unique_id=740206079]
-position = Vector2(565, 315)
+position = Vector2(924, 501)
 scale = Vector2(3.0234375, 2.890625)
 sprite_frames = SubResource("SpriteFrames_v6544")
 
@@ -443,17 +443,17 @@ self_modulate = Color(1, 1, 1, 0)
 top_level = true
 material = SubResource("ShaderMaterial_jvi5b")
 layout_mode = 0
-offset_right = 1153.0
-offset_bottom = 646.0
+offset_right = 1923.0
+offset_bottom = 1083.0
 mouse_filter = 2
 color = Color(1, 1, 1, 0)
 script = ExtResource("11_jvi5b")
 
 [node name="Hotbar" type="CenterContainer" parent="GameUI" unique_id=372805190]
 layout_mode = 0
-offset_top = 522.0
-offset_right = 1157.0
-offset_bottom = 650.0
+offset_top = 902.0
+offset_right = 1917.0
+offset_bottom = 1078.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="GameUI/Hotbar" unique_id=809913503]
 layout_mode = 2

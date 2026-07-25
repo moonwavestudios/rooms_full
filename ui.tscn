@@ -24,7 +24,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_gs482"]
 font = ExtResource("1_b2p7n")
-font_size = 71
+font_size = 159
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cxd00"]
 bg_color = Color(0, 0, 0, 1)
@@ -64,17 +64,18 @@ grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="." unique_id=1730000436]
 layout_mode = 0
-offset_right = 1151.0
-offset_bottom = 652.0
+offset_right = 1923.0
+offset_bottom = 1079.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_n5ude")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1007565750]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 653.0
+offset_right = 1919.0
+offset_bottom = 1082.0
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer" unique_id=1906338090]
 layout_mode = 2
+theme_override_font_sizes/font_size = 75
 text = "Rooms"
 label_settings = SubResource("LabelSettings_gs482")
 horizontal_alignment = 1
@@ -82,14 +83,14 @@ horizontal_alignment = 1
 [node name="Singleplayer" type="Button" parent="Panel/VBoxContainer" unique_id=966524567]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_b2p7n")
-theme_override_font_sizes/font_size = 56
+theme_override_font_sizes/font_size = 75
 text = "Singleplayer"
 flat = true
 
 [node name="Multiplayer" type="Button" parent="Panel/VBoxContainer" unique_id=686564472]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_b2p7n")
-theme_override_font_sizes/font_size = 56
+theme_override_font_sizes/font_size = 75
 text = "Multiplayer"
 flat = true
 script = ExtResource("3_y4yjw")
@@ -97,7 +98,7 @@ script = ExtResource("3_y4yjw")
 [node name="Settings" type="Button" parent="Panel/VBoxContainer" unique_id=1608019302]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_b2p7n")
-theme_override_font_sizes/font_size = 56
+theme_override_font_sizes/font_size = 75
 text = "Settings"
 flat = true
 script = ExtResource("3_waa4j")
@@ -105,7 +106,7 @@ script = ExtResource("3_waa4j")
 [node name="Credits" type="Button" parent="Panel/VBoxContainer" unique_id=1095457999]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_b2p7n")
-theme_override_font_sizes/font_size = 56
+theme_override_font_sizes/font_size = 75
 text = "Credits"
 flat = true
 script = ExtResource("4_n5rqp")
@@ -113,7 +114,7 @@ script = ExtResource("4_n5rqp")
 [node name="Quit" type="Button" parent="Panel/VBoxContainer" unique_id=113334948]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_b2p7n")
-theme_override_font_sizes/font_size = 56
+theme_override_font_sizes/font_size = 75
 text = "Quit"
 flat = true
 script = ExtResource("4_ok7cu")

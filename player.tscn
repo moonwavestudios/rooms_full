@@ -18,7 +18,7 @@
 [ext_resource type="Animation" uid="uid://c4n5ttvl1wrwl" path="res://models/player_model/animations/flashlight/use/Armature_flashlight_equip.res" id="14_jm5j8"]
 [ext_resource type="Animation" uid="uid://5mmnwboxfapi" path="res://models/player_model/animations/idle/Armature_mixamo_com.res" id="15_dx0e4"]
 [ext_resource type="Animation" uid="uid://betayvu8y5xe5" path="res://models/player_model/animations/imaginary_remote/use/Armature_mixamo_com.tres" id="16_q13i1"]
-[ext_resource type="Animation" uid="uid://cxg2ythwwe18x" path="res://models/player_model/animations/keycard/use/Armature_use.res" id="18_7hik5"]
+[ext_resource type="Animation" uid="uid://brlxwppicdirs" path="res://models/player_model/animations/keycard/use/Armature_use.res" id="18_7hik5"]
 [ext_resource type="Animation" uid="uid://cxytxy40byhht" path="res://models/player_model/animations/pills/take/Armature_mixamo_com.res" id="18_7lmhl"]
 [ext_resource type="Animation" uid="uid://mctk02icc85e" path="res://models/player_model/animations/pills/hold/Armature_mixamo_com.res" id="18_dx0e4"]
 [ext_resource type="Animation" uid="uid://g628e06c2yye" path="res://models/player_model/animations/pills/equip/Armature_mixamo_com.res" id="18_jm5j8"]
