@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cl8y8tcsxjbuc" path="res://rooms/spawn_room_v_2.tscn" id="2_e2o6t"]
 [ext_resource type="AudioStream" uid="uid://d3pu65fef3sam" path="res://sfx/morse.mp3" id="3_feb5d"]
 [ext_resource type="AudioStream" uid="uid://hqtkfrtjjrh4" path="res://assets/music/Mind's Eye Full.mp3" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://crewel6h86rd5" path="res://rooms/lobby.tscn" id="6_ryrav"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ejfmt"]
 shader = ExtResource("1_7jktm")
@@ -70,3 +71,6 @@ volume_db = -20.0
 
 [node name="Ambience" type="AudioStreamPlayer" parent="." unique_id=136361136]
 stream = ExtResource("4_fc0e3")
+
+[node name="Lobby" parent="." unique_id=1186829522 instance=ExtResource("6_ryrav")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 240.5381, 0, 354.7976)
