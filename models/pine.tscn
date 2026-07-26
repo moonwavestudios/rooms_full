@@ -16,15 +16,25 @@ normal_texture = ExtResource("3_ulywt")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6pnr2"]
 transparency = 1
+cull_mode = 2
 albedo_texture = ExtResource("5_2ven4")
 roughness_texture = ExtResource("7_s1akx")
 normal_enabled = true
 normal_texture = ExtResource("6_gtsd4")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_86q0k"]
+size = Vector3(0.35009766, 5.288574, 0.32348633)
+
 [node name="Pine" unique_id=312295467 instance=ExtResource("1_o5rul")]
 
-[node name="Tree_0" parent="." index="0" unique_id=1846758861]
+[node name="Tree_0" parent="." index="0" unique_id=881892389]
 surface_material_override/0 = SubResource("StandardMaterial3D_ulywt")
 
-[node name="Tree_1" parent="Tree_0" index="0" unique_id=1100370044]
+[node name="Tree_1" parent="Tree_0" index="0" unique_id=1190905284]
 surface_material_override/0 = SubResource("StandardMaterial3D_6pnr2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1796456653]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=2062488711]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.028076172, 2.6672363, 0.006958008)
+shape = SubResource("BoxShape3D_86q0k")
