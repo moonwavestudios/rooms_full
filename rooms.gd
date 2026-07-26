@@ -11,6 +11,10 @@ const RUSH_FLICKER_INTERVAL := 0.04
 @onready var rng = get_node("../..").rng
 @onready var mod_loader = get_node_or_null("/root/ModLoader")
 
+var spawn_rooms: Array[PackedScene] = [
+	preload("res://rooms/new_spawn_room.tscn"),
+]
+
 var room_scenes: Array[PackedScene] = [
 	preload("res://rooms/room_a.tscn"),
 	preload("res://rooms/room_b.tscn"),
