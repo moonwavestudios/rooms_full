@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dscpfdaus6enc" path="res://models/van/textures/Material_Metallic.png" id="9_hox17"]
 [ext_resource type="Texture2D" uid="uid://tsdmcr8k86yn" path="res://models/van/textures/Material_Roughness.png" id="10_sc4t8"]
 [ext_resource type="Texture2D" uid="uid://b3tp71ko3i8na" path="res://models/van/textures/Material_Normal.png" id="11_wj3lf"]
+[ext_resource type="PackedScene" uid="uid://pqx566c4myg5" path="res://models/pine.tscn" id="13_wj3lf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dmh4e"]
 transparency = 1
@@ -44,6 +45,12 @@ use_collision = true
 size = Vector3(45.588013, 0.033081055, 40.1727)
 material = ExtResource("1_oxlrl")
 
+[node name="CSGBox3D13" type="CSGBox3D" parent="." unique_id=760038672]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.591949, 1.1781769)
+use_collision = true
+size = Vector3(45.588013, 0.033081055, 40.1727)
+material = ExtResource("1_oxlrl")
+
 [node name="CSGBox3D8" type="CSGBox3D" parent="." unique_id=1951191767]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.520573, 0, -3.8345337)
 use_collision = true
@@ -58,6 +65,12 @@ material = ExtResource("2_oxlrl")
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="." unique_id=1159860026]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.068431854, 4.3055267, -18.293781)
+use_collision = true
+size = Vector3(45.45115, 8.592316, 0.117549896)
+material = ExtResource("2_oxlrl")
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="." unique_id=1581910692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.068431854, 4.3055267, 21.036694)
 use_collision = true
 size = Vector3(45.45115, 8.592316, 0.117549896)
 material = ExtResource("2_oxlrl")
@@ -250,3 +263,54 @@ light_color = Color(0.8980392, 0.9490196, 1, 1)
 light_energy = 5.0
 shadow_enabled = true
 area_size = Vector2(5.7615566, 2.444991)
+
+[node name="PlayerSpawn" type="Marker3D" parent="." unique_id=1689406275]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4444776, 0)
+
+[node name="PlayerSpawn2" type="Marker3D" parent="." unique_id=1888394965]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4444776, 2.3928413)
+
+[node name="PlayerSpawn3" type="Marker3D" parent="." unique_id=694051270]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1686788, 1.4444776, 2.3928413)
+
+[node name="PlayerSpawn4" type="Marker3D" parent="." unique_id=1085240834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1686788, 1.4444776, 0.20065546)
+
+[node name="PlayerSpawn5" type="Marker3D" parent="." unique_id=23414290]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1686788, 1.4444776, -2.387817)
+
+[node name="PlayerSpawn6" type="Marker3D" parent="." unique_id=770572530]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12951946, 1.4444776, -2.387817)
+
+[node name="PlayerSpawn7" type="Marker3D" parent="." unique_id=773379285]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1686788, 1.4444776, 4.0898895)
+
+[node name="PlayerSpawn8" type="Marker3D" parent="." unique_id=2051165121]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12951946, 1.4444776, 4.0898895)
+
+[node name="Pine" parent="." unique_id=312295467 instance=ExtResource("13_wj3lf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.52441, -0.03327775, 0)
+
+[node name="Pine5" parent="." unique_id=625247744 instance=ExtResource("13_wj3lf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.52441, -0.03327775, 6.495942)
+
+[node name="Pine6" parent="." unique_id=232398743 instance=ExtResource("13_wj3lf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.429104, -0.03327775, 6.495942)
+
+[node name="Pine7" parent="." unique_id=1507634143 instance=ExtResource("13_wj3lf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.429104, -0.03327775, 12.530798)
+
+[node name="Pine8" parent="." unique_id=488441369 instance=ExtResource("13_wj3lf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.126923, -0.03327775, 21.907728)
+
+[node name="Pine9" parent="." unique_id=1378125640 instance=ExtResource("13_wj3lf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.680183, -0.03327775, 21.907728)
+
+[node name="Pine2" parent="." unique_id=1596909516 instance=ExtResource("13_wj3lf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.52441, -0.03327775, -9.561235)
+
+[node name="Pine3" parent="." unique_id=2043682994 instance=ExtResource("13_wj3lf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.02874, -0.03327775, -9.561235)
+
+[node name="Pine4" parent="." unique_id=1772111286 instance=ExtResource("13_wj3lf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.708843, -0.03327775, -3.946148)

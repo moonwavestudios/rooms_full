@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c2pf1wkkvm7xj" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://dbggfjdaxgtua" path="res://ui.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://crewel6h86rd5" path="res://rooms/lobby.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c431u2qlu5eka" path="res://game.tscn" id="6_272bh"]
 
 [node name="main" type="Node" unique_id=1517276342]
@@ -18,3 +19,6 @@ _spawnable_scenes = PackedStringArray("uid://ckudr8chj1kgo")
 spawn_path = NodePath("..")
 
 [node name="Game" parent="." unique_id=390072711 instance=ExtResource("6_272bh")]
+
+[node name="Lobby" parent="." unique_id=1186829522 instance=ExtResource("5_lquwl")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 105.23486, 0, 241.45439)

@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://b3se8jxkjr2pg"]
+
+[ext_resource type="Texture2D" uid="uid://cnfvuros0qf6q" path="res://textures/grass/Grass005_4K-JPG_Color.jpg" id="1_653dq"]
+[ext_resource type="Image" uid="uid://dpo1ohj2vit34" path="res://rooms/new_spawn_room/Heightmap_0_0.res" id="1_kf2m7"]
+[ext_resource type="Texture2D" uid="uid://b62e3lc80g35x" path="res://textures/grass/Grass005_4K-JPG_NormalGL.jpg" id="2_78bx3"]
+[ext_resource type="Texture2D" uid="uid://b5ek5e5hs1het" path="res://textures/grass/Grass005_4K-JPG_Roughness.jpg" id="3_h6kt7"]
+[ext_resource type="Texture2D" uid="uid://baivs8m850jdo" path="res://textures/dirt/Ground103_4K-JPG_Color.jpg" id="4_dch1v"]
+[ext_resource type="Image" uid="uid://dlevhueijclx0" path="res://rooms/new_spawn_room/Splatmap_0_0_0.res" id="5_78bx3"]
+[ext_resource type="Texture2D" uid="uid://oqea6c0dt6cw" path="res://textures/dirt/Ground103_4K-JPG_NormalGL.jpg" id="5_88yxg"]
+[ext_resource type="Image" uid="uid://bu7dhtgmd1gjo" path="res://rooms/new_spawn_room/Heightmap_1_0.res" id="6_2re7f"]
+[ext_resource type="Texture2D" uid="uid://barhuc8rjchr8" path="res://textures/dirt/Ground103_4K-JPG_Roughness.jpg" id="6_qhfaw"]
+[ext_resource type="Image" uid="uid://bvji0aa7u8mml" path="res://rooms/new_spawn_room/Splatmap_1_0_0.res" id="7_dxbsl"]
+[ext_resource type="Image" uid="uid://b40ghds1lsjr0" path="res://rooms/new_spawn_room/Color_0_0.res" id="7_qhfaw"]
+[ext_resource type="Image" uid="uid://8oil5pia828y" path="res://rooms/new_spawn_room/Heightmap_0_-1.res" id="8_67x05"]
+[ext_resource type="Image" uid="uid://ixl22e7gsc6e" path="res://rooms/new_spawn_room/Splatmap_0_-1_0.res" id="9_dch1v"]
+[ext_resource type="Image" uid="uid://lrxrdqc7rjla" path="res://rooms/new_spawn_room/Color_1_0.res" id="10_8uxms"]
+[ext_resource type="Image" uid="uid://dssuq3503jk57" path="res://rooms/new_spawn_room/Color_0_-1.res" id="13_8uxms"]
+[ext_resource type="Image" uid="uid://bejn8xctl6bq5" path="res://rooms/new_spawn_room/Heightmap_1_1.res" id="16_tv2lw"]
+[ext_resource type="Image" uid="uid://c43xwnplypwhn" path="res://rooms/new_spawn_room/Splatmap_1_1_0.res" id="17_iymx1"]
+[ext_resource type="Image" uid="uid://b1l8clycqegfv" path="res://rooms/new_spawn_room/Color_2_0.res" id="18_oh5jo"]
+[ext_resource type="Image" uid="uid://dt1c00vjggd6y" path="res://rooms/new_spawn_room/Heightmap_2_0.res" id="18_uaam2"]
+[ext_resource type="Image" uid="uid://b6oi1wt66f7eb" path="res://rooms/new_spawn_room/Splatmap_2_0_0.res" id="19_oh5jo"]
+[ext_resource type="Image" uid="uid://c47ixfmqtmcxk" path="res://rooms/new_spawn_room/Heightmap_2_1.res" id="20_d7ykd"]
+[ext_resource type="Image" uid="uid://chpnbsanoqkt1" path="res://rooms/new_spawn_room/Splatmap_2_1_0.res" id="21_1t3y0"]
+[ext_resource type="Image" uid="uid://c4qr5i7f0s1s0" path="res://rooms/new_spawn_room/Color_2_1.res" id="21_d7ykd"]
+[ext_resource type="Image" uid="uid://d36hgwe2ynj7a" path="res://rooms/new_spawn_room/Heightmap_0_1.res" id="24_44oro"]
+[ext_resource type="Image" uid="uid://baam1ftpmd3m" path="res://rooms/new_spawn_room/Splatmap_0_1_0.res" id="25_e2pod"]
+[ext_resource type="Image" uid="uid://cs0vli0ydek4e" path="res://rooms/new_spawn_room/Heightmap_-1_0.res" id="26_o7egl"]
+[ext_resource type="Image" uid="uid://dx0s8hhmusbva" path="res://rooms/new_spawn_room/Splatmap_-1_0_0.res" id="27_bk4yl"]
+[ext_resource type="Image" uid="uid://37xx5ebr4m33" path="res://rooms/new_spawn_room/Heightmap_-1_1.res" id="28_s7n0u"]
+[ext_resource type="Image" uid="uid://bh43kfodocpws" path="res://rooms/new_spawn_room/Splatmap_-1_1_0.res" id="29_pibqu"]
+
+[sub_resource type="TextureSetResource" id="TextureSetResource_7o30o"]
+albedoTexture = ExtResource("1_653dq")
+normalTexture = ExtResource("2_78bx3")
+roughnessTexture = ExtResource("3_h6kt7")
+triplanar = true
+
+[sub_resource type="TextureSetResource" id="TextureSetResource_mb5vc"]
+albedoTexture = ExtResource("4_dch1v")
+normalTexture = ExtResource("5_88yxg")
+roughnessTexture = ExtResource("6_qhfaw")
+
+[sub_resource type="TextureSetsResource" id="TextureSetsResource_0v12r"]
+textureSets = Array[TextureSetResource]([SubResource("TextureSetResource_7o30o"), SubResource("TextureSetResource_mb5vc")])
+
+[sub_resource type="ZoneResource" id="ZoneResource_vbmo6"]
+heightMapImage = ExtResource("1_kf2m7")
+colorImage = ExtResource("7_qhfaw")
+splatmapsImage = Array[Image]([ExtResource("5_78bx3")])
+
+[sub_resource type="ZoneResource" id="ZoneResource_88yxg"]
+zonePosition = Vector2i(1, 0)
+heightMapImage = ExtResource("6_2re7f")
+colorImage = ExtResource("10_8uxms")
+splatmapsImage = Array[Image]([ExtResource("7_dxbsl")])
+
+[sub_resource type="ZoneResource" id="ZoneResource_qhfaw"]
+zonePosition = Vector2i(0, -1)
+heightMapImage = ExtResource("8_67x05")
+colorImage = ExtResource("13_8uxms")
+splatmapsImage = Array[Image]([ExtResource("9_dch1v")])
+
+[sub_resource type="ZoneResource" id="ZoneResource_5oxby"]
+zonePosition = Vector2i(1, 1)
+heightMapImage = ExtResource("16_tv2lw")
+splatmapsImage = Array[Image]([ExtResource("17_iymx1")])
+
+[sub_resource type="ZoneResource" id="ZoneResource_nwxor"]
+zonePosition = Vector2i(2, 0)
+heightMapImage = ExtResource("18_uaam2")
+colorImage = ExtResource("18_oh5jo")
+splatmapsImage = Array[Image]([ExtResource("19_oh5jo")])
+
+[sub_resource type="ZoneResource" id="ZoneResource_44oro"]
+zonePosition = Vector2i(2, 1)
+heightMapImage = ExtResource("20_d7ykd")
+colorImage = ExtResource("21_d7ykd")
+splatmapsImage = Array[Image]([ExtResource("21_1t3y0")])
+
+[sub_resource type="ZoneResource" id="ZoneResource_q1di4"]
+zonePosition = Vector2i(0, 1)
+heightMapImage = ExtResource("24_44oro")
+splatmapsImage = Array[Image]([ExtResource("25_e2pod")])
+
+[sub_resource type="ZoneResource" id="ZoneResource_vd671"]
+zonePosition = Vector2i(-1, 0)
+heightMapImage = ExtResource("26_o7egl")
+splatmapsImage = Array[Image]([ExtResource("27_bk4yl")])
+
+[sub_resource type="ZoneResource" id="ZoneResource_pgswc"]
+zonePosition = Vector2i(-1, 1)
+heightMapImage = ExtResource("28_s7n0u")
+splatmapsImage = Array[Image]([ExtResource("29_pibqu")])
+
+[sub_resource type="ZonesResource" id="ZonesResource_80h1m"]
+zones = Array[ZoneResource]([SubResource("ZoneResource_vbmo6"), SubResource("ZoneResource_88yxg"), SubResource("ZoneResource_qhfaw"), SubResource("ZoneResource_5oxby"), SubResource("ZoneResource_nwxor"), SubResource("ZoneResource_44oro"), SubResource("ZoneResource_q1di4"), SubResource("ZoneResource_vd671"), SubResource("ZoneResource_pgswc")])
+
+[node name="new_spawn_room" type="Node3D" unique_id=363707165]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=998653740]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -184.73163, 0, 44.52356)
+size = Vector3(117.30266, 0.033691406, 110.77905)
+
+[node name="TerraBrush" type="TerraBrush" parent="." unique_id=1897689064]
+dataPath = "res://rooms/new_spawn_room"
+textureSets = SubResource("TextureSetsResource_0v12r")
+terrainZones = SubResource("ZonesResource_80h1m")
+physics_interpolation_mode = 2
+metadata/_edit_lock_ = false
+
+[node name="TerraBrushEditor" type="TerraBrushEditor" parent="." unique_id=42154242 node_paths=PackedStringArray("terraBrushNode")]
+terraBrushNode = NodePath("../TerraBrush")

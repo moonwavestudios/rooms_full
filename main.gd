@@ -10,6 +10,8 @@ var rng := RandomNumberGenerator.new()
 @onready var joinlobbyname = $"CanvasLayer/UI/JoinLobby/LobbyName"
 @onready var joinusername = $"CanvasLayer/UI/JoinLobby/PlayerName"
 
+@onready var lobby = $Lobby
+
 const AUTHOR := "Moonwave Studios"
 const LICENSE := "MIT"
 const COPYRIGHT := "2026"
