@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c2ijepdw4fsud"]
 
 [ext_resource type="Material" uid="uid://c28gdvubm0bai" path="res://assets/tiles.tres" id="1_5c1wh"]
+[ext_resource type="Material" uid="uid://dk7rispq45fn3" path="res://assets/concrete.tres" id="2_clwy3"]
 [ext_resource type="PackedScene" uid="uid://edny0xnsfjdt" path="res://door.tscn" id="2_q21oe"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_86q0k"]
@@ -15,6 +16,7 @@ albedo_color = Color(1, 1, 1, 0)
 lightmap_size_hint = Vector2i(14, 21)
 material = SubResource("StandardMaterial3D_tx27i")
 add_uv2 = true
+size = Vector3(1, 1.0245361, 1)
 
 [node name="room_physics" type="Node3D" unique_id=1801123231]
 
@@ -22,6 +24,58 @@ add_uv2 = true
 use_collision = true
 size = Vector3(3.9262695, 0.033203125, 32.093018)
 material = ExtResource("1_5c1wh")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=405972491]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5387983, -0.011505127)
+use_collision = true
+size = Vector3(3.9262695, 0.033203125, 32.150818)
+material = ExtResource("2_clwy3")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=604650517]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049987793, 2.831645, -15.974533)
+size = Vector3(1.692749, 1.3781738, 0.21511841)
+material = ExtResource("2_clwy3")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=219509869]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.378067, 1.7687178, -15.974533)
+use_collision = true
+size = Vector3(1.1673279, 3.5040283, 0.21511841)
+material = ExtResource("2_clwy3")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="." unique_id=1849467284]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4217551, 1.7687178, -15.974533)
+use_collision = true
+size = Vector3(1.0952606, 3.5040283, 0.21511841)
+material = ExtResource("2_clwy3")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="." unique_id=1013203219]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.378067, 1.7687178, 15.943968)
+use_collision = true
+size = Vector3(1.1673279, 3.5040283, 0.21511841)
+material = ExtResource("2_clwy3")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="." unique_id=161415281]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.793354, 1.7687178, -0.06843567)
+use_collision = true
+size = Vector3(0.33675385, 3.5040283, 31.802341)
+material = ExtResource("2_clwy3")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="." unique_id=1499538171]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7792172, 1.7687178, -0.06843567)
+use_collision = true
+size = Vector3(0.33675385, 3.5040283, 31.802341)
+material = ExtResource("2_clwy3")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="." unique_id=1009622896]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4217551, 1.7687178, 15.943968)
+use_collision = true
+size = Vector3(1.0952606, 3.5040283, 0.21511841)
+material = ExtResource("2_clwy3")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1699246419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049987793, 2.8323774, 15.9395685)
+size = Vector3(1.692749, 1.3796387, 0.21511841)
+material = ExtResource("2_clwy3")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=151758495]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.52348644, 0)
@@ -78,11 +132,11 @@ shape = SubResource("BoxShape3D_86q0k")
 mesh = SubResource("BoxMesh_86q0k")
 
 [node name="Begin_Pos" type="MeshInstance3D" parent="." unique_id=95581890]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.4820043, 15.968868)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43631995, 15.968868)
 mesh = SubResource("BoxMesh_5c1wh")
 
 [node name="End_Pos" type="MeshInstance3D" parent="." unique_id=1089339321]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.48071212, -15.750641)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.46844405, -15.750641)
 mesh = SubResource("BoxMesh_5c1wh")
 
 [node name="DoorSpawn" type="Node3D" parent="." unique_id=41046799]

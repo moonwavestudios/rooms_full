@@ -176,7 +176,7 @@ outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_jvi5b"]
 font = ExtResource("5_lyh3y")
-font_size = 45
+font_size = 102
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpvek"]
 
@@ -213,19 +213,20 @@ offset_bottom = 40.0
 [node name="Label" type="Label" parent="GameUI" unique_id=1947272310]
 visible = false
 layout_mode = 0
-offset_left = 384.0
-offset_right = 853.0
-offset_bottom = 66.0
+offset_left = 731.0
+offset_top = 2.0
+offset_right = 1200.0
+offset_bottom = 68.0
 text = "Use the interact key"
 label_settings = SubResource("LabelSettings_af2jw")
 
 [node name="fps" type="Label" parent="GameUI" unique_id=1878810733]
 visible = false
 layout_mode = 0
-offset_left = 1079.0
-offset_top = 613.0
-offset_right = 1150.0
-offset_bottom = 647.0
+offset_left = 1840.0
+offset_top = 1029.0
+offset_right = 1911.0
+offset_bottom = 1063.0
 text = "FPS: 0"
 label_settings = SubResource("LabelSettings_af2jw")
 script = ExtResource("3_o66fx")
@@ -233,19 +234,19 @@ script = ExtResource("3_o66fx")
 [node name="Label2" type="Label" parent="GameUI" unique_id=1095642828]
 visible = false
 layout_mode = 0
-offset_left = 501.0
-offset_top = 62.0
-offset_right = 713.0
-offset_bottom = 140.0
+offset_left = 868.0
+offset_top = 103.0
+offset_right = 1080.0
+offset_bottom = 181.0
 text = "Room: 1"
 label_settings = SubResource("LabelSettings_1j5ju")
 
 [node name="Coins" type="TextureRect" parent="GameUI" unique_id=344997321]
 visible = false
 layout_mode = 0
-offset_left = 956.0
+offset_left = 1789.0
 offset_top = 4.0
-offset_right = 1000.0
+offset_right = 1833.0
 offset_bottom = 48.0
 texture = ExtResource("3_jvi5b")
 expand_mode = 1
@@ -263,9 +264,9 @@ vertical_alignment = 1
 [node name="BatteryAmount" type="TextureRect" parent="GameUI" unique_id=270516366]
 visible = false
 layout_mode = 0
-offset_left = 956.0
+offset_left = 1789.0
 offset_top = 54.0
-offset_right = 1000.0
+offset_right = 1833.0
 offset_bottom = 98.0
 texture = ExtResource("4_jvi5b")
 expand_mode = 1
@@ -283,10 +284,10 @@ vertical_alignment = 1
 [node name="health" type="Panel" parent="GameUI" unique_id=2076999836]
 visible = false
 layout_mode = 0
-offset_left = 5.0
-offset_top = 609.0
-offset_right = 323.0
-offset_bottom = 642.0
+offset_left = 3.0
+offset_top = 990.0
+offset_right = 321.0
+offset_bottom = 1023.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_aomcw")
 
 [node name="Health" type="ProgressBar" parent="GameUI/health" unique_id=327822234]
@@ -314,9 +315,9 @@ texture = ExtResource("3_aomcw")
 
 [node name="CenterContainer2" type="CenterContainer" parent="GameUI" unique_id=1489757352]
 layout_mode = 0
-offset_top = 586.0
-offset_right = 1156.0
-offset_bottom = 649.0
+offset_top = 1015.0
+offset_right = 1920.0
+offset_bottom = 1078.0
 
 [node name="shop" type="Control" parent="GameUI" unique_id=1403266229]
 visible = false
@@ -394,14 +395,14 @@ horizontal_alignment = 1
 [node name="Death" type="Panel" parent="GameUI" unique_id=1124568970]
 visible = false
 layout_mode = 0
-offset_right = 1154.0
-offset_bottom = 649.0
+offset_right = 1932.0
+offset_bottom = 1092.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_v6544")
 
 [node name="Label" type="Label" parent="GameUI/Death" unique_id=527897731]
 layout_mode = 0
-offset_right = 1154.0
-offset_bottom = 650.0
+offset_right = 1923.0
+offset_bottom = 1077.0
 text = "YOU DIED"
 label_settings = SubResource("LabelSettings_v6544")
 horizontal_alignment = 1
@@ -696,10 +697,10 @@ horizontal_alignment = 1
 [node name="PaintingUI" type="Label" parent="GameUI" unique_id=510754359]
 visible = false
 layout_mode = 0
-offset_left = -2.0
-offset_top = 599.0
-offset_right = 1151.0
-offset_bottom = 650.0
+offset_left = 387.0
+offset_top = 844.0
+offset_right = 1540.0
+offset_bottom = 895.0
 text = "Test"
 label_settings = SubResource("LabelSettings_5gb3g")
 horizontal_alignment = 1
@@ -718,12 +719,12 @@ expand_mode = 1
 [node name="Pause" type="Panel" parent="." unique_id=1142944185]
 visible = false
 layout_mode = 0
-offset_right = 1156.0
-offset_bottom = 648.0
+offset_right = 1929.0
+offset_bottom = 1094.0
 
 [node name="Label" type="Label" parent="Pause" unique_id=146650063]
 layout_mode = 0
-offset_right = 1154.0
+offset_right = 1920.0
 offset_bottom = 65.0
 text = "PAUSED"
 label_settings = SubResource("LabelSettings_jvi5b")
@@ -731,24 +732,24 @@ horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="Pause" unique_id=1271031716]
 layout_mode = 0
-offset_left = 463.0
-offset_top = 146.0
-offset_right = 696.0
-offset_bottom = 192.0
+offset_left = 776.0
+offset_top = 216.0
+offset_right = 1141.0
+offset_bottom = 351.0
 theme_override_fonts/font = ExtResource("5_lyh3y")
-theme_override_font_sizes/font_size = 33
+theme_override_font_sizes/font_size = 90
 text = "RESUME"
 flat = true
 script = ExtResource("12_un6lf")
 
 [node name="Button2" type="Button" parent="Pause" unique_id=64478079]
 layout_mode = 0
-offset_left = 462.0
-offset_top = 229.0
-offset_right = 695.0
-offset_bottom = 284.0
+offset_left = 840.0
+offset_top = 408.0
+offset_right = 1073.0
+offset_bottom = 543.0
 theme_override_fonts/font = ExtResource("5_lyh3y")
-theme_override_font_sizes/font_size = 33
+theme_override_font_sizes/font_size = 90
 text = "QUIT"
 flat = true
 script = ExtResource("13_jmjus")

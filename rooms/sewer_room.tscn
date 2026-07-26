@@ -5,8 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://edny0xnsfjdt" path="res://door.tscn" id="3_ty4i0"]
 [ext_resource type="Material" uid="uid://d3vq7bpwvpdgl" path="res://assets/walls.tres" id="4_htglj"]
 [ext_resource type="PackedScene" uid="uid://dlfnn8hxistuw" path="res://models/light.tscn" id="6_8315p"]
+[ext_resource type="Texture2D" uid="uid://csihl5d0li28n" path="res://textures/concrete2/Concrete030_4K-JPG_Color.jpg" id="6_kf041"]
 [ext_resource type="Material" uid="uid://dk7rispq45fn3" path="res://assets/concrete.tres" id="7_8462o"]
+[ext_resource type="Texture2D" uid="uid://d0sfr38q0fudn" path="res://textures/concrete2/Concrete030_4K-JPG_AmbientOcclusion.jpg" id="7_cpp2d"]
 [ext_resource type="PackedScene" uid="uid://bydgsi1jfy2oh" path="res://models/shelf_2.tscn" id="7_kaosq"]
+[ext_resource type="Texture2D" uid="uid://bhbcs3g7e1v40" path="res://textures/concrete2/Concrete030_4K-JPG_NormalGL.jpg" id="8_qujai"]
+[ext_resource type="Texture2D" uid="uid://b63hsk6rbbnca" path="res://textures/concrete2/Concrete030_4K-JPG_Roughness.jpg" id="9_tb652"]
 
 [sub_resource type="Gradient" id="Gradient_kaosq"]
 offsets = PackedFloat32Array(0, 0.9927536)
@@ -75,6 +79,25 @@ albedo_color = Color(1, 1, 1, 0)
 
 [sub_resource type="BoxMesh" id="BoxMesh_kaosq"]
 material = SubResource("StandardMaterial3D_2tr76")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tvj76"]
+albedo_color = Color(0, 0, 0, 1)
+albedo_texture = ExtResource("6_kf041")
+roughness_texture = ExtResource("9_tb652")
+normal_enabled = true
+normal_texture = ExtResource("8_qujai")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("7_cpp2d")
+ao_on_uv2 = true
+uv1_scale = Vector3(0.16, 0.16, 0.16)
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_triplanar = true
+uv2_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_8mayq"]
+material = SubResource("StandardMaterial3D_tvj76")
 
 [sub_resource type="BoxMesh" id="BoxMesh_htglj"]
 material = ExtResource("7_8462o")
@@ -267,7 +290,7 @@ transform = Transform3D(1.1239843, 0, 0, 0, 1.1206244, 0, 0, 0, 1, -0.3189702, 0
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=3170333]
 transform = Transform3D(25.586048, 0, 0, 0, 0.353, 0, 0, 0, 47.684, 7.737837, 5.7024136, 0)
-mesh = SubResource("BoxMesh_htglj")
+mesh = SubResource("BoxMesh_8mayq")
 skeleton = NodePath("")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=1185178481]
