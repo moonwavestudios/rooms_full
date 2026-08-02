@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://xxeudi7tu0p8"]
+
+[ext_resource type="ArrayMesh" uid="uid://dh5hhlkb15xxm" path="res://models/fence_metal/Simple Metal Fence/model/obj/fence.obj" id="1_mdxu4"]
+[ext_resource type="Texture2D" uid="uid://b60bnsua4ix8a" path="res://models/fence_metal/Simple Metal Fence/materials/Diffuse.png" id="2_678lh"]
+[ext_resource type="Texture2D" uid="uid://bfuh4moorgpg0" path="res://models/fence_metal/Simple Metal Fence/materials/Diffuse_AO.png" id="3_qlnbr"]
+[ext_resource type="Texture2D" uid="uid://cahgocovxrcp5" path="res://models/fence_metal/Simple Metal Fence/materials/Diffuse_Normal.png" id="3_vdcjy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mdxu4"]
+albedo_texture = ExtResource("2_678lh")
+normal_enabled = true
+normal_texture = ExtResource("3_vdcjy")
+ao_enabled = true
+ao_texture = ExtResource("3_qlnbr")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_phis1"]
+size = Vector3(0.46533203, 1.0273438, 1.6577148)
+
+[node name="fence_metal" type="Node3D" unique_id=475841968]
+
+[node name="Fence" type="MeshInstance3D" parent="." unique_id=1101818773]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+mesh = ExtResource("1_mdxu4")
+surface_material_override/0 = SubResource("StandardMaterial3D_mdxu4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1339313092]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=582496258]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008056641, -0.013671875, -0.004638672)
+shape = SubResource("BoxShape3D_phis1")
