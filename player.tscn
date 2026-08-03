@@ -25,6 +25,7 @@
 [ext_resource type="FontFile" uid="uid://dxsjhqed312w" path="res://fonts/daidaidaidaidaaisuki_free.otf" id="23_7lmhl"]
 [ext_resource type="Animation" uid="uid://cocbabq5hw0ya" path="res://models/player_model/animations/run/Armature_walk.res" id="23_jm5j8"]
 [ext_resource type="PackedScene" uid="uid://drkmc82qdnrfn" path="res://models/player_model/player_model.fbx" id="24_dx0e4"]
+[ext_resource type="PackedScene" uid="uid://cxuyybiw0rn75" path="res://scenes/chat_ui.tscn" id="26_7hik5"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
 
@@ -344,6 +345,8 @@ max_distance = 20.0
 stream = SubResource("AudioStreamMicrophone_7lmhl")
 autoplay = true
 bus = &"Voice"
+
+[node name="ChatUI" parent="." unique_id=493876984 instance=ExtResource("26_7hik5")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="TimerItems" to="." method="_on_timer_items_timeout"]

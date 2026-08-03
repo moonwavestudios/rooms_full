@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cxuyybiw0rn75"]
+
+[ext_resource type="Script" uid="uid://c7rpmcoe177ms" path="res://scripts/chat.gd" id="1_hixvo"]
+
+[node name="ChatUI" type="Control" unique_id=493876984]
+layout_mode = 3
+anchors_preset = 0
+offset_bottom = 1.0
+script = ExtResource("1_hixvo")
+
+[node name="Panel" type="Panel" parent="." unique_id=1312249741]
+layout_mode = 0
+offset_right = 330.0
+offset_bottom = 189.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel" unique_id=1657346128]
+layout_mode = 0
+offset_right = 330.0
+offset_bottom = 191.0
+
+[node name="Messages" type="VBoxContainer" parent="Panel/ScrollContainer" unique_id=504776106]
+layout_mode = 2
+alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="Panel" unique_id=1347383725]
+layout_mode = 0
+offset_top = 146.0
+offset_right = 329.0
+offset_bottom = 190.0
+placeholder_text = "Type Message"
+
+[node name="SendButton" type="Button" parent="Panel" unique_id=813676779]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 146.0
+offset_right = 492.0
+offset_bottom = 181.0
+text = "send"
+
+[node name="AutoHideTimer" type="Timer" parent="." unique_id=565901630]
