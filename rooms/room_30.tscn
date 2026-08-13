@@ -138,7 +138,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0008239746, 0.00036621094,
 shape = SubResource("BoxShape3D_6er78")
 
 [node name="Boss" parent="." unique_id=1653474537 instance=ExtResource("5_ln7v1")]
-transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 0.590178, 1.375164, 90.110344)
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 0.590178, 7.0022335, 90.110344)
 
 [node name="Area3D" type="Area3D" parent="." unique_id=176580265]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.1473055)

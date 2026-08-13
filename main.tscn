@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://dbggfjdaxgtua" path="res://ui.tscn" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://crewel6h86rd5" path="res://rooms/lobby.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://dl1vi5a1071ri" path="res://splash.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://c431u2qlu5eka" path="res://game.tscn" id="6_272bh"]
 
 [node name="main" type="Node" unique_id=1517276342]
@@ -13,6 +14,8 @@ player_Scene = ExtResource("2_0xm2m")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=619873134]
 
 [node name="UI" parent="CanvasLayer" unique_id=672674785 instance=ExtResource("3_1bvp3")]
+
+[node name="Splash" parent="CanvasLayer" unique_id=319112182 instance=ExtResource("6_7mycd")]
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=1718826974]
 _spawnable_scenes = PackedStringArray("uid://ckudr8chj1kgo")

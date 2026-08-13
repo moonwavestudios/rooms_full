@@ -3,6 +3,8 @@
 [ext_resource type="Material" uid="uid://c28gdvubm0bai" path="res://assets/tiles.tres" id="1_80h1m"]
 [ext_resource type="Shader" uid="uid://bcojkc3ju3ifo" path="res://shaders/horror_water.gdshader" id="1_vbmo6"]
 [ext_resource type="PackedScene" uid="uid://xxeudi7tu0p8" path="res://models/fence_metal.tscn" id="3_80h1m"]
+[ext_resource type="PackedScene" uid="uid://ckkpxnv5lkthc" path="res://models/shelf.tscn" id="4_653dq"]
+[ext_resource type="PackedScene" uid="uid://dh6yu54tbbmyh" path="res://models/key.tscn" id="5_78bx3"]
 
 [sub_resource type="Gradient" id="Gradient_kaosq"]
 offsets = PackedFloat32Array(0, 0.9927536)
@@ -129,3 +131,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.56
 
 [node name="fence_metal5" parent="." unique_id=712506120 instance=ExtResource("3_80h1m")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.6980243, 0.25967902, 0.24376184)
+
+[node name="shelf" parent="." unique_id=1709193542 instance=ExtResource("4_653dq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.379253, -0.039126277, 21.10291)
+
+[node name="key" parent="." unique_id=1383148317 instance=ExtResource("5_78bx3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.89119, 0.48881876, 19.565691)

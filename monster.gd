@@ -11,6 +11,10 @@ var target_position: Vector3
 func _ready() -> void:
 	$Scream.play()
 
+@rpc("any_peer", "call_local", "reliable")
+func sync_monster_death() -> void:
+	queue_free()
+
 func _physics_process(_delta):
 	if target_position == Vector3.ZERO:
 		return
@@ -29,7 +33,8 @@ func _physics_process(_delta):
 			var collider = rc.get_collider()
 			if collider is CharacterBody3D and collider.is_in_group("player") and not collider.hidden:
 				if collider.CrucifixHeld:
-					print("destroy rush")
+					sync_monster_death.rpc()
+					return
 				else:
 					collider.health = 0
 					queue_free()
