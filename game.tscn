@@ -2,9 +2,9 @@
 
 [ext_resource type="Shader" uid="uid://cuvo5jpi6obt8" path="res://shaders/underwater_world.gdshader" id="1_7jktm"]
 [ext_resource type="Script" uid="uid://cvd12gmo8uei4" path="res://rooms.gd" id="1_fc0e3"]
-[ext_resource type="PackedScene" uid="uid://cl8y8tcsxjbuc" path="res://rooms/spawn_room_v_2.tscn" id="2_e2o6t"]
 [ext_resource type="AudioStream" uid="uid://d3pu65fef3sam" path="res://sfx/morse.mp3" id="3_feb5d"]
 [ext_resource type="AudioStream" uid="uid://hqtkfrtjjrh4" path="res://assets/music/Mind's Eye Full.mp3" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://cb2hjoljqd1te" path="res://rooms/spawn_room_2.tscn" id="4_ryrav"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ejfmt"]
 shader = ExtResource("1_7jktm")
@@ -62,7 +62,8 @@ sky_mode = 2
 [node name="Rooms" type="Node3D" parent="." unique_id=1004831570]
 script = ExtResource("1_fc0e3")
 
-[node name="spawnroom_v2" parent="Rooms" unique_id=1564529558 instance=ExtResource("2_e2o6t")]
+[node name="spawn_room_2" parent="Rooms" unique_id=527298692 instance=ExtResource("4_ryrav")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5781946, 0)
 
 [node name="Secret" type="AudioStreamPlayer" parent="." unique_id=201964089]
 stream = ExtResource("3_feb5d")

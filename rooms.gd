@@ -128,7 +128,7 @@ signal stalker_spawned(stalker_node: Node)
 signal room_generated(room_node: Node, room_num: int)
 
 func _ready():
-	var spawn_room = $spawnroom_v2
+	var spawn_room = $spawn_room_2
 	generated_rooms.append(spawn_room)
 	_initialize_room_pool()
 
@@ -306,9 +306,7 @@ func _get_room_exit_node(room: Node, path_choice: int = 0) -> MeshInstance3D:
 		return room.get_node("End_Pos") as MeshInstance3D
 
 	var end_positions := []
-	for child in room.get_children():
-		if child.name.begins_with("End_Pos"):
-			end_positions.append(child)
+	_collect_end_positions(room, end_positions)
 
 	if end_positions.is_empty():
 		return null
@@ -316,6 +314,12 @@ func _get_room_exit_node(room: Node, path_choice: int = 0) -> MeshInstance3D:
 	end_positions.sort_custom(func(a, b): return a.name < b.name)
 	var index = clamp(path_choice, 0, end_positions.size() - 1)
 	return end_positions[index] as MeshInstance3D
+
+func _collect_end_positions(node: Node, arr: Array):
+	if node.name.begins_with("End_Pos"):
+		arr.append(node)
+	for child in node.get_children():
+		_collect_end_positions(child, arr)
 
 func roll_secret_room() -> PackedScene:
 	for entry in secret_rooms:
