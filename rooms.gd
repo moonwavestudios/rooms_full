@@ -11,10 +11,6 @@ const RUSH_FLICKER_INTERVAL := 0.04
 @onready var rng = get_node("../..").rng
 @onready var mod_loader = get_node_or_null("/root/ModLoader")
 
-var spawn_rooms: Array[PackedScene] = [
-	preload("res://rooms/new_spawn_room.tscn"),
-]
-
 var room_scenes: Array[PackedScene] = [
 	preload("res://rooms/room_a.tscn"),
 	preload("res://rooms/room_b.tscn"),
@@ -305,6 +301,22 @@ func get_room_scene_for_door(door_number: int) -> PackedScene:
 
 	return seeded_pick_random(all_available_rooms)
 
+func _get_room_exit_node(room: Node, path_choice: int = 0) -> MeshInstance3D:
+	if room.has_node("End_Pos"):
+		return room.get_node("End_Pos") as MeshInstance3D
+
+	var end_positions := []
+	for child in room.get_children():
+		if child.name.begins_with("End_Pos"):
+			end_positions.append(child)
+
+	if end_positions.is_empty():
+		return null
+
+	end_positions.sort_custom(func(a, b): return a.name < b.name)
+	var index = clamp(path_choice, 0, end_positions.size() - 1)
+	return end_positions[index] as MeshInstance3D
+
 func roll_secret_room() -> PackedScene:
 	for entry in secret_rooms:
 		if spawned_secret_rooms.has(entry["scene"]):
@@ -313,7 +325,7 @@ func roll_secret_room() -> PackedScene:
 			return entry["scene"]
 	return null
 
-func generate_room(previous_room):
+func generate_room(previous_room, path_choice: int = 0):
 	if not multiplayer.is_server():
 		return
 
@@ -329,44 +341,15 @@ func generate_room(previous_room):
 
 	add_child(new_room)
 
-	var prev_end_pos = previous_room.get_node("End_Pos") as MeshInstance3D
+	var prev_end_pos = _get_room_exit_node(previous_room, path_choice)
+	if not prev_end_pos:
+		push_error("previous_room has no End_Pos node(s)!")
+		new_room.queue_free()
+		return
+
 	new_room.global_transform.basis = prev_end_pos.global_transform.basis
 	var rotated_offset = new_room.global_transform.basis * new_begin_local_offset
 	new_room.global_transform.origin = prev_end_pos.global_transform.origin - rotated_offset
-
-	maybe_break_lights_normal(new_room)
-	maybe_make_room_locked(new_room)
-
-	generated_rooms.append(new_room)
-	roomNum += 1
-
-	if generated_rooms.size() > MAX_ROOMS:
-		var old_room = generated_rooms[0]
-		if is_instance_valid(old_room):
-			old_room.queue_free()
-		generated_rooms.remove_at(0)
-
-	rooms_since_last_rush += 1
-
-	if room_has_tag(new_room, "has_wardrobe"):
-		has_seen_wardrobe = true
-
-	if roomNum >= RUSH_START_ROOM:
-		$"../Ambience".stop()
-		if has_seen_wardrobe:
-			if rooms_since_last_rush >= RUSH_COOLDOWN_ROOMS:
-				if generated_rooms.size() > RUSH_SPAWN_OFFSET:
-					if seeded_randf() <= RUSH_SPAWN_CHANCE:
-						spawn_rush_monster()
-						rooms_since_last_rush = 0
-
-	update_rush_target()
-
-	emit_signal("room_generated", new_room, roomNum)
-
-	var scene_index = get_room_scene_index(room_scene)
-	var prev_room_path = get_path_to(previous_room)
-	rpc("sync_room_generation", scene_index, prev_room_path, next_door_number)
 
 func room_has_tag(room: Node, tag: String) -> bool:
 	if room.has_meta("tags"):
@@ -440,7 +423,7 @@ func get_scene_from_index(index: int) -> PackedScene:
 	return room_scenes[0]
 
 @rpc("authority", "call_local", "reliable")
-func sync_room_generation(scene_index: int, prev_room_path: NodePath, _door_number: int):
+func sync_room_generation(scene_index: int, prev_room_path: NodePath, _door_number: int, path_choice: int = 0):
 	if multiplayer.is_server():
 		return
 
@@ -456,19 +439,15 @@ func sync_room_generation(scene_index: int, prev_room_path: NodePath, _door_numb
 
 	add_child(new_room)
 
-	var prev_end_pos = previous_room.get_node("End_Pos") as MeshInstance3D
+	var prev_end_pos = _get_room_exit_node(previous_room, path_choice)
+	if not prev_end_pos:
+		push_error("Client: previous_room has no End_Pos node(s)!")
+		new_room.queue_free()
+		return
+
 	new_room.global_transform.basis = prev_end_pos.global_transform.basis
 	var rotated_offset = new_room.global_transform.basis * new_begin_local_offset
 	new_room.global_transform.origin = prev_end_pos.global_transform.origin - rotated_offset
-
-	generated_rooms.append(new_room)
-	roomNum += 1
-
-	if generated_rooms.size() > MAX_ROOMS:
-		var old_room = generated_rooms[0]
-		if is_instance_valid(old_room):
-			old_room.queue_free()
-		generated_rooms.remove_at(0)
 
 func _collect_lights(node: Node, arr: Array):
 	if node is Light3D:
