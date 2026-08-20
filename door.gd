@@ -1,15 +1,11 @@
 extends StaticBody3D
-
 @export var open = false
 @export var locked = false
 @export var is_side_door = false
-
 func _ready():
 	$ProximityPrompt.prompt_triggered.connect(_on_interacted)
-
 func _on_interacted(interactor: Node) -> void:
 	try_open(interactor)
-
 func try_open(interactor: Node) -> void:
 	if open:
 		return
@@ -23,19 +19,18 @@ func try_open(interactor: Node) -> void:
 	rpc("sync_open_door")
 	if not is_side_door:
 		interactor.on_room_advanced(global_position)
-
 @rpc("any_peer", "call_local", "reliable")
 func sync_open_door() -> void:
 	_open_door()
-
 func _open_door() -> void:
 	open = true
 	$CollisionShape3D.disabled = true
 	$OpenSound.play()
+	var left_dir = -global_transform.basis.x.normalized()
 	var tween = create_tween()
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.set_trans(Tween.TRANS_CUBIC)
-	tween.tween_property(self, "global_position", global_position + Vector3(0, 3.0, 0), 0.5)
+	tween.tween_property(self, "global_position", global_position + left_dir * 3.0, 0.5)
 	if not is_side_door and multiplayer.is_server():
 		var rooms_node = get_tree().current_scene.get_node("Game").get_node("Rooms")
 		rooms_node.generate_room(get_parent().get_parent())

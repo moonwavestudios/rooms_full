@@ -1,3 +1,84 @@
 [gd_scene format=3 uid="uid://cb2hjoljqd1te"]
 
+[ext_resource type="Material" uid="uid://cyx0uusq0lbkp" path="res://assets/materials/wood.tres" id="1_bpwjr"]
+[ext_resource type="PackedScene" uid="uid://txi0kkplnef4" path="res://models/Sidedoor.tscn" id="2_4k76t"]
+
 [node name="spawn_room_2" type="Node3D" unique_id=527298692]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1696734950]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8893738, 0, 3.3716602)
+size = Vector3(18.098816, 0.0703125, 40.957462)
+material = ExtResource("1_bpwjr")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1304348509]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3352995, 3.2356873, -13.632881)
+size = Vector3(0.38671875, 6.4136353, 6.9483795)
+material = ExtResource("1_bpwjr")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=1673694613]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3352995, 3.2356873, -3.6902623)
+size = Vector3(0.38671875, 6.4136353, 9.818428)
+material = ExtResource("1_bpwjr")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=566717212]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.236389, 3.2356873, -6.187823)
+size = Vector3(0.38671875, 6.4136353, 7.476143)
+material = ExtResource("1_bpwjr")
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="." unique_id=818116681]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.236389, 3.2356873, -16.895546)
+size = Vector3(0.38671875, 6.4136353, 7.476143)
+material = ExtResource("1_bpwjr")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="." unique_id=291944277]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.236389, 3.2356873, 4.771032)
+size = Vector3(0.38671875, 6.4136353, 7.476143)
+material = ExtResource("1_bpwjr")
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="." unique_id=1520664322]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.236389, 3.2356873, 14.135759)
+size = Vector3(0.38671875, 6.4136353, 7.476143)
+material = ExtResource("1_bpwjr")
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="." unique_id=973552956]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.236389, 3.2356873, 23.615582)
+size = Vector3(0.38671875, 6.4136353, 7.476143)
+material = ExtResource("1_bpwjr")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=7940252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3352995, 4.2719574, -9.383383)
+size = Vector3(0.38671875, 4.341095, 1.5697107)
+material = ExtResource("1_bpwjr")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="." unique_id=335212356]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3352995, 3.2356873, 6.359632)
+size = Vector3(0.38671875, 6.4136353, 7.226597)
+material = ExtResource("1_bpwjr")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="." unique_id=864214902]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3352995, 4.2719574, 1.9624271)
+size = Vector3(0.38671875, 4.341095, 1.5697107)
+material = ExtResource("1_bpwjr")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="." unique_id=1519752421]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3352995, 3.2356873, 15.126493)
+size = Vector3(0.38671875, 6.4136353, 7.226597)
+material = ExtResource("1_bpwjr")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="." unique_id=108331894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3352995, 4.2719574, 10.729288)
+size = Vector3(0.38671875, 4.341095, 1.5697107)
+material = ExtResource("1_bpwjr")
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="." unique_id=58296535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3352995, 3.2356873, 22.057308)
+size = Vector3(0.38671875, 6.4136353, 3.4965296)
+material = ExtResource("1_bpwjr")
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="." unique_id=1066308346]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3352995, 4.2719574, 19.525137)
+size = Vector3(0.38671875, 4.341095, 1.5697107)
+material = ExtResource("1_bpwjr")
+
+[node name="Sidedoor" parent="." unique_id=1515299434 instance=ExtResource("2_4k76t")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.890466, 0.49455237, -9.803724)
